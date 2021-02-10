@@ -355,14 +355,14 @@ function set_conditionRoutineBegin(snapshot) {
     
     
     
-    for(int i = 0; i < levList.length; i++)
+    for(var i = 0; i < levList.length; i++)
     {
         levList[i]= new Array(noOfMiniScenes + 1);
         respList[i] = new Array(noOfMiniScenes + 1);
         kestList[i] = new Array(noOfMiniScenes + 1);
         reverseList[i] = new Array(noOfMiniScenes + 1);
         localTrialNo[i] = new Array(noOfMiniScenes + 1)
-        for(int j = 1; j < levList[i].length; i++)
+        for(var j = 1; j < levList[i].length; i++)
         {
             levList[i][j]= new Array(100).fill(0);
             respList[i][j] = new Array(100).fill(0);
@@ -458,7 +458,7 @@ function trialRoutineBegin(snapshot) {
         initN = (nRefImage * 2);
         staircase = 0;
         if(localTrialNo[staircase][currentScene] > 10)
-            for(int = 1; i <= noOfMiniScenes; i++)
+            for(var = 1; i <= noOfMiniScenes; i++)
                 if(localTrialNo[staircase][i] <= 10)
                     currentScene = i;
                     
@@ -469,7 +469,7 @@ function trialRoutineBegin(snapshot) {
         initN = (nRefImage / 2);
         staircase = 1;
         if(localTrialNo[staircase][currentScene] > 10)
-            for(int = 1; i <= noOfMiniScenes; i++)
+            for(var = 1; i <= noOfMiniScenes; i++)
                 if(localTrialNo[staircase][i] <= 10)
                     currentScene = i;
     }
