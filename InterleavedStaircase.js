@@ -358,11 +358,11 @@ function set_conditionRoutineBegin(snapshot) {
     
     for(var i = 0; i < levList.length; i++)
     {
-        levList[i]= new Array(noOfMiniScenes + 1);
-        respList[i] = new Array(noOfMiniScenes + 1);
-        kestList[i] = new Array(noOfMiniScenes + 1);
-        reverseList[i] = new Array(noOfMiniScenes + 1);
-        localTrialNo[i] = new Array(noOfMiniScenes + 1)
+        levList[i]= new Array(noOfMiniScenes + 2);
+        respList[i] = new Array(noOfMiniScenes + 2);
+        kestList[i] = new Array(noOfMiniScenes + 2);
+        reverseList[i] = new Array(noOfMiniScenes + 2);
+        localTrialNo[i] = new Array(noOfMiniScenes + 2)
         for(var j = 1; j < levList[i].length; i++)
         {
             levList[i][j]= new Array(100).fill(0);
@@ -447,7 +447,7 @@ function trialRoutineBegin(snapshot) {
     
     staircase = 0;
     
-    currentScene = Math.floor(Math.random() * noOfMiniScenes);
+    currentScene = Math.floor(Math.random() * noOfMiniScenes) + 1;
     currentStaircase = Math.random();
     
     trial = 1;
@@ -478,6 +478,7 @@ function trialRoutineBegin(snapshot) {
                     }
      //               }
     }
+    
     
     trial = localTrialNo[staircase][currentScene];   
     
@@ -601,7 +602,7 @@ function trialRoutineEachFrame(snapshot) {
     }
 
     if (resp.status === PsychoJS.Status.STARTED) {
-      let theseKeys = resp.getKeys({keyList: ['left', 'righ'], waitRelease: false});
+      let theseKeys = resp.getKeys({keyList: ['left', 'right'], waitRelease: false});
       _resp_allKeys = _resp_allKeys.concat(theseKeys);
       if (_resp_allKeys.length > 0) {
         resp.keys = _resp_allKeys[_resp_allKeys.length - 1].name;  // just the last key pressed
@@ -648,7 +649,7 @@ function trialRoutineEnd(snapshot) {
     psychoJS.experiment.addData("Trial No.", trial);
     psychoJS.experiment.addData("Comp Side", (refSide * (- 1)));
     psychoJS.experiment.addData("Ref Num", nRefImage);
-    psychoJS.experiment.addData("Level List", levList[trial]);
+    psychoJS.experiment.addData("Level List", levList[staircase][currentScene][trial]);
     psychoJS.experiment.addData("Bounce Num", comp_num);
     psychoJS.experiment.addData("Staircase", staircase);
     psychoJS.experiment.addData("Scene No", currentScene);
@@ -679,7 +680,7 @@ function trialRoutineEnd(snapshot) {
     
     kestList[staircase][currentScene][trial] = kestResp;
     psychoJS.experiment.addData("comp>ref?", kestResp);
-    if ((trial > 1)) {
+    if ((localTrialNo[staircase][currentScene] > 1)) {
         if ((kestList[staircase][currentScene][trial] !== kestList[staircase][currentScene][(trial - 1)])) {
             reversals += 1;
             reverseList[staircase][currentScene][reversals] = levList[staircase][currentScene][(trial - 1)];
@@ -687,7 +688,7 @@ function trialRoutineEnd(snapshot) {
     }
     
     localTrialNo[staircase][currentScene] = (localTrialNo[staircase][currentScene] + 1);
-    trialCounter = (trial + 1);
+    trialCounter = (trialCounter + 1);
     
     psychoJS.experiment.addData('resp.keys', resp.keys);
     if (typeof resp.keys !== 'undefined') {  // we had a response

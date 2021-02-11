@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.10),
-    on February 10, 2021, at 22:30
+    on February 11, 2021, at 08:54
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -219,7 +219,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_2 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=[None],
+    trialList=data.importConditions('imageConds.xlsx'),
     seed=None, name='trials_2')
 thisExp.addLoop(trials_2)  # add the loop to the experiment
 thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
@@ -238,6 +238,36 @@ for thisTrial_2 in trials_2:
     # ------Prepare to start Routine "set_condition"-------
     continueRoutine = True
     # update component parameters for each repeat
+    imageSet = imageSetLvl
+    imageSetStr = str(imageSet)
+    setName = imageSetName
+    nRefImage = 8
+    
+    initStep = (nRefImage * 2)
+    
+    noOfMiniScenes  = 2
+    
+    reversals = 0
+    trialCounter = 1
+    
+    reversalsSharp = 0
+    reversalsFlat =  0
+    
+    maxNoFlat = 10
+    
+    
+    levList = [[[0] * 100] * (noOfMiniScenes+2)] * 2
+    respList = [[[0] * 100] * (noOfMiniScenes+2)] * 2
+    kestList = [[[0] * 100] * (noOfMiniScenes+2)] * 2
+    reverseList = [[[0] * 100] * (noOfMiniScenes+2)] * 2
+    localTrialNo = [[1] * (noOfMiniScenes + 2)] * 2
+    
+    
+    globalTrialNo = 60;
+    
+    
+    
+    
     # keep track of which components have finished
     set_conditionComponents = []
     for thisComponent in set_conditionComponents:
@@ -308,6 +338,78 @@ for thisTrial_2 in trials_2:
         # ------Prepare to start Routine "trial"-------
         continueRoutine = True
         # update component parameters for each repeat
+        
+        images1  = [f'stimuli/{imageSetStr}/1/{i}_{imageSetName}.png' for i in range(31)]
+        images2 = [f'stimuli/{imageSetStr}/2/{i}_{imageSetName}.png' for i in range(31)]
+        
+        #images[3] = [f'stimuli/{imageSetStr}/3/{i}_{imageSetName}.png' for i in range(31)]
+        
+        currentScene = round(random() * 2) + 1
+        
+        
+        if trialCounter <= globalTrialNo/2:
+            phi = 0.25
+            initN = nRefImage * 3
+            staircase = 0
+            if localTrialNo[staircase][currentScene] > 10:
+                i = 1 
+                while (i <= noOfMiniScenes): 
+                    if localTrialNo[staircase][currentScene] <= 10:
+                        currentScene = i
+                    i = i + 1
+        else:
+            phi = 0.75
+            initN = 0
+            staircase = 1
+            if localTrialNo[staircase][currentScene] > 10:
+                i = 1 
+                while (i <= noOfMiniScenes):  
+                    if localTrialNo[staircase][currentScene] <= 10:
+                        currentScene = i
+                i = i + 1;
+        
+        if currentScene == 1:
+            images = images1
+        elif currentScene == 2:
+            images = images2
+        print(currentScene)
+        trial = localTrialNo[staircase][currentScene]
+        
+        if random() > 0.5:
+            refSide = 1
+        else:
+            refSide = -1
+            
+        compSide = refSide * -1 
+        
+        if trial == 1:
+           levList[staircase][currentScene][trial] = initN
+        elif trial == 2:
+            levList[staircase][currentScene][trial] = initN-(initStep/2)*(kestList[staircase][currentScene][trial-1]-phi)
+        else:
+            levList[staircase][currentScene][trial] = levList[staircase][currentScene][trial-1]-(initStep/(reversals+2))*(kestList[staircase][currentScene][trial-1]-phi)
+        
+        # bound range
+        if levList[staircase][currentScene][trial] > initN:
+            levList[staircase][currentScene][trial] = initN
+        if levList[staircase][currentScene][trial] < 1:
+            levList[staircase][currentScene][trial] = 1
+        
+        print(trial)
+        print(levList[staircase][currentScene][trial])
+        
+        nCompQuality = int(round(levList[staircase][currentScene][trial]))
+        
+        comp_num = nCompQuality 
+        
+        if refSide == -1:
+            leftImage = images[nRefImage]
+            rightImage = images[comp_num]
+        else:
+            leftImage = images[comp_num]
+            rightImage = images[nRefImage]
+        
+        
         leftImagePortrait.setImage(leftImage)
         rightImagePortrait.setImage(rightImage)
         resp.keys = []
@@ -434,6 +536,43 @@ for thisTrial_2 in trials_2:
         for thisComponent in trialComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
+        # store level and response
+        #respList.append(response)
+        thisExp.addData('Trial No.', trial)
+        thisExp.addData('Comp Side', refSide * -1)
+        thisExp.addData('Ref Num', nRefImage)
+        thisExp.addData('Level List', levList[staircase][currentScene][trial])
+        thisExp.addData('Bounce Num', comp_num)
+        thisExp.addData('Staircase', staircase)
+        thisExp.addData('Scene No', currentScene)
+        
+        kestResp = 0
+        if staircase == 0:
+            if compSide < 0 and resp.keys == 'left':
+                kestResp = 1 # comp more realistic 
+            elif compSide > 0 and resp.keys == 'right':
+                kestResp = 1 # comp more realisitic
+        else:
+            if compSide > 0 and resp.keys == 'left':
+                kestResp = 1 # comp more realistic 
+            elif compSide < 0 and resp.keys == 'right':
+                kestResp = 1 # comp more realisitic
+            
+        
+        kestList[staircase][currentScene][trial] = kestResp
+        thisExp.addData('comp>ref?', kestResp)
+        
+        # count reversals
+        if localTrialNo[staircase][currentScene] > 1:
+            if kestList[staircase][currentScene][trial] != kestList[staircase][currentScene][trial-1]:
+                reversals += 1
+                reverseList[staircase][currentScene][reversals] = levList[staircase][currentScene][trial-1]
+        
+        # increment trials
+        localTrialNo[staircase][currentScene] = localTrialNo[staircase][currentScene]+1
+        trialCounter = trialCounter + 1 
+        
+        
         trials.addData('leftImagePortrait.started', leftImagePortrait.tStartRefresh)
         trials.addData('leftImagePortrait.stopped', leftImagePortrait.tStopRefresh)
         trials.addData('ISI.started', ISI.tStart)
