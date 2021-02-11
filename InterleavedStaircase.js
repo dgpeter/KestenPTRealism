@@ -454,7 +454,7 @@ function trialRoutineBegin(snapshot) {
     
     if(trialCounter <= globalTrialNo/2)
     {
-    if ((Math.random() > 0.5)) {
+    //if ((Math.random() > 0.5)) {
         phi = 0.25;
         initN = (nRefImage * 2);
         staircase = 0;
@@ -462,12 +462,12 @@ function trialRoutineBegin(snapshot) {
             for(var i = 1; i <= noOfMiniScenes; i++){
                 if(localTrialNo[staircase][i] <= 10){
                     currentScene = i;}
-                    }
-                    }
+                   }
+       //           }
                     
     }
     else {
-    if  ((Math.random() <= 0.5)){
+    //if  ((Math.random() <= 0.5)){
         phi = 0.75;
         initN = (nRefImage / 2);
         staircase = 1;
@@ -476,7 +476,7 @@ function trialRoutineBegin(snapshot) {
                 if(localTrialNo[staircase][i] <= 10){
                     currentScene = i;}
                     }
-                    }
+     //               }
     }
     
     trial = localTrialNo[staircase][currentScene];   
