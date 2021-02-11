@@ -305,7 +305,7 @@ function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 60, method: TrialHandler.Method.RANDOM,
+    nReps: 30, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'trials'
@@ -350,14 +350,13 @@ var initStep;
 var noOfMiniScenes;
 var reversals;
 var trialCounter;
-var reversalsSharp;
-var reversalsFlat;
 var maxNoFlat;
 var levList;
 var respList;
 var kestList;
 var reverseList;
 var localTrialNo;
+var localReversalNo;
 var globalTrialNo;
 var set_conditionComponents;
 function set_conditionRoutineBegin(snapshot) {
@@ -371,17 +370,17 @@ function set_conditionRoutineBegin(snapshot) {
     imageSet = imageSetLvl;
     imageSetStr = imageSet.toString();
     setName = imageSetName;
-    nRefImage = 8; //TO DO
+    nRefImage = 6; //TO DO
     
-    initStep = (nRefImage * 2);
+    initStep = nRefImage/2;
     
-    noOfMiniScenes  = 2;
+    noOfMiniScenes  = 3;
     
     reversals = 0;
     trialCounter = 1;
+    reversals = 0
     
-    reversalsSharp = 0;
-    reversalsFlat =  0;
+    localReversalsNo
     
     maxNoFlat = 10;
     
@@ -391,9 +390,10 @@ function set_conditionRoutineBegin(snapshot) {
     kestList = new Array(2);
     reverseList = new Array(2);
     localTrialNo = new Array(2);
+    localReversalNo = new Array(2);
     
     
-    globalTrialNo = 60;
+    globalTrialNo = 30;
     
     
     
@@ -403,7 +403,8 @@ function set_conditionRoutineBegin(snapshot) {
         respList[i] = new Array(noOfMiniScenes + 2);
         kestList[i] = new Array(noOfMiniScenes + 2);
         reverseList[i] = new Array(noOfMiniScenes + 2);
-        localTrialNo[i] = new Array(noOfMiniScenes + 2)
+        localTrialNo[i] = new Array(noOfMiniScenes + 2);
+        localReversalNo[i] = new Array(noOfMiniScenes + 2);
         for(var j = 1; j < noOfMiniScenes + 2; j++)
         {
             levList[i][j]= new Array(100).fill(0);
@@ -411,6 +412,7 @@ function set_conditionRoutineBegin(snapshot) {
             kestList[i][j] = new Array(100).fill(0);
             reverseList[i][j] = new Array(100).fill(0);
             localTrialNo[i][j] = 1;
+            localReversalNo[i][j] = 0;
         }
         
     }
@@ -555,7 +557,7 @@ function trialRoutineBegin(snapshot) {
         } 
         else
         {
-            levList[staircase][currentScene][trial] = (levList[staircase][currentScene][(trial - 1)] - ((initStep / (reversals + 2)) * (kestList[staircase][currentScene][(trial - 1)] - phi)));
+            levList[staircase][currentScene][trial] = (levList[staircase][currentScene][(trial - 1)] - ((initStep / (localReversalNo[staircase][currentScene] + 2)) * (kestList[staircase][currentScene][(trial - 1)] - phi)));
         }
     }
     if ((levList[staircase][currentScene][trial] > initN)) {
@@ -738,6 +740,7 @@ function trialRoutineEnd(snapshot) {
     if ((localTrialNo[staircase][currentScene] > 1)) {
         if ((kestList[staircase][currentScene][trial] !== kestList[staircase][currentScene][(trial - 1)])) {
             reversals += 1;
+            localReversalNo[staircase][currentScene] += 1;
             reverseList[staircase][currentScene][reversals] = levList[staircase][currentScene][(trial - 1)];
         }
     }
