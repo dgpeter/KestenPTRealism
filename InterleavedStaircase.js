@@ -675,14 +675,14 @@ function trialRoutineEnd(snapshot) {
             kestResp = 1;
         }
     }
-        }
+    }
     
-    kestList[trial] = kestResp;
+    kestList[staircase][currentScene][trial] = kestResp;
     psychoJS.experiment.addData("comp>ref?", kestResp);
     if ((trial > 1)) {
-        if ((kestList[trial] !== kestList[(trial - 1)])) {
+        if ((kestList[staircase][currentScene][trial] !== kestList[staircase][currentScene][(trial - 1)])) {
             reversals += 1;
-            reverseList[reversals] = levList[(trial - 1)];
+            reverseList[staircase][currentScene][reversals] = levList[staircase][currentScene][(trial - 1)];
         }
     }
     
@@ -696,51 +696,6 @@ function trialRoutineEnd(snapshot) {
         }
     
     resp.stop();
-    psychoJS.experiment.addData("Trial No.", trial);
-    psychoJS.experiment.addData("Comp Side", (refSide * (- 1)));
-    psychoJS.experiment.addData("Ref Num", nRefImage);
-    psychoJS.experiment.addData("Level List", levList[trial]);
-    psychoJS.experiment.addData("Bounce Num", comp_num);
-    psychoJS.experiment.addData("Staircase", staircase);
-    psychoJS.experiment.addData("Scene No", currentScene);
-    
-    kestResp = 0;
-    if(staircase == 0)
-    {
-        if (((compSide < 0) && (resp.keys === "left"))) {
-        kestResp = 1;
-    }
-    else 
-        {
-            if (((compSide > 0) && (resp.keys === "right"))) 
-            {
-                kestResp = 1;
-            }
-        }
-    }
-    else
-    {
-        if (((compSide > 0) && (resp.keys === "left"))) {
-        kestResp = 1;
-    } else {
-        if (((compSide < 0) && (resp.keys === "right"))) {
-            kestResp = 1;
-        }
-    }
-        }
-    
-    kestList[trial] = kestResp;
-    psychoJS.experiment.addData("comp>ref?", kestResp);
-    if ((trial > 1)) {
-        if ((kestList[trial] !== kestList[(trial - 1)])) {
-            reversals += 1;
-            reverseList[reversals] = levList[(trial - 1)];
-        }
-    }
-    
-    localTrialNo[staircase][currentScene]++;
-    trialCounter = (trial + 1);
-    
     // the Routine "trial" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -848,8 +803,6 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
-  
-  
   
   
   
