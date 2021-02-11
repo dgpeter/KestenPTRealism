@@ -388,7 +388,7 @@ function set_conditionRoutineBegin(snapshot) {
     trialCounter = 1;
     reversals = 0
     
-    localReversalsNo
+    
     
     maxNoFlat = 10;
     
