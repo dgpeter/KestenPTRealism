@@ -63,6 +63,7 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
+    {'name': 'imageConds.xlsx', 'path': 'imageConds.xlsx'}
   ]
 });
 
@@ -258,7 +259,7 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: undefined,
+    trialList: 'imageConds.xlsx',
     seed: undefined, name: 'trials_2'
   });
   psychoJS.experiment.addLoop(trials_2); // add the loop to the experiment
@@ -658,8 +659,7 @@ function trialRoutineEnd(snapshot) {
         if (((compSide < 0) && (resp.keys === "left"))) {
         kestResp = 1;
     }
-    else 
-        {
+    else {
             if (((compSide > 0) && (resp.keys === "right"))) 
             {
                 kestResp = 1;
@@ -686,7 +686,7 @@ function trialRoutineEnd(snapshot) {
         }
     }
     
-    localTrialNo[staircase][currentScene]++;
+    localTrialNo[staircase][currentScene] = (localTrialNo[staircase][currentScene] + 1);
     trialCounter = (trial + 1);
     
     psychoJS.experiment.addData('resp.keys', resp.keys);
