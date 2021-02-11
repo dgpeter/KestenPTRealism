@@ -52,7 +52,7 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'imageConds.xlsx', 'path': 'imageConds.xlsx'}
+    {'name': 'imageConds2.xlsx', 'path': 'imageConds2.xlsx'}
   ]
 });
 
@@ -275,7 +275,7 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'imageConds.xlsx',
+    trialList: 'imageConds2.xlsx',
     seed: undefined, name: 'trials_2'
   });
   psychoJS.experiment.addLoop(trials_2); // add the loop to the experiment
