@@ -655,30 +655,30 @@ function trialRoutineEnd(snapshot) {
     psychoJS.experiment.addData("Scene No", currentScene);
     
     kestResp = 0;
-    if(staircase == 0)
-    {
-        if (((compSide < 0) && (resp.keys === "left"))) 
-            kestResp = 1;
-        else if (((compSide > 0) && (resp.keys === "right"))) 
-            kestResp = 1;
-    }
-    else if(staircase == 1)
-    {
-        if (((compSide > 0) && (resp.keys === "left"))) 
-            kestResp = 1;
-        else if (((compSide < 0) && (resp.keys === "right"))) 
-            kestResp = 1;
-    }
-    
-    kestList[staircase][currentScene][trial] = kestResp;
-    psychoJS.experiment.addData("comp>ref?", kestResp);
-    
-    if ((localTrialNo[staircase][currentScene] > 1)) {
-        if ((kestList[staircase][currentScene][trial] !== kestList[staircase][currentScene][(trial - 1)])) {
-            reversals += 1;
-            reverseList[staircase][currentScene][reversals] = levList[staircase][currentScene][(trial - 1)];
-        }
-    }
+    //if(staircase == 0)
+    //{
+    //    if (((compSide < 0) && (resp.keys === "left"))) 
+    //        kestResp = 1;
+    //    else if (((compSide > 0) && (resp.keys === "right"))) 
+    //        kestResp = 1;
+    //}
+    //else if(staircase == 1)
+    //{
+    //    if (((compSide > 0) && (resp.keys === "left"))) 
+    //        kestResp = 1;
+    //    else if (((compSide < 0) && (resp.keys === "right"))) 
+    //        kestResp = 1;
+    //}
+    //
+    //kestList[staircase][currentScene][trial] = kestResp;
+    //psychoJS.experiment.addData("comp>ref?", kestResp);
+    //
+    //if ((localTrialNo[staircase][currentScene] > 1)) {
+    //    if ((kestList[staircase][currentScene][trial] !== kestList[staircase][currentScene][(trial - 1)])) {
+    //        reversals += 1;
+    //        reverseList[staircase][currentScene][reversals] = levList[staircase][currentScene][(trial - 1)];
+    //    }
+    //}
     
     localTrialNo[staircase][currentScene] = (localTrialNo[staircase][currentScene] + 1);
     trialCounter = (trialCounter + 1);
