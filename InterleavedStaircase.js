@@ -647,7 +647,7 @@ function trialRoutineEachFrame(snapshot) {
     }
     
     // *text_2* updates
-    if (t >= 0 && text_2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 5.5 && text_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       text_2.tStart = t;  // (not accounting for frame time here)
       text_2.frameNStart = frameN;  // exact frame index
