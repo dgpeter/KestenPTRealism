@@ -572,7 +572,7 @@ function trialRoutineBegin(snapshot) {
     console.log(trial);
     console.log(levList[staircase][currentScene][trial]);
     
-    nCompQuality = Number.parseInt(round(levList[staircase][currentScene][trial]));
+    nCompQuality = Number.parseInt(levList[staircase][currentScene][trial]);
     comp_num = nCompQuality;
     
     
