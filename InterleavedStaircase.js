@@ -519,6 +519,8 @@ function trialRoutineBegin(snapshot) {
     currentStaircase = Math.random();
     
     
+        
+    
     if(trialCounter <= globalTrialNo/2)
     {
         phi = 0.25;
@@ -526,7 +528,7 @@ function trialRoutineBegin(snapshot) {
         staircase = 0;
         if(localTrialNo[staircase][currentScene] > globalTrialNo/noOfMiniScenes/2){
             for(var i = 1; i <= noOfMiniScenes; i++)
-                if(localTrialNo[staircase][i] <= 10){
+                if(localTrialNo[staircase][i] <= globalTrialNo/noOfMiniScenes/2){
                     currentScene = i;
                     }
                    }           
@@ -537,7 +539,7 @@ function trialRoutineBegin(snapshot) {
         staircase = 1;
         if(localTrialNo[staircase][currentScene] > globalTrialNo/noOfMiniScenes/2){
             for(var i = 1; i <= noOfMiniScenes; i++)
-                if(localTrialNo[staircase][i] <= 10){
+                if(localTrialNo[staircase][i] <= globalTrialNo/noOfMiniScenes/2){
                     currentScene = i;
                     }
                     }
@@ -716,13 +718,14 @@ function trialRoutineEnd(snapshot) {
       }
     }
     psychoJS.experiment.addData("Trial No.", trialCounter);
-    psychoJS.experiment.addData("Scene Trial No.", trial);
+    psychoJS.experiment.addData("Scene No", currentScene);
+    psychoJS.experiment.addData("Scene Trial No.", localTrialNo[staircase][currentScene]);
     psychoJS.experiment.addData("Comp Side", (refSide * (- 1)));
     psychoJS.experiment.addData("Ref Num", nRefImage);
     psychoJS.experiment.addData("Level List", levList[staircase][currentScene][trial]);
     psychoJS.experiment.addData("Bounce Num", comp_num);
     psychoJS.experiment.addData("Staircase", staircase);
-    psychoJS.experiment.addData("Scene No", currentScene);
+    
     
     kestResp = 0;
     if(staircase == 0)
