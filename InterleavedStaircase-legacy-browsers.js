@@ -443,7 +443,6 @@ function trialRoutineBegin(snapshot) {
     currentScene = Math.floor(Math.random() * noOfMiniScenes) + 1;
     currentStaircase = Math.random();
     
-    trial = 1;
     
     if(trialCounter <= globalTrialNo/2)
     {
@@ -652,33 +651,24 @@ function trialRoutineEnd(snapshot) {
     kestResp = 0;
     if(staircase == 0)
     {
-            if (((compSide < 0) && (resp.keys === "left"))) {
+        if (((compSide < 0) && (resp.keys === "left"))) 
             kestResp = 1;
-        }
-        else 
-        {
-             if (((compSide > 0) && (resp.keys === "right"))) 
-             {
-                  kestResp = 1;
-             }
-         }
+        else if (((compSide > 0) && (resp.keys === "right"))) 
+            kestResp = 1;
     }
     else if(staircase == 1)
     {
-        if (((compSide > 0) && (resp.keys === "left"))) {
-        kestResp = 1;
-        } 
-        else {
-        if (((compSide < 0) && (resp.keys === "right"))) {
+        if (((compSide > 0) && (resp.keys === "left"))) 
             kestResp = 1;
-        } }
+        else if (((compSide < 0) && (resp.keys === "right"))) 
+            kestResp = 1;
     }
     
     kestList[staircase][currentScene][trial] = kestResp;
     psychoJS.experiment.addData("comp>ref?", kestResp);
     
     if ((localTrialNo[staircase][currentScene] > 1)) {
-        if ((kestList[staircase][currentScene][trial] != kestList[staircase][currentScene][(trial - 1)])) {
+        if ((kestList[staircase][currentScene][trial] !== kestList[staircase][currentScene][(trial - 1)])) {
             reversals += 1;
             reverseList[staircase][currentScene][reversals] = levList[staircase][currentScene][(trial - 1)];
         }
