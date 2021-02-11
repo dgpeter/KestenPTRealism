@@ -333,7 +333,7 @@ function set_conditionRoutineBegin(snapshot) {
     
     initStep = (nRefImage * 2);
     
-    noOfMiniScenes  = 1;
+    noOfMiniScenes  = 2;
     
     reversals = 0;
     trialCounter = 1;
@@ -448,30 +448,34 @@ function trialRoutineBegin(snapshot) {
     
     currentScene = Math.floor(Math.random() * noOfMiniScenes);
     currentStaircase = Math.random();
-    found = false;
+    
     trial = 1;
     
     if(trialCounter <= globalTrialNo/2)
     {
-    //if ((Math.random() > 0.5)) {
+    if ((Math.random() > 0.5)) {
         phi = 0.25;
         initN = (nRefImage * 2);
         staircase = 0;
-        if(localTrialNo[staircase][currentScene] > 10)
-            for(var = 1; i <= noOfMiniScenes; i++)
-                if(localTrialNo[staircase][i] <= 10)
-                    currentScene = i;
+        if(localTrialNo[staircase][currentScene] > 10){
+            for(var i = 1; i <= noOfMiniScenes; i++){
+                if(localTrialNo[staircase][i] <= 10){
+                    currentScene = i;}
+                    }
+                    }
                     
     }
     else {
-    //if  ((Math.random() <= 0.5)){
+    if  ((Math.random() <= 0.5)){
         phi = 0.75;
         initN = (nRefImage / 2);
         staircase = 1;
-        if(localTrialNo[staircase][currentScene] > 10)
-            for(var = 1; i <= noOfMiniScenes; i++)
-                if(localTrialNo[staircase][i] <= 10)
-                    currentScene = i;
+        if(localTrialNo[staircase][currentScene] > 10){
+            for(var i = 1; i <= noOfMiniScenes; i++){
+                if(localTrialNo[staircase][i] <= 10){
+                    currentScene = i;}
+                    }
+                    }
     }
     
     trial = localTrialNo[staircase][currentScene];   
@@ -692,6 +696,51 @@ function trialRoutineEnd(snapshot) {
         }
     
     resp.stop();
+    psychoJS.experiment.addData("Trial No.", trial);
+    psychoJS.experiment.addData("Comp Side", (refSide * (- 1)));
+    psychoJS.experiment.addData("Ref Num", nRefImage);
+    psychoJS.experiment.addData("Level List", levList[trial]);
+    psychoJS.experiment.addData("Bounce Num", comp_num);
+    psychoJS.experiment.addData("Staircase", staircase);
+    psychoJS.experiment.addData("Scene No", currentScene);
+    
+    kestResp = 0;
+    if(staircase == 0)
+    {
+        if (((compSide < 0) && (resp.keys === "left"))) {
+        kestResp = 1;
+    }
+    else 
+        {
+            if (((compSide > 0) && (resp.keys === "right"))) 
+            {
+                kestResp = 1;
+            }
+        }
+    }
+    else
+    {
+        if (((compSide > 0) && (resp.keys === "left"))) {
+        kestResp = 1;
+    } else {
+        if (((compSide < 0) && (resp.keys === "right"))) {
+            kestResp = 1;
+        }
+    }
+        }
+    
+    kestList[trial] = kestResp;
+    psychoJS.experiment.addData("comp>ref?", kestResp);
+    if ((trial > 1)) {
+        if ((kestList[trial] !== kestList[(trial - 1)])) {
+            reversals += 1;
+            reverseList[reversals] = levList[(trial - 1)];
+        }
+    }
+    
+    localTrialNo[staircase][currentScene]++;
+    trialCounter = (trial + 1);
+    
     // the Routine "trial" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -799,6 +848,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   
