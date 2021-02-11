@@ -517,7 +517,7 @@ function trialRoutineBegin(snapshot) {
         phi = 0.25;
         initN = (nRefImage * 2);
         staircase = 0;
-        if(localTrialNo[staircase][currentScene] > globalTrailNo/noOfMiniScenes/2){
+        if(localTrialNo[staircase][currentScene] > globalTrialNo/noOfMiniScenes/2){
             for(var i = 1; i <= noOfMiniScenes; i++)
                 if(localTrialNo[staircase][i] <= 10){
                     currentScene = i;
@@ -528,7 +528,7 @@ function trialRoutineBegin(snapshot) {
         phi = 0.75;
         initN = (nRefImage / 2);
         staircase = 1;
-        if(localTrialNo[staircase][currentScene] > globalTrailNo/noOfMiniScenes/2){
+        if(localTrialNo[staircase][currentScene] > globalTrialNo/noOfMiniScenes/2){
             for(var i = 1; i <= noOfMiniScenes; i++)
                 if(localTrialNo[staircase][i] <= 10){
                     currentScene = i;
