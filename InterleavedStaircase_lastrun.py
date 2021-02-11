@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.10),
-    on February 11, 2021, at 08:54
+    on February 11, 2021, at 09:07
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -100,7 +100,7 @@ leftImagePortrait = visual.ImageStim(
     win=win,
     name='leftImagePortrait', 
     image='sin', mask=None,
-    ori=0, pos=(-0.5, 0), size=(0.5, 0.5),
+    ori=0, pos=(-0.5, 0), size=(1, 1),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -317,7 +317,7 @@ for thisTrial_2 in trials_2:
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=18, method='random', 
+    trials = data.TrialHandler(nReps=60, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -496,7 +496,7 @@ for thisTrial_2 in trials_2:
                 win.callOnFlip(resp.clock.reset)  # t=0 on next screen flip
                 win.callOnFlip(resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
             if resp.status == STARTED and not waitOnFlip:
-                theseKeys = resp.getKeys(keyList=['left', 'righ'], waitRelease=False)
+                theseKeys = resp.getKeys(keyList=['left', 'right'], waitRelease=False)
                 _resp_allKeys.extend(theseKeys)
                 if len(_resp_allKeys):
                     resp.keys = _resp_allKeys[-1].name  # just the last key pressed
@@ -593,7 +593,7 @@ for thisTrial_2 in trials_2:
         routineTimer.reset()
         thisExp.nextEntry()
         
-    # completed 18 repeats of 'trials'
+    # completed 60 repeats of 'trials'
     
     thisExp.nextEntry()
     

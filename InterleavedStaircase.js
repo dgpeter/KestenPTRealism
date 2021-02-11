@@ -112,7 +112,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'leftImagePortrait', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [(- 0.5), 0], size : [0.5, 0.5],
+    ori : 0, pos : [(- 0.5), 0], size : [1, 1],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -121,7 +121,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'rightImagePortrait', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0.5, 0], size : [0.5, 0.5],
+    ori : 0, pos : [0.5, 0], size : [1, 1],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
@@ -286,7 +286,7 @@ function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 18, method: TrialHandler.Method.RANDOM,
+    nReps: 60, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'trials'
@@ -646,7 +646,8 @@ function trialRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData("Trial No.", trial);
+    psychoJS.experiment.addData("Trial No.", trialCounter);
+    psychoJS.experiment.addData("Scene Trial No.", trial);
     psychoJS.experiment.addData("Comp Side", (refSide * (- 1)));
     psychoJS.experiment.addData("Ref Num", nRefImage);
     psychoJS.experiment.addData("Level List", levList[staircase][currentScene][trial]);
@@ -657,31 +658,33 @@ function trialRoutineEnd(snapshot) {
     kestResp = 0;
     if(staircase == 0)
     {
-        if (((compSide < 0) && (resp.keys === "left"))) {
-        kestResp = 1;
-    }
-    else {
-            if (((compSide > 0) && (resp.keys === "right"))) 
-            {
-                kestResp = 1;
-            }
+            if (((compSide < 0) && (resp.keys === "left"))) {
+            kestResp = 1;
         }
+        else 
+        {
+             if (((compSide > 0) && (resp.keys === "right"))) 
+             {
+                  kestResp = 1;
+             }
+         }
     }
-    else
+    else if(staircase == 1)
     {
         if (((compSide > 0) && (resp.keys === "left"))) {
         kestResp = 1;
-    } else {
+        } 
+        else {
         if (((compSide < 0) && (resp.keys === "right"))) {
             kestResp = 1;
-        }
-    }
+        } }
     }
     
     kestList[staircase][currentScene][trial] = kestResp;
     psychoJS.experiment.addData("comp>ref?", kestResp);
+    
     if ((localTrialNo[staircase][currentScene] > 1)) {
-        if ((kestList[staircase][currentScene][trial] !== kestList[staircase][currentScene][(trial - 1)])) {
+        if ((kestList[staircase][currentScene][trial] != kestList[staircase][currentScene][(trial - 1)])) {
             reversals += 1;
             reverseList[staircase][currentScene][reversals] = levList[staircase][currentScene][(trial - 1)];
         }
