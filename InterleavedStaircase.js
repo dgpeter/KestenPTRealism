@@ -127,7 +127,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'leftImagePortrait', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [(- 0.5), 0], size : [1, 1],
+    ori : 0, pos : [(- 0.5), 0], size : [0.9, 0.9],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -136,7 +136,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'rightImagePortrait', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0.5, 0], size : [1, 1],
+    ori : 0, pos : [0.5, 0], size : [0.9, 0.9],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
@@ -524,7 +524,7 @@ function trialRoutineBegin(snapshot) {
         phi = 0.25;
         initN = (nRefImage * 2);
         staircase = 0;
-        if(localTrialNo[staircase][currentScene] > 10){
+        if(localTrialNo[staircase][currentScene] > globalTrailNo/noOfMiniScenes/2){
             for(var i = 1; i <= noOfMiniScenes; i++)
                 if(localTrialNo[staircase][i] <= 10){
                     currentScene = i;
@@ -535,7 +535,7 @@ function trialRoutineBegin(snapshot) {
         phi = 0.75;
         initN = (nRefImage / 2);
         staircase = 1;
-        if(localTrialNo[staircase][currentScene] > 10){
+        if(localTrialNo[staircase][currentScene] > globalTrailNo/noOfMiniScenes/2){
             for(var i = 1; i <= noOfMiniScenes; i++)
                 if(localTrialNo[staircase][i] <= 10){
                     currentScene = i;
