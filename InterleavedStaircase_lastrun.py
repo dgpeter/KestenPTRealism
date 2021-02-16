@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.10),
-    on February 11, 2021, at 09:07
+    on February 16, 2021, at 19:09
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -109,7 +109,7 @@ rightImagePortrait = visual.ImageStim(
     win=win,
     name='rightImagePortrait', 
     image='sin', mask=None,
-    ori=0, pos=(0.5, 0), size=(0.5, 0.5),
+    ori=0, pos=(0.5, 0), size=(1, 1),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
@@ -219,7 +219,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_2 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('imageConds.xlsx'),
+    trialList=data.importConditions('imageConds2.xlsx'),
     seed=None, name='trials_2')
 thisExp.addLoop(trials_2)  # add the loop to the experiment
 thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
@@ -241,11 +241,11 @@ for thisTrial_2 in trials_2:
     imageSet = imageSetLvl
     imageSetStr = str(imageSet)
     setName = imageSetName
-    nRefImage = 8
+    nRefImage = refSetNumber
     
     initStep = (nRefImage * 2)
     
-    noOfMiniScenes  = 2
+    noOfMiniScenes  = 3
     
     reversals = 0
     trialCounter = 1
@@ -253,7 +253,7 @@ for thisTrial_2 in trials_2:
     reversalsSharp = 0
     reversalsFlat =  0
     
-    maxNoFlat = 10
+    
     
     
     levList = [[[0] * 100] * (noOfMiniScenes+2)] * 2
@@ -263,7 +263,8 @@ for thisTrial_2 in trials_2:
     localTrialNo = [[1] * (noOfMiniScenes + 2)] * 2
     
     
-    globalTrialNo = 60;
+    globalTrialNo = 18
+    maxNoFlat = globalTrialNo/(noOfMiniScenes * 2)
     
     
     
@@ -317,7 +318,7 @@ for thisTrial_2 in trials_2:
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=60, method='random', 
+    trials = data.TrialHandler(nReps=18, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -339,39 +340,40 @@ for thisTrial_2 in trials_2:
         continueRoutine = True
         # update component parameters for each repeat
         
-        images1  = [f'stimuli/{imageSetStr}/1/{i}_{imageSetName}.png' for i in range(31)]
-        images2 = [f'stimuli/{imageSetStr}/2/{i}_{imageSetName}.png' for i in range(31)]
+        images1  = [f'stimuli/{imageSetStr}/1/{i}_{imageSetName}.png' for i in range(22)]
+        images2 = [f'stimuli/{imageSetStr}/2/{i}_{imageSetName}.png' for i in range(22)]
+        images3 = [f'stimuli/{imageSetStr}/3/{i}_{imageSetName}.png' for i in range(22)]
         
-        #images[3] = [f'stimuli/{imageSetStr}/3/{i}_{imageSetName}.png' for i in range(31)]
-        
-        currentScene = round(random() * 2) + 1
+        currentScene = int(random() * noOfMiniScenes) + 1
         
         
-        if trialCounter <= globalTrialNo/2:
+        if trialCounter <= globalTrialNo/(2*2):
             phi = 0.25
             initN = nRefImage * 3
             staircase = 0
-            if localTrialNo[staircase][currentScene] > 10:
+            if localTrialNo[staircase][currentScene] > maxNoFlat:
                 i = 1 
                 while (i <= noOfMiniScenes): 
-                    if localTrialNo[staircase][currentScene] <= 10:
+                    if localTrialNo[staircase][currentScene] <= maxNoFlat:
                         currentScene = i
                     i = i + 1
         else:
             phi = 0.75
             initN = 0
             staircase = 1
-            if localTrialNo[staircase][currentScene] > 10:
+            if localTrialNo[staircase][currentScene] > maxNoFlat:
                 i = 1 
                 while (i <= noOfMiniScenes):  
-                    if localTrialNo[staircase][currentScene] <= 10:
+                    if localTrialNo[staircase][currentScene] <= maxNoFlat:              
                         currentScene = i
-                i = i + 1;
+                    i = i + 1
         
         if currentScene == 1:
             images = images1
         elif currentScene == 2:
             images = images2
+        elif currentScene == 3:
+            images = images3
         print(currentScene)
         trial = localTrialNo[staircase][currentScene]
         
@@ -593,7 +595,7 @@ for thisTrial_2 in trials_2:
         routineTimer.reset()
         thisExp.nextEntry()
         
-    # completed 60 repeats of 'trials'
+    # completed 18 repeats of 'trials'
     
     thisExp.nextEntry()
     

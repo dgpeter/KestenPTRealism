@@ -69,8 +69,6 @@ psychoJS.start({
 
 psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.EXP);
 
-
-var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
@@ -90,19 +88,6 @@ function updateInfo() {
   return Scheduler.Event.NEXT;
 }
 
-
-var InstructionsClock;
-var text;
-var key_resp;
-var set_conditionClock;
-var trialClock;
-var leftImagePortrait;
-var rightImagePortrait;
-var text_2;
-var resp;
-var endClock;
-var globalClock;
-var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "Instructions"
   InstructionsClock = new util.Clock();
@@ -127,7 +112,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'leftImagePortrait', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [(- 0.5), 0], size : [0.9, 0.9],
+    ori : 0, pos : [(- 0.5), 0], size : [0.99, 0.99],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -136,7 +121,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'rightImagePortrait', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0.5, 0], size : [0.9, 0.9],
+    ori : 0, pos : [0.5, 0], size : [0.99, 0.99],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
@@ -163,12 +148,6 @@ function experimentInit() {
   return Scheduler.Event.NEXT;
 }
 
-
-var t;
-var frameN;
-var continueRoutine;
-var _key_resp_allKeys;
-var InstructionsComponents;
 function InstructionsRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Instructions'-------
@@ -191,7 +170,6 @@ function InstructionsRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
-
 
 function InstructionsRoutineEachFrame(snapshot) {
   return function () {
@@ -260,7 +238,6 @@ function InstructionsRoutineEachFrame(snapshot) {
   };
 }
 
-
 function InstructionsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Instructions'-------
@@ -276,9 +253,6 @@ function InstructionsRoutineEnd(snapshot) {
   };
 }
 
-
-var trials_2;
-var currentLoop;
 function trials_2LoopBegin(trials_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_2 = new TrialHandler({
@@ -308,13 +282,11 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
-var trials;
 function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 30, method: TrialHandler.Method.RANDOM,
+    nReps: 18, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'trials'
@@ -335,13 +307,11 @@ function trialsLoopBegin(trialsLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function trialsLoopEnd() {
   psychoJS.experiment.removeLoop(trials);
 
   return Scheduler.Event.NEXT;
 }
-
 
 function trials_2LoopEnd() {
   psychoJS.experiment.removeLoop(trials_2);
@@ -349,24 +319,6 @@ function trials_2LoopEnd() {
   return Scheduler.Event.NEXT;
 }
 
-
-var imageSet;
-var imageSetStr;
-var setName;
-var nRefImage;
-var initStep;
-var noOfMiniScenes;
-var reversals;
-var trialCounter;
-var maxNoFlat;
-var levList;
-var respList;
-var kestList;
-var reverseList;
-var localTrialNo;
-var localReversalNo;
-var globalTrialNo;
-var set_conditionComponents;
 function set_conditionRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'set_condition'-------
@@ -378,19 +330,18 @@ function set_conditionRoutineBegin(snapshot) {
     imageSet = imageSetLvl;
     imageSetStr = imageSet.toString();
     setName = imageSetName;
-    nRefImage = 6; //TO DO
+    nRefImage = refSetNumber; 
     
-    initStep = nRefImage/2;
+    initStep = (nRefImage * 2);
     
     noOfMiniScenes  = 3;
     
     reversals = 0;
     trialCounter = 1;
-    reversals = 0
     
+    reversalsSharp = 0;
+    reversalsFlat =  0;
     
-    
-    maxNoFlat = 10;
     
     
     levList = new Array(2);
@@ -398,11 +349,10 @@ function set_conditionRoutineBegin(snapshot) {
     kestList = new Array(2);
     reverseList = new Array(2);
     localTrialNo = new Array(2);
-    localReversalNo = new Array(2);
     
     
-    globalTrialNo = 30;
-    
+    globalTrialNo = 60;
+    maxNoFlat = globalTrialNo/(noOfMiniScenes * 2);
     
     
     for(var i = 0; i < levList.length; i++)
@@ -411,16 +361,14 @@ function set_conditionRoutineBegin(snapshot) {
         respList[i] = new Array(noOfMiniScenes + 2);
         kestList[i] = new Array(noOfMiniScenes + 2);
         reverseList[i] = new Array(noOfMiniScenes + 2);
-        localTrialNo[i] = new Array(noOfMiniScenes + 2);
-        localReversalNo[i] = new Array(noOfMiniScenes + 2);
-        for(var j = 1; j < noOfMiniScenes + 2; j++)
+        localTrialNo[i] = new Array(noOfMiniScenes + 2)
+        for(var j = 1; j < levList[i].length; i++)
         {
             levList[i][j]= new Array(100).fill(0);
             respList[i][j] = new Array(100).fill(0);
             kestList[i][j] = new Array(100).fill(0);
             reverseList[i][j] = new Array(100).fill(0);
             localTrialNo[i][j] = 1;
-            localReversalNo[i][j] = 0;
         }
         
     }
@@ -436,7 +384,6 @@ function set_conditionRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
-
 
 function set_conditionRoutineEachFrame(snapshot) {
   return function () {
@@ -471,7 +418,6 @@ function set_conditionRoutineEachFrame(snapshot) {
   };
 }
 
-
 function set_conditionRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'set_condition'-------
@@ -487,21 +433,6 @@ function set_conditionRoutineEnd(snapshot) {
   };
 }
 
-
-var leftImage;
-var rightImage;
-var staircase;
-var currentScene;
-var currentStaircase;
-var phi;
-var initN;
-var trial;
-var refSide;
-var compSide;
-var nCompQuality;
-var comp_num;
-var _resp_allKeys;
-var trialComponents;
 function trialRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'trial'-------
@@ -519,31 +450,32 @@ function trialRoutineBegin(snapshot) {
     currentStaircase = Math.random();
     
     
-        
     
     if(trialCounter <= globalTrialNo/2)
     {
+    //if ((Math.random() > 0.5)) {
         phi = 0.25;
         initN = (nRefImage * 2);
         staircase = 0;
-        if(localTrialNo[staircase][currentScene] > globalTrialNo/noOfMiniScenes/2){
-            for(var i = 1; i <= noOfMiniScenes; i++)
-                if(localTrialNo[staircase][i] <= globalTrialNo/noOfMiniScenes/2){
-                    currentScene = i;
-                    }
-                   }           
+        if(localTrialNo[staircase][currentScene] > maxNoFlat){
+            for(var i = 1; i <= noOfMiniScenes; i++){
+                if(localTrialNo[staircase][i] <= maxNoFlat){
+                    currentScene = i;}
+                   }
+       //           }
+                    
     }
     else {
+    //if  ((Math.random() <= 0.5)){
         phi = 0.75;
-        initN = (nRefImage / 2);
+        initN = (nRefImage / 4);
         staircase = 1;
-        if(localTrialNo[staircase][currentScene] > globalTrialNo/noOfMiniScenes/2){
-            for(var i = 1; i <= noOfMiniScenes; i++)
-                if(localTrialNo[staircase][i] <= globalTrialNo/noOfMiniScenes/2){
-                    currentScene = i;
+        if(localTrialNo[staircase][currentScene] > maxNoFlat){
+            for(var i = 1; i <= noOfMiniScenes; i++){
+                if(localTrialNo[staircase][i] <= maxNoFlat){
+                    currentScene = i;}
                     }
-                    }
-    
+     //               }
     }
     
     
@@ -566,7 +498,7 @@ function trialRoutineBegin(snapshot) {
         } 
         else
         {
-            levList[staircase][currentScene][trial] = (levList[staircase][currentScene][(trial - 1)] - ((initStep / (localReversalNo[staircase][currentScene] + 2)) * (kestList[staircase][currentScene][(trial - 1)] - phi)));
+            levList[staircase][currentScene][trial] = (levList[staircase][currentScene][(trial - 1)] - ((initStep / (reversals + 2)) * (kestList[staircase][currentScene][(trial - 1)] - phi)));
         }
     }
     if ((levList[staircase][currentScene][trial] > initN)) {
@@ -579,7 +511,7 @@ function trialRoutineBegin(snapshot) {
     console.log(trial);
     console.log(levList[staircase][currentScene][trial]);
     
-    nCompQuality = Number.parseInt(levList[staircase][currentScene][trial]);
+    nCompQuality = Number.parseInt(round(levList[staircase][currentScene][trial]));
     comp_num = nCompQuality;
     
     
@@ -591,8 +523,6 @@ function trialRoutineBegin(snapshot) {
         rightImage.src = `stimuli/${imageSetStr}/${currentScene}/${nRefImage}_${setName}.png`;
     }
     
-    leftImagePortrait.setImage(leftImage);
-    rightImagePortrait.setImage(rightImage);
     resp.keys = undefined;
     resp.rt = undefined;
     _resp_allKeys = [];
@@ -610,8 +540,6 @@ function trialRoutineBegin(snapshot) {
   }
 }
 
-
-var frameRemains;
 function trialRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'trial'-------
@@ -634,6 +562,10 @@ function trialRoutineEachFrame(snapshot) {
       leftImagePortrait.setAutoDraw(false);
     }
     
+    if (leftImagePortrait.status === PsychoJS.Status.STARTED){ // only update if being drawn
+      leftImagePortrait.setImage(leftImage, false);
+    }
+    
     // *rightImagePortrait* updates
     if (t >= 0.5 && rightImagePortrait.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -648,6 +580,10 @@ function trialRoutineEachFrame(snapshot) {
       rightImagePortrait.setAutoDraw(false);
     }
     
+    if (rightImagePortrait.status === PsychoJS.Status.STARTED){ // only update if being drawn
+      rightImagePortrait.setImage(rightImage, false);
+    }
+    
     // *text_2* updates
     if (t >= 5.5 && text_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -659,7 +595,7 @@ function trialRoutineEachFrame(snapshot) {
 
     
     // *resp* updates
-    if (t >= 0 && resp.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 5.5 && resp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       resp.tStart = t;  // (not accounting for frame time here)
       resp.frameNStart = frameN;  // exact frame index
@@ -707,8 +643,6 @@ function trialRoutineEachFrame(snapshot) {
   };
 }
 
-
-var kestResp;
 function trialRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'trial'-------
@@ -717,39 +651,43 @@ function trialRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData("Trial No.", trialCounter);
-    psychoJS.experiment.addData("Scene No", currentScene);
-    psychoJS.experiment.addData("Scene Trial No.", localTrialNo[staircase][currentScene]);
+    psychoJS.experiment.addData("Trial No.", trial);
     psychoJS.experiment.addData("Comp Side", (refSide * (- 1)));
     psychoJS.experiment.addData("Ref Num", nRefImage);
     psychoJS.experiment.addData("Level List", levList[staircase][currentScene][trial]);
     psychoJS.experiment.addData("Bounce Num", comp_num);
     psychoJS.experiment.addData("Staircase", staircase);
-    
+    psychoJS.experiment.addData("Scene No", currentScene);
     
     kestResp = 0;
     if(staircase == 0)
     {
-        if (((compSide < 0) && (resp.keys === "left"))) 
-            kestResp = 1;
-        else if (((compSide > 0) && (resp.keys === "right"))) 
-            kestResp = 1;
+        if (((compSide < 0) && (resp.keys === "left"))) {
+        kestResp = 1;
     }
-    else if(staircase == 1)
+    else {
+            if (((compSide > 0) && (resp.keys === "right"))) 
+            {
+                kestResp = 1;
+            }
+        }
+    }
+    else
     {
-        if (((compSide > 0) && (resp.keys === "left"))) 
+        if (((compSide > 0) && (resp.keys === "left"))) {
+        kestResp = 1;
+    } else {
+        if (((compSide < 0) && (resp.keys === "right"))) {
             kestResp = 1;
-        else if (((compSide < 0) && (resp.keys === "right"))) 
-            kestResp = 1;
+        }
+    }
     }
     
     kestList[staircase][currentScene][trial] = kestResp;
     psychoJS.experiment.addData("comp>ref?", kestResp);
-    
     if ((localTrialNo[staircase][currentScene] > 1)) {
         if ((kestList[staircase][currentScene][trial] !== kestList[staircase][currentScene][(trial - 1)])) {
             reversals += 1;
-            localReversalNo[staircase][currentScene] += 1;
             reverseList[staircase][currentScene][reversals] = levList[staircase][currentScene][(trial - 1)];
         }
     }
@@ -771,8 +709,6 @@ function trialRoutineEnd(snapshot) {
   };
 }
 
-
-var endComponents;
 function endRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'end'-------
@@ -790,7 +726,6 @@ function endRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
-
 
 function endRoutineEachFrame(snapshot) {
   return function () {
@@ -825,7 +760,6 @@ function endRoutineEachFrame(snapshot) {
   };
 }
 
-
 function endRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'end'-------
@@ -840,7 +774,6 @@ function endRoutineEnd(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
-
 
 function endLoopIteration(scheduler, snapshot) {
   // ------Prepare for next entry------
@@ -864,14 +797,12 @@ function endLoopIteration(scheduler, snapshot) {
   };
 }
 
-
 function importConditions(currentLoop) {
   return function () {
     psychoJS.importAttributes(currentLoop.getCurrentTrial());
     return Scheduler.Event.NEXT;
     };
 }
-
 
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
