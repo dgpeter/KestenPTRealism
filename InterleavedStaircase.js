@@ -63,7 +63,7 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'imageConds2.xlsx', 'path': 'imageConds2.xlsx'}
+    {'name': 'imageConds3.xlsx', 'path': 'imageConds3.xlsx'}
   ]
 });
 
@@ -259,7 +259,7 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'imageConds2.xlsx',
+    trialList: 'imageConds3.xlsx',
     seed: undefined, name: 'trials_2'
   });
   psychoJS.experiment.addLoop(trials_2); // add the loop to the experiment
@@ -523,6 +523,8 @@ function trialRoutineBegin(snapshot) {
         rightImage.src = `stimuli/${imageSetStr}/${currentScene}/${nRefImage}_${setName}.png`;
     }
     
+    leftImagePortrait.setImage(leftImage);
+    rightImagePortrait.setImage(rightImage);
     resp.keys = undefined;
     resp.rt = undefined;
     _resp_allKeys = [];
@@ -562,10 +564,6 @@ function trialRoutineEachFrame(snapshot) {
       leftImagePortrait.setAutoDraw(false);
     }
     
-    if (leftImagePortrait.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      leftImagePortrait.setImage(leftImage, false);
-    }
-    
     // *rightImagePortrait* updates
     if (t >= 0.5 && rightImagePortrait.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -578,10 +576,6 @@ function trialRoutineEachFrame(snapshot) {
     frameRemains = 0.5 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((rightImagePortrait.status === PsychoJS.Status.STARTED || rightImagePortrait.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       rightImagePortrait.setAutoDraw(false);
-    }
-    
-    if (rightImagePortrait.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      rightImagePortrait.setImage(rightImage, false);
     }
     
     // *text_2* updates
