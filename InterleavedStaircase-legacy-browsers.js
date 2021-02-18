@@ -359,6 +359,9 @@ var reverseList;
 var localTrialNo;
 var globalTrialNo;
 var maxNoFlat;
+var images1;
+var images2;
+var images3;
 var set_conditionComponents;
 function set_conditionRoutineBegin(snapshot) {
   return function () {
@@ -413,6 +416,21 @@ function set_conditionRoutineBegin(snapshot) {
         }
         
     }
+    
+    images1 = new Array();
+    images2 = new Array();
+    images3 = new Array();
+    
+    function preload(images, set) {
+        for (var i = 0; i < 22; i++) {
+            images[i] = new Image();
+            images[i].src = `stimuli/${imageSetStr}/${set}/${i}_${setName}.png`;
+        }
+    }
+    
+    preload(images1, 1);
+    preload(images2, 2);
+    preload(images3, 3);
     
     
     
@@ -480,9 +498,6 @@ function set_conditionRoutineEnd(snapshot) {
 
 var leftImage;
 var rightImage;
-var images1;
-var images2;
-var images3;
 var staircase;
 var currentScene;
 var currentStaircase;
@@ -508,20 +523,7 @@ function trialRoutineBegin(snapshot) {
     leftImage = new Image();
     rightImage = new Image();
     
-    images1 = new Array();
-    images2 = new Array();
-    images3 = new Array();
     
-    function preload(images, set) {
-        for (var i = 0; i < 22; i++) {
-            images[i] = new Image();
-            images[i].src = `stimuli/${imageSetStr}/${set}/${i}_${setName}.png`;
-        }
-    }
-    
-    preload(images1, 1);
-    preload(images2, 2);
-    preload(images3, 3);
     
     
     staircase = 0;
