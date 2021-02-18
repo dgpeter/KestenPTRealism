@@ -515,9 +515,9 @@ function trialRoutineBegin(snapshot) {
     leftImage = new Image();
     rightImage = new Image();
     
-    images1 = [];
-    images2 = [];
-    images3 = [];
+    images1 = new Array();
+    images2 = new Array();
+    images3 = new Array();
     
     function preload(images, set) {
         for (var i = 0; i < 22; i++) {
