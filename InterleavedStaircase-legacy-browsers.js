@@ -781,10 +781,10 @@ function trialRoutineEnd(snapshot) {
     else
     {
         if (((compSide > 0) && (resp.keys === "left"))) {
-        kestResp = 1;
+        kestResp = -1;
     } else {
         if (((compSide < 0) && (resp.keys === "right"))) {
-            kestResp = 1;
+            kestResp = -1;
         }
     }
     }
