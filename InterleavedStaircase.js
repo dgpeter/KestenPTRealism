@@ -602,12 +602,24 @@ function trialRoutineBegin(snapshot) {
             levList[staircase][currentScene][trial] = (levList[staircase][currentScene][(trial - 1)] - ((initStep / (reversals + 2)) * (kestList[staircase][currentScene][(trial - 1)] - phi)));
         }
     }
-    if ((levList[staircase][currentScene][trial] > initN)) {
-        levList[staircase][currentScene][trial] = initN;
-    }
+    if(staircase == 0)
+    {
+        if ((levList[staircase][currentScene][trial] > initN)) {
+            levList[staircase][currentScene][trial] = initN;
+        }
     
-    if ((levList[staircase][currentScene][trial] < 1)) {
-        levList[staircase][currentScene][trial] = 1;
+        if ((levList[staircase][currentScene][trial] < 0)) {
+            levList[staircase][currentScene][trial] = 0;
+        }
+    }
+    else
+    {
+        if ((levList[staircase][currentScene][trial] < initN)) {
+            levList[staircase][currentScene][trial] = initN;
+        }
+        if ((levList[staircase][currentScene][trial] < 0)) {
+            levList[staircase][currentScene][trial] = 0;
+        } 
     }
     console.log(trial);
     console.log(levList[staircase][currentScene][trial]);
