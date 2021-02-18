@@ -411,7 +411,7 @@ function set_conditionRoutineBegin(snapshot) {
         kestList[i] = new Array(noOfMiniScenes + 2);
         reverseList[i] = new Array(noOfMiniScenes + 2);
         localTrialNo[i] = new Array(noOfMiniScenes + 2);
-        for(var j = 1; j < levList[i].length; i++)
+        for(var j = 1; j <= noOfMiniScenes + 2; j++)
         {
             levList[i][j]= new Array(100).fill(0);
             respList[i][j] = new Array(100).fill(0);
