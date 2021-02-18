@@ -487,11 +487,15 @@ function set_conditionRoutineEnd(snapshot) {
 
 var leftImage;
 var rightImage;
+var images1;
+var images2;
+var images3;
 var staircase;
 var currentScene;
 var currentStaircase;
 var phi;
 var initN;
+var images;
 var trial;
 var refSide;
 var compSide;
@@ -509,6 +513,21 @@ function trialRoutineBegin(snapshot) {
     // update component parameters for each repeat
     leftImage = new Image();
     rightImage = new Image();
+    
+    images1 = []
+    images2 = []
+    images3 = []
+    
+    function preload(images, set) {
+        for (var i = 0; i < 22; i++) {
+            images[i] = new Image();
+            images[i].src = `stimuli/${imageSetStr}/${set}/${i}_${setName}.png`;
+        }
+    }
+    
+    preload(images1, 1);
+    preload(images2, 2);
+    preload(images3, 3);
     
     staircase = 0;
     
@@ -543,6 +562,22 @@ function trialRoutineBegin(snapshot) {
                     }
                  }
     }
+    
+    
+    images = []
+    if (currentScene == 1)
+    {
+        images = images1;
+    }
+    else if (currentScene == 2)
+    {
+        images = images2;
+    }
+    else if (currentScene == 3)
+    {
+        images = images3;
+    }
+    
     
     
     trial = localTrialNo[staircase][currentScene];   
@@ -582,11 +617,11 @@ function trialRoutineBegin(snapshot) {
     
     
     if ((refSide === (- 1))) {
-        leftImage.src = `stimuli/${imageSetStr}/${currentScene}/${nRefImage}_${setName}.png`;
-        rightImage.src = `stimuli/${imageSetStr}/${currentScene}/${comp_num}_${setName}.png`;
+        leftImage = images[nRefImage];
+        rightImage = images[comp_num];
     } else {
-        leftImage.src = `stimuli/${imageSetStr}/${currentScene}/${comp_num}_${setName}.png`;
-        rightImage.src = `stimuli/${imageSetStr}/${currentScene}/${nRefImage}_${setName}.png`;
+        leftImage = images[comp_num];
+        rightImage = images[nRefImage];
     }
     
     leftImagePortrait.setImage(leftImage);
