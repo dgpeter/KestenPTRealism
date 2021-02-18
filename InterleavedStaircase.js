@@ -499,6 +499,7 @@ var images;
 var trial;
 var refSide;
 var compSide;
+var stairFactor;
 var nCompQuality;
 var comp_num;
 var _resp_allKeys;
@@ -588,18 +589,20 @@ function trialRoutineBegin(snapshot) {
         refSide = (- 1);
     }
     compSide = (refSide * (- 1));
-    
+    stairFactor = 1;
+    if(staircase == 1){
+        stairFactor = -1;}
     if ((trial === 1)) {
         levList[staircase][currentScene][trial] = initN;
     } else
     {
         if ((trial === 2)) 
         {
-            levList[staircase][currentScene][trial] = (initN - ((initStep / 2) * (kestList[staircase][currentScene][(trial - 1)] - phi)));
+            levList[staircase][currentScene][trial] = stairFactor * (initN - ((initStep / 2) * (kestList[staircase][currentScene][(trial - 1)] - phi)));
         } 
         else
         {
-            levList[staircase][currentScene][trial] = (levList[staircase][currentScene][(trial - 1)] - ((initStep / (reversals + 2)) * (kestList[staircase][currentScene][(trial - 1)] - phi)));
+            levList[staircase][currentScene][trial] = stairFactor * (levList[staircase][currentScene][(trial - 1)] - ((initStep / (reversals + 2)) * (kestList[staircase][currentScene][(trial - 1)] - phi)));
         }
     }
     console.log("Trial is: " + trial);
@@ -787,10 +790,10 @@ function trialRoutineEnd(snapshot) {
     else
     {
         if (((compSide > 0) && (resp.keys === "left"))) {
-        kestResp = -1;
+        kestResp = 1;
     } else {
         if (((compSide < 0) && (resp.keys === "right"))) {
-            kestResp = -1;
+            kestResp = 1;
         }
     }
     }
