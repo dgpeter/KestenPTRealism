@@ -392,7 +392,7 @@ function set_conditionRoutineBegin(snapshot) {
     localTrialNo = new Array(2);
     
     
-    globalTrialNo = 60;
+    globalTrialNo = 18;
     maxNoFlat = globalTrialNo/(noOfMiniScenes * 2);
     
     
@@ -514,7 +514,7 @@ function trialRoutineBegin(snapshot) {
     {
     //if ((Math.random() > 0.5)) {
         phi = 0.25;
-        initN = (nRefImage * 2);
+        initN = (nRefImage * 3);
         staircase = 0;
         if(localTrialNo[staircase][currentScene] > maxNoFlat){
             for(var i = 1; i <= noOfMiniScenes; i++){
@@ -527,7 +527,7 @@ function trialRoutineBegin(snapshot) {
     else {
     //if  ((Math.random() <= 0.5)){
         phi = 0.75;
-        initN = (nRefImage / 4);
+        initN = 0;
         staircase = 1;
         if(localTrialNo[staircase][currentScene] > maxNoFlat){
             for(var i = 1; i <= noOfMiniScenes; i++){
