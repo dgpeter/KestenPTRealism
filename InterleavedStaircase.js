@@ -390,7 +390,7 @@ function set_conditionRoutineBegin(snapshot) {
     set_conditionClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
-    routineTimer.add(6.000000);
+    routineTimer.add(15.000000);
     // update component parameters for each repeat
     imageSet = imageSetLvl;
     imageSetStr = imageSet.toString();
@@ -485,7 +485,7 @@ function set_conditionRoutineEachFrame(snapshot) {
       text_3.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 15 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_3.status === PsychoJS.Status.STARTED || text_3.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_3.setAutoDraw(false);
     }
