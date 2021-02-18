@@ -487,6 +487,9 @@ function set_conditionRoutineEnd(snapshot) {
 
 var leftImage;
 var rightImage;
+var images1;
+var images2;
+var images3;
 var staircase;
 var currentScene;
 var currentStaircase;
@@ -512,6 +515,20 @@ function trialRoutineBegin(snapshot) {
     leftImage = new Image();
     rightImage = new Image();
     
+    images1 = [];
+    images2 = [];
+    images3 = [];
+    
+    function preload(images, set) {
+        for (var i = 0; i < 22; i++) {
+            images[i] = new Image();
+            images[i].src = `stimuli/${imageSetStr}/${set}/${i}_${setName}.png`;
+        }
+    }
+    
+    preload(images1, 1);
+    preload(images2, 2);
+    preload(images3, 3);
     
     
     staircase = 0;
