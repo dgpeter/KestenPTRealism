@@ -602,6 +602,8 @@ function trialRoutineBegin(snapshot) {
             levList[staircase][currentScene][trial] = (levList[staircase][currentScene][(trial - 1)] - ((initStep / (reversals + 2)) * (kestList[staircase][currentScene][(trial - 1)] - phi)));
         }
     }
+    console.log("Trial is: " + trial);
+    console.log("Level before is: " + levList[staircase][currentScene][trial]);
     if(staircase == 0)
     {
         if ((levList[staircase][currentScene][trial] > initN)) {
@@ -621,8 +623,7 @@ function trialRoutineBegin(snapshot) {
             levList[staircase][currentScene][trial] = 0;
         } 
     }
-    console.log(trial);
-    console.log(levList[staircase][currentScene][trial]);
+    console.log("Level after is: " + levList[staircase][currentScene][trial]);
     
     nCompQuality = Number.parseInt(round(levList[staircase][currentScene][trial]));
     comp_num = nCompQuality;
