@@ -677,17 +677,18 @@ function trialRoutineBegin(snapshot) {
     nCompQuality = Number.parseInt(round(levList[staircase][currentScene][trial]));
     comp_num = nCompQuality;
     
-    
+    leftImage= ""
+    rightImage = "" 
     if ((refSide === (- 1))) {
-        leftImagePortrait = `stimuli/${imageSetStr}/${setName}/${nRefImage}_${setName}.png`;
+        leftImage = `stimuli/${imageSetStr}/${setName}/${nRefImage}_${setName}.png`;
         rightImage = `stimuli/${imageSetStr}/${setName}/${comp_num}_${setName}.png`;
     } else {
         leftImage = `stimuli/${imageSetStr}/${setName}/${comp_num}_${setName}.png`;
         rightImage = `stimuli/${imageSetStr}/${setName}/${nRefImage}_${setName}.png`;
     }
     
-    leftImagePortrait.setImage('');
-    rightImagePortrait.setImage('');
+    leftImagePortrait.setImage(leftImage);
+    rightImagePortrait.setImage(rightImage);
     resp.keys = undefined;
     resp.rt = undefined;
     _resp_allKeys = [];
