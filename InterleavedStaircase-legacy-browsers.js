@@ -672,11 +672,11 @@ function trialRoutineBegin(snapshot) {
     
     
     if ((refSide === (- 1))) {
-        leftImagePortrait = `stimuli/${imageSetStr}/${set}/${nRefImage}_${setName}.png`;
-        rightImage = `stimuli/${imageSetStr}/${set}/${comp_num}_${setName}.png`;
+        leftImagePortrait = `stimuli/${imageSetStr}/${setName}/${nRefImage}_${setName}.png`;
+        rightImage = `stimuli/${imageSetStr}/${setName}/${comp_num}_${setName}.png`;
     } else {
-        leftImage = `stimuli/${imageSetStr}/${set}/${comp_num}_${setName}.png`;
-        rightImage = `stimuli/${imageSetStr}/${set}/${nRefImage}_${setName}.png`;
+        leftImage = `stimuli/${imageSetStr}/${setName}/${comp_num}_${setName}.png`;
+        rightImage = `stimuli/${imageSetStr}/${setName}/${nRefImage}_${setName}.png`;
     }
     
     leftImagePortrait.setImage('');
