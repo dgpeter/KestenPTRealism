@@ -28,7 +28,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'InterleavedStaircase';  // from the Builder filename that created this script
-let expInfo = {'Participant:': ''};
+let expInfo = {'participant': ''};
 
 // Start code blocks for 'Before Experiment'
 // schedule the experiment:
@@ -102,6 +102,7 @@ var rightImagePortrait;
 var text_2;
 var resp;
 var endClock;
+var text_4;
 var globalClock;
 var routineTimer;
 function experimentInit() {
@@ -110,7 +111,7 @@ function experimentInit() {
   text = new visual.TextStim({
     win: psychoJS.window,
     name: 'text',
-    text: 'Please evaluate the quality differences between the two scenes.\n\nPress  ‘left’  if you think the stimulus on the left is of higher quality\n\nPress  ‘right’ if you think the stimulus on the right is of higer quality\n\nPress any key to start',
+    text: 'Please evaluate the differences in realism between the two scenes. Each comparison will last 5 seconds and then you will be required to: \n\nPress  ‘left’  if you think the stimulus on the left was more realistic\n\nPress  ‘right’ if you think the stimulus on the right was more realistic\n\nPress any key to start',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -168,6 +169,17 @@ function experimentInit() {
   
   // Initialize components for Routine "end"
   endClock = new util.Clock();
+  text_4 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_4',
+    text: 'Thank you for participating in this trial. ',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
@@ -326,7 +338,7 @@ function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 18, method: TrialHandler.Method.RANDOM,
+    nReps: 60, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'trials'
@@ -379,6 +391,8 @@ var reverseList;
 var localTrialNo;
 var globalTrialNo;
 var maxNoFlat;
+var leftImage;
+var rightImage;
 var images1;
 var images2;
 var images3;
@@ -390,7 +404,7 @@ function set_conditionRoutineBegin(snapshot) {
     set_conditionClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
-    routineTimer.add(15.000000);
+    routineTimer.add(2.000000);
     // update component parameters for each repeat
     imageSet = imageSetLvl;
     imageSetStr = imageSet.toString();
@@ -416,7 +430,7 @@ function set_conditionRoutineBegin(snapshot) {
     localTrialNo = new Array(2);
     
     
-    globalTrialNo = 18;
+    globalTrialNo = 60;
     maxNoFlat = globalTrialNo/(noOfMiniScenes * 2);
     
     
@@ -438,13 +452,22 @@ function set_conditionRoutineBegin(snapshot) {
         
     }
     
+    leftImage = new Image();
+    rightImage = new Image();
+    
+    
     images1 = new Array();
     images2 = new Array();
     images3 = new Array();
     
-    function preload(images, set) {
-        for (var i = 0; i < 22; i++) {
-            images[i] = new Image();
+    function preload(images, set, index) {
+        index = index || 0
+        maxNo = 22
+        if (imageArray && maxNo > index) {
+                var img = new Image ();
+                img.onload = function() {
+                    preload(images, set, index + 1);
+                }
             images[i].src = `stimuli/${imageSetStr}/${set}/${i}_${setName}.png`;
         }
     }
@@ -485,7 +508,7 @@ function set_conditionRoutineEachFrame(snapshot) {
       text_3.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 15 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_3.status === PsychoJS.Status.STARTED || text_3.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_3.setAutoDraw(false);
     }
@@ -529,8 +552,6 @@ function set_conditionRoutineEnd(snapshot) {
 }
 
 
-var leftImage;
-var rightImage;
 var staircase;
 var currentScene;
 var currentStaircase;
@@ -553,9 +574,6 @@ function trialRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    leftImage = new Image();
-    rightImage = new Image();
-    
     
     
     
@@ -872,9 +890,11 @@ function endRoutineBegin(snapshot) {
     endClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    routineTimer.add(1.000000);
     // update component parameters for each repeat
     // keep track of which components have finished
     endComponents = [];
+    endComponents.push(text_4);
     
     for (const thisComponent of endComponents)
       if ('status' in thisComponent)
@@ -891,6 +911,20 @@ function endRoutineEachFrame(snapshot) {
     t = endClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *text_4* updates
+    if (t >= 0.0 && text_4.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_4.tStart = t;  // (not accounting for frame time here)
+      text_4.frameNStart = frameN;  // exact frame index
+      
+      text_4.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_4.status === PsychoJS.Status.STARTED || text_4.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_4.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -909,7 +943,7 @@ function endRoutineEachFrame(snapshot) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -926,9 +960,6 @@ function endRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    // the Routine "end" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
   };
 }

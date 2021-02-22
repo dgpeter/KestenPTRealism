@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.10),
-    on February 16, 2021, at 19:09
+    on February 22, 2021, at 15:38
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.2.10'
 expName = 'InterleavedStaircase'  # from the Builder filename that created this script
-expInfo = {'participant': '', 'session': '001'}
+expInfo = {'participant': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -65,8 +65,8 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # Setup the Window
 win = visual.Window(
-    size=[1536, 864], fullscr=True, screen=0, 
-    winType='pyglet', allowGUI=False, allowStencil=False,
+    size=[1536, 864], fullscr=False, screen=0, 
+    winType='pyglet', allowGUI=True, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
     units='norm')
@@ -83,7 +83,7 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "Instructions"
 InstructionsClock = core.Clock()
 text = visual.TextStim(win=win, name='text',
-    text='Please evaluate the quality differences between the two scenes.\n\nPress  ‘left’  if you think the stimulus on the left is of higher quality\n\nPress  ‘right’ if you think the stimulus on the right is of higer quality\n\nPress any key to start',
+    text='Please evaluate the differences in realism between the two scenes. Each comparison will last 5 seconds and then you will be required to: \n\nPress  ‘left’  if you think the stimulus on the left was more realistic\n\nPress  ‘right’ if you think the stimulus on the right was more realistic\n\nPress any key to start',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -93,6 +93,13 @@ key_resp = keyboard.Keyboard()
 
 # Initialize components for Routine "set_condition"
 set_conditionClock = core.Clock()
+text_3 = visual.TextStim(win=win, name='text_3',
+    text='Loading...',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
 
 # Initialize components for Routine "trial"
 trialClock = core.Clock()
@@ -100,7 +107,7 @@ leftImagePortrait = visual.ImageStim(
     win=win,
     name='leftImagePortrait', 
     image='sin', mask=None,
-    ori=0, pos=(-0.5, 0), size=(1, 1),
+    ori=0, pos=(-0.5, 0), size=(0.99, 0.99),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -109,7 +116,7 @@ rightImagePortrait = visual.ImageStim(
     win=win,
     name='rightImagePortrait', 
     image='sin', mask=None,
-    ori=0, pos=(0.5, 0), size=(1, 1),
+    ori=0, pos=(0.5, 0), size=(0.99, 0.99),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
@@ -124,6 +131,13 @@ resp = keyboard.Keyboard()
 
 # Initialize components for Routine "end"
 endClock = core.Clock()
+text_4 = visual.TextStim(win=win, name='text_4',
+    text='Thank you for participating in this trial. ',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -219,7 +233,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_2 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('imageConds2.xlsx'),
+    trialList=data.importConditions('imageConds3.xlsx'),
     seed=None, name='trials_2')
 thisExp.addLoop(trials_2)  # add the loop to the experiment
 thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
@@ -237,13 +251,14 @@ for thisTrial_2 in trials_2:
     
     # ------Prepare to start Routine "set_condition"-------
     continueRoutine = True
+    routineTimer.add(2.000000)
     # update component parameters for each repeat
     imageSet = imageSetLvl
     imageSetStr = str(imageSet)
     setName = imageSetName
     nRefImage = refSetNumber
     
-    initStep = (nRefImage * 2)
+    initStep = (nRefImage)
     
     noOfMiniScenes  = 3
     
@@ -255,22 +270,37 @@ for thisTrial_2 in trials_2:
     
     
     
+    levList = [0] * 2
+    respList = [0] * 2
+    kestList = [0] * 2
+    reverseList = [0] * 2
+    localTrialNo = [0] * 2
+    staircaseTrialNo = [1] * 2
     
-    levList = [[[0] * 100] * (noOfMiniScenes+2)] * 2
-    respList = [[[0] * 100] * (noOfMiniScenes+2)] * 2
-    kestList = [[[0] * 100] * (noOfMiniScenes+2)] * 2
-    reverseList = [[[0] * 100] * (noOfMiniScenes+2)] * 2
-    localTrialNo = [[1] * (noOfMiniScenes + 2)] * 2
+    for i in range(2):
+        levList[i] = [0] * (noOfMiniScenes + 2)
+        respList[i] = [0] * (noOfMiniScenes + 2)
+        kestList[i] = [0] * (noOfMiniScenes + 2)
+        reverseList[i] = [0] * (noOfMiniScenes + 2)
+        localTrialNo[i] = [0] * (noOfMiniScenes + 2)
+        for j in range(noOfMiniScenes + 2):
+            levList[i][j] = [0] * 100
+            respList[i][j] = [0] * 100
+            kestList[i][j] = [0] * 100
+            reverseList[i][j] = [0] * 100
+            localTrialNo[i][j] = 1
+            
+            
     
     
-    globalTrialNo = 18
+    globalTrialNo = 60
     maxNoFlat = globalTrialNo/(noOfMiniScenes * 2)
     
     
     
     
     # keep track of which components have finished
-    set_conditionComponents = []
+    set_conditionComponents = [text_3]
     for thisComponent in set_conditionComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -285,13 +315,30 @@ for thisTrial_2 in trials_2:
     frameN = -1
     
     # -------Run Routine "set_condition"-------
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = set_conditionClock.getTime()
         tThisFlip = win.getFutureFlipTime(clock=set_conditionClock)
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *text_3* updates
+        if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_3.frameNStart = frameN  # exact frame index
+            text_3.tStart = t  # local t and not account for scr refresh
+            text_3.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
+            text_3.setAutoDraw(True)
+        if text_3.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_3.tStartRefresh + 2-frameTolerance:
+                # keep track of stop time/frame for later
+                text_3.tStop = t  # not accounting for scr refresh
+                text_3.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_3, 'tStopRefresh')  # time at next scr refresh
+                text_3.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -314,11 +361,11 @@ for thisTrial_2 in trials_2:
     for thisComponent in set_conditionComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    # the Routine "set_condition" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
+    trials_2.addData('text_3.started', text_3.tStartRefresh)
+    trials_2.addData('text_3.stopped', text_3.tStopRefresh)
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=18, method='random', 
+    trials = data.TrialHandler(nReps=60, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -340,33 +387,39 @@ for thisTrial_2 in trials_2:
         continueRoutine = True
         # update component parameters for each repeat
         
-        images1  = [f'stimuli/{imageSetStr}/1/{i}_{imageSetName}.png' for i in range(22)]
+        images1 = [f'stimuli/{imageSetStr}/1/{i}_{imageSetName}.png' for i in range(22)]
         images2 = [f'stimuli/{imageSetStr}/2/{i}_{imageSetName}.png' for i in range(22)]
         images3 = [f'stimuli/{imageSetStr}/3/{i}_{imageSetName}.png' for i in range(22)]
         
         currentScene = int(random() * noOfMiniScenes) + 1
+        staircase = round(random()) 
         
-        
-        if trialCounter <= globalTrialNo/(2*2):
-            phi = 0.25
-            initN = nRefImage * 3
-            staircase = 0
-            if localTrialNo[staircase][currentScene] > maxNoFlat:
-                i = 1 
-                while (i <= noOfMiniScenes): 
-                    if localTrialNo[staircase][currentScene] <= maxNoFlat:
-                        currentScene = i
-                    i = i + 1
-        else:
-            phi = 0.75
-            initN = 0
+        if staircase == 0 and staircaseTrialNo[staircase] > globalTrialNo/2:
             staircase = 1
-            if localTrialNo[staircase][currentScene] > maxNoFlat:
-                i = 1 
-                while (i <= noOfMiniScenes):  
-                    if localTrialNo[staircase][currentScene] <= maxNoFlat:              
-                        currentScene = i
-                    i = i + 1
+        if staircase == 1 and staircaseTrialNo[staircase] > globalTrialNo/2:
+            staircase = 0
+        
+        if trialCounter <= globalTrialNo:
+            if staircase == 0:
+                    phi = 0.25
+                    initN = nRefImage * 3
+                    staircaseTrialNo[staircase] += 1
+                    if localTrialNo[staircase][currentScene] > maxNoFlat:
+                        i = 1 
+                        while (i <= noOfMiniScenes): 
+                            if localTrialNo[staircase][i] <= maxNoFlat:
+                                currentScene = i
+                            i = i + 1
+            else:
+                    phi = 0.75
+                    initN = 0
+                    staircaseTrialNo[staircase] += 1
+                    if localTrialNo[staircase][currentScene] > maxNoFlat:
+                        i = 1 
+                        while (i <= noOfMiniScenes):  
+                            if localTrialNo[staircase][i] <= maxNoFlat:              
+                                currentScene = i
+                            i = i + 1
         
         if currentScene == 1:
             images = images1
@@ -374,8 +427,9 @@ for thisTrial_2 in trials_2:
             images = images2
         elif currentScene == 3:
             images = images3
-        print(currentScene)
+        print("Current local scene no is: " + str(currentScene))
         trial = localTrialNo[staircase][currentScene]
+        print("Trial is: " + str(trial) + " " + str(staircase))
         
         if random() > 0.5:
             refSide = 1
@@ -391,14 +445,21 @@ for thisTrial_2 in trials_2:
         else:
             levList[staircase][currentScene][trial] = levList[staircase][currentScene][trial-1]-(initStep/(reversals+2))*(kestList[staircase][currentScene][trial-1]-phi)
         
+        print("Before quality level is: " + str(levList[staircase][currentScene][trial]))
         # bound range
-        if levList[staircase][currentScene][trial] > initN:
-            levList[staircase][currentScene][trial] = initN
-        if levList[staircase][currentScene][trial] < 1:
-            levList[staircase][currentScene][trial] = 1
+        if staircase ==  0:
+            if levList[staircase][currentScene][trial] > initN:
+                levList[staircase][currentScene][trial] = initN
+            if levList[staircase][currentScene][trial] < 0:
+                levList[staircase][currentScene][trial] = 0
+        elif staircase == 1:
+            if levList[staircase][currentScene][trial] < initN:
+                levList[staircase][currentScene][trial] = initN
+            if levList[staircase][currentScene][trial] < 0:
+                levList[staircase][currentScene][trial] = 0
         
-        print(trial)
-        print(levList[staircase][currentScene][trial])
+        
+        print("Current quality level is: " + str(levList[staircase][currentScene][trial]))
         
         nCompQuality = int(round(levList[staircase][currentScene][trial]))
         
@@ -540,7 +601,7 @@ for thisTrial_2 in trials_2:
                 thisComponent.setAutoDraw(False)
         # store level and response
         #respList.append(response)
-        thisExp.addData('Trial No.', trial)
+        thisExp.addData('Trial No.', localTrialNo[staircase][currentScene])
         thisExp.addData('Comp Side', refSide * -1)
         thisExp.addData('Ref Num', nRefImage)
         thisExp.addData('Level List', levList[staircase][currentScene][trial])
@@ -549,17 +610,11 @@ for thisTrial_2 in trials_2:
         thisExp.addData('Scene No', currentScene)
         
         kestResp = 0
-        if staircase == 0:
-            if compSide < 0 and resp.keys == 'left':
-                kestResp = 1 # comp more realistic 
-            elif compSide > 0 and resp.keys == 'right':
-                kestResp = 1 # comp more realisitic
-        else:
-            if compSide > 0 and resp.keys == 'left':
-                kestResp = 1 # comp more realistic 
-            elif compSide < 0 and resp.keys == 'right':
-                kestResp = 1 # comp more realisitic
-            
+        if compSide < 0 and resp.keys == 'left':
+            kestResp = 1 # comp more realistic 
+        elif compSide > 0 and resp.keys == 'right':
+            kestResp = 1 # comp more realisitic
+        
         
         kestList[staircase][currentScene][trial] = kestResp
         thisExp.addData('comp>ref?', kestResp)
@@ -571,7 +626,7 @@ for thisTrial_2 in trials_2:
                 reverseList[staircase][currentScene][reversals] = levList[staircase][currentScene][trial-1]
         
         # increment trials
-        localTrialNo[staircase][currentScene] = localTrialNo[staircase][currentScene]+1
+        localTrialNo[staircase][currentScene] += 1
         trialCounter = trialCounter + 1 
         
         
@@ -595,7 +650,7 @@ for thisTrial_2 in trials_2:
         routineTimer.reset()
         thisExp.nextEntry()
         
-    # completed 18 repeats of 'trials'
+    # completed 60 repeats of 'trials'
     
     thisExp.nextEntry()
     
@@ -604,9 +659,10 @@ for thisTrial_2 in trials_2:
 
 # ------Prepare to start Routine "end"-------
 continueRoutine = True
+routineTimer.add(1.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
-endComponents = []
+endComponents = [text_4]
 for thisComponent in endComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -621,13 +677,30 @@ endClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
 # -------Run Routine "end"-------
-while continueRoutine:
+while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = endClock.getTime()
     tThisFlip = win.getFutureFlipTime(clock=endClock)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
+    
+    # *text_4* updates
+    if text_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_4.frameNStart = frameN  # exact frame index
+        text_4.tStart = t  # local t and not account for scr refresh
+        text_4.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_4, 'tStartRefresh')  # time at next scr refresh
+        text_4.setAutoDraw(True)
+    if text_4.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_4.tStartRefresh + 1.0-frameTolerance:
+            # keep track of stop time/frame for later
+            text_4.tStop = t  # not accounting for scr refresh
+            text_4.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_4, 'tStopRefresh')  # time at next scr refresh
+            text_4.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -650,8 +723,8 @@ while continueRoutine:
 for thisComponent in endComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# the Routine "end" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
+thisExp.addData('text_4.started', text_4.tStartRefresh)
+thisExp.addData('text_4.stopped', text_4.tStopRefresh)
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting

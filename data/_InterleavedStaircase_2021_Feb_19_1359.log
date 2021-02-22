@@ -1,0 +1,292 @@
+0.9418 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+8.4160 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023C79562748>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000023C792E3E10>, multiSample=False, name='window1', numSamples=2, pos=[192.0, 108.0], screen=0, size=array([1536,  864]), stencilBits=0, stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.4161 	EXP 	window1: mouseVisible = True
+8.4162 	EXP 	window1: recordFrameIntervals = False
+8.5824 	EXP 	window1: recordFrameIntervals = True
+8.7651 	EXP 	window1: recordFrameIntervals = False
+8.8924 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+8.8951 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_3', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Loading...', units='norm', win=Window(...), wrapWidth=1)
+8.8967 	EXP 	Created leftImagePortrait = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='leftImagePortrait', opacity=1.0, ori=0.0, pos=array([-0.5,  0. ]), size=array([0.99, 0.99]), texRes=128, units='norm', win=Window(...))
+8.8979 	EXP 	Created rightImagePortrait = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='rightImagePortrait', opacity=1.0, ori=0.0, pos=array([0.5, 0. ]), size=array([0.99, 0.99]), texRes=128, units='norm', win=Window(...))
+8.9001 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Please record your answer. ', units='norm', win=Window(...), wrapWidth=1)
+8.9290 	EXP 	text: autoDraw = True
+9.8908 	EXP 	Imported imageConds3.xlsx as conditions, 2 conditions, 3 params
+9.8909 	EXP 	Created sequence: sequential, trialTypes=2, nReps=1, seed=None
+9.8911 	EXP 	New trial (rep=0, index=0): OrderedDict([('imageSetLvl', 1), ('imageSetName', 'barber'), ('refSetNumber', 7)])
+9.8937 	DATA 	Keypress: return
+9.8966 	EXP 	text: autoDraw = False
+9.8966 	EXP 	text_3: autoDraw = True
+11.8801 	EXP 	Created sequence: random, trialTypes=1, nReps=18, seed=None
+11.8803 	EXP 	New trial (rep=0, index=0): None
+12.0913 	EXP 	window1: recordFrameIntervals = False
+12.0966 	EXP 	text_3: autoDraw = False
+12.0966 	EXP 	leftImagePortrait: image = 'stimuli/1/1/7_barber.png'
+12.0966 	EXP 	rightImagePortrait: image = 'stimuli/1/1/21_barber.png'
+12.0967 	EXP 	window1: recordFrameIntervals = False
+12.6071 	EXP 	leftImagePortrait: autoDraw = True
+12.6071 	EXP 	rightImagePortrait: autoDraw = True
+14.7147 	DATA 	Keypress: right
+17.5907 	EXP 	text_2: autoDraw = True
+17.6075 	EXP 	leftImagePortrait: autoDraw = False
+17.6075 	EXP 	rightImagePortrait: autoDraw = False
+17.9295 	EXP 	New trial (rep=1, index=0): None
+18.0019 	EXP 	window1: recordFrameIntervals = False
+18.0039 	DATA 	Keypress: right
+18.0072 	EXP 	leftImagePortrait: autoDraw = False
+18.0072 	EXP 	rightImagePortrait: autoDraw = False
+18.0072 	EXP 	text_2: autoDraw = False
+18.0072 	EXP 	leftImagePortrait: image = 'stimuli/1/3/7_barber.png'
+18.0072 	EXP 	rightImagePortrait: image = 'stimuli/1/3/21_barber.png'
+18.0073 	EXP 	window1: recordFrameIntervals = False
+18.5069 	EXP 	leftImagePortrait: autoDraw = True
+18.5069 	EXP 	rightImagePortrait: autoDraw = True
+23.5025 	EXP 	text_2: autoDraw = True
+23.5192 	EXP 	leftImagePortrait: autoDraw = False
+23.5192 	EXP 	rightImagePortrait: autoDraw = False
+24.6771 	EXP 	New trial (rep=2, index=0): None
+24.7621 	EXP 	window1: recordFrameIntervals = False
+24.7638 	DATA 	Keypress: left
+24.7675 	EXP 	leftImagePortrait: autoDraw = False
+24.7675 	EXP 	rightImagePortrait: autoDraw = False
+24.7675 	EXP 	text_2: autoDraw = False
+24.7675 	EXP 	leftImagePortrait: image = 'stimuli/1/1/18_barber.png'
+24.7675 	EXP 	rightImagePortrait: image = 'stimuli/1/1/7_barber.png'
+24.7676 	EXP 	window1: recordFrameIntervals = False
+25.2683 	EXP 	leftImagePortrait: autoDraw = True
+25.2683 	EXP 	rightImagePortrait: autoDraw = True
+30.2642 	EXP 	text_2: autoDraw = True
+30.2806 	EXP 	leftImagePortrait: autoDraw = False
+30.2806 	EXP 	rightImagePortrait: autoDraw = False
+30.6682 	EXP 	New trial (rep=3, index=0): None
+30.7415 	EXP 	window1: recordFrameIntervals = False
+30.7437 	DATA 	Keypress: left
+30.7475 	EXP 	leftImagePortrait: autoDraw = False
+30.7475 	EXP 	rightImagePortrait: autoDraw = False
+30.7475 	EXP 	text_2: autoDraw = False
+30.7475 	EXP 	leftImagePortrait: image = 'stimuli/1/1/7_barber.png'
+30.7475 	EXP 	rightImagePortrait: image = 'stimuli/1/1/16_barber.png'
+30.7476 	EXP 	window1: recordFrameIntervals = False
+31.2469 	EXP 	leftImagePortrait: autoDraw = True
+31.2469 	EXP 	rightImagePortrait: autoDraw = True
+36.2422 	EXP 	text_2: autoDraw = True
+36.2589 	EXP 	leftImagePortrait: autoDraw = False
+36.2589 	EXP 	rightImagePortrait: autoDraw = False
+36.6145 	EXP 	New trial (rep=4, index=0): None
+36.6903 	EXP 	window1: recordFrameIntervals = False
+36.6924 	DATA 	Keypress: right
+36.6959 	EXP 	leftImagePortrait: autoDraw = False
+36.6959 	EXP 	rightImagePortrait: autoDraw = False
+36.6959 	EXP 	text_2: autoDraw = False
+36.6959 	EXP 	leftImagePortrait: image = 'stimuli/1/3/21_barber.png'
+36.6959 	EXP 	rightImagePortrait: image = 'stimuli/1/3/7_barber.png'
+36.6960 	EXP 	window1: recordFrameIntervals = False
+37.1913 	EXP 	leftImagePortrait: autoDraw = True
+37.1913 	EXP 	rightImagePortrait: autoDraw = True
+42.1876 	EXP 	text_2: autoDraw = True
+42.2042 	EXP 	leftImagePortrait: autoDraw = False
+42.2042 	EXP 	rightImagePortrait: autoDraw = False
+42.6416 	EXP 	New trial (rep=5, index=0): None
+42.7196 	EXP 	window1: recordFrameIntervals = False
+42.7215 	DATA 	Keypress: right
+42.7251 	EXP 	leftImagePortrait: autoDraw = False
+42.7251 	EXP 	rightImagePortrait: autoDraw = False
+42.7251 	EXP 	text_2: autoDraw = False
+42.7251 	EXP 	leftImagePortrait: image = 'stimuli/1/2/21_barber.png'
+42.7251 	EXP 	rightImagePortrait: image = 'stimuli/1/2/7_barber.png'
+42.7253 	EXP 	window1: recordFrameIntervals = False
+43.2201 	EXP 	leftImagePortrait: autoDraw = True
+43.2201 	EXP 	rightImagePortrait: autoDraw = True
+48.2329 	EXP 	leftImagePortrait: autoDraw = False
+48.2329 	EXP 	rightImagePortrait: autoDraw = False
+48.2329 	EXP 	text_2: autoDraw = True
+48.6046 	EXP 	New trial (rep=6, index=0): None
+48.6742 	EXP 	window1: recordFrameIntervals = False
+48.6766 	DATA 	Keypress: left
+48.6803 	EXP 	leftImagePortrait: autoDraw = False
+48.6803 	EXP 	rightImagePortrait: autoDraw = False
+48.6803 	EXP 	text_2: autoDraw = False
+48.6803 	EXP 	leftImagePortrait: image = 'stimuli/1/3/7_barber.png'
+48.6803 	EXP 	rightImagePortrait: image = 'stimuli/1/3/21_barber.png'
+48.6804 	EXP 	window1: recordFrameIntervals = False
+49.1819 	EXP 	leftImagePortrait: autoDraw = True
+49.1819 	EXP 	rightImagePortrait: autoDraw = True
+54.1776 	EXP 	text_2: autoDraw = True
+54.1961 	EXP 	leftImagePortrait: autoDraw = False
+54.1961 	EXP 	rightImagePortrait: autoDraw = False
+54.4993 	EXP 	New trial (rep=7, index=0): None
+54.5760 	EXP 	window1: recordFrameIntervals = False
+54.5778 	DATA 	Keypress: left
+54.5814 	EXP 	leftImagePortrait: autoDraw = False
+54.5814 	EXP 	rightImagePortrait: autoDraw = False
+54.5814 	EXP 	text_2: autoDraw = False
+54.5814 	EXP 	leftImagePortrait: image = 'stimuli/1/2/7_barber.png'
+54.5814 	EXP 	rightImagePortrait: image = 'stimuli/1/2/18_barber.png'
+54.5817 	EXP 	window1: recordFrameIntervals = False
+55.0771 	EXP 	leftImagePortrait: autoDraw = True
+55.0771 	EXP 	rightImagePortrait: autoDraw = True
+60.0912 	EXP 	leftImagePortrait: autoDraw = False
+60.0912 	EXP 	rightImagePortrait: autoDraw = False
+60.0912 	EXP 	text_2: autoDraw = True
+60.3942 	EXP 	New trial (rep=8, index=0): None
+60.4704 	EXP 	window1: recordFrameIntervals = False
+60.4722 	DATA 	Keypress: right
+60.4755 	EXP 	leftImagePortrait: autoDraw = False
+60.4755 	EXP 	rightImagePortrait: autoDraw = False
+60.4755 	EXP 	text_2: autoDraw = False
+60.4755 	EXP 	leftImagePortrait: image = 'stimuli/1/2/16_barber.png'
+60.4755 	EXP 	rightImagePortrait: image = 'stimuli/1/2/7_barber.png'
+60.4756 	EXP 	window1: recordFrameIntervals = False
+60.9720 	EXP 	leftImagePortrait: autoDraw = True
+60.9720 	EXP 	rightImagePortrait: autoDraw = True
+65.9678 	EXP 	text_2: autoDraw = True
+65.9844 	EXP 	leftImagePortrait: autoDraw = False
+65.9844 	EXP 	rightImagePortrait: autoDraw = False
+66.3061 	EXP 	New trial (rep=9, index=0): None
+66.3732 	EXP 	window1: recordFrameIntervals = False
+66.3753 	DATA 	Keypress: left
+66.3789 	EXP 	leftImagePortrait: autoDraw = False
+66.3789 	EXP 	rightImagePortrait: autoDraw = False
+66.3789 	EXP 	text_2: autoDraw = False
+66.3789 	EXP 	leftImagePortrait: image = 'stimuli/1/3/0_barber.png'
+66.3789 	EXP 	rightImagePortrait: image = 'stimuli/1/3/7_barber.png'
+66.3790 	EXP 	window1: recordFrameIntervals = False
+66.8713 	EXP 	leftImagePortrait: autoDraw = True
+66.8713 	EXP 	rightImagePortrait: autoDraw = True
+71.3649 	DATA 	Keypress: right
+71.8635 	EXP 	text_2: autoDraw = True
+71.8799 	EXP 	leftImagePortrait: autoDraw = False
+71.8799 	EXP 	rightImagePortrait: autoDraw = False
+73.3171 	EXP 	New trial (rep=10, index=0): None
+73.4209 	EXP 	window1: recordFrameIntervals = False
+73.4225 	DATA 	Keypress: right
+73.4260 	EXP 	leftImagePortrait: autoDraw = False
+73.4260 	EXP 	rightImagePortrait: autoDraw = False
+73.4260 	EXP 	text_2: autoDraw = False
+73.4260 	EXP 	leftImagePortrait: image = 'stimuli/1/1/7_barber.png'
+73.4260 	EXP 	rightImagePortrait: image = 'stimuli/1/1/0_barber.png'
+73.4262 	EXP 	window1: recordFrameIntervals = False
+73.9282 	EXP 	leftImagePortrait: autoDraw = True
+73.9282 	EXP 	rightImagePortrait: autoDraw = True
+78.9253 	EXP 	text_2: autoDraw = True
+78.9409 	EXP 	leftImagePortrait: autoDraw = False
+78.9409 	EXP 	rightImagePortrait: autoDraw = False
+79.3449 	EXP 	New trial (rep=11, index=0): None
+79.4321 	EXP 	window1: recordFrameIntervals = False
+79.4339 	DATA 	Keypress: left
+79.4372 	EXP 	leftImagePortrait: autoDraw = False
+79.4372 	EXP 	rightImagePortrait: autoDraw = False
+79.4372 	EXP 	text_2: autoDraw = False
+79.4372 	EXP 	leftImagePortrait: image = 'stimuli/1/1/7_barber.png'
+79.4372 	EXP 	rightImagePortrait: image = 'stimuli/1/1/3_barber.png'
+79.4373 	EXP 	window1: recordFrameIntervals = False
+79.9401 	EXP 	leftImagePortrait: autoDraw = True
+79.9401 	EXP 	rightImagePortrait: autoDraw = True
+84.9354 	EXP 	text_2: autoDraw = True
+84.9521 	EXP 	leftImagePortrait: autoDraw = False
+84.9521 	EXP 	rightImagePortrait: autoDraw = False
+85.2896 	EXP 	New trial (rep=12, index=0): None
+85.3740 	EXP 	window1: recordFrameIntervals = False
+85.3758 	DATA 	Keypress: left
+85.3795 	EXP 	leftImagePortrait: autoDraw = False
+85.3795 	EXP 	rightImagePortrait: autoDraw = False
+85.3795 	EXP 	text_2: autoDraw = False
+85.3795 	EXP 	leftImagePortrait: image = 'stimuli/1/3/7_barber.png'
+85.3795 	EXP 	rightImagePortrait: image = 'stimuli/1/3/3_barber.png'
+85.3799 	EXP 	window1: recordFrameIntervals = False
+85.8718 	EXP 	leftImagePortrait: autoDraw = True
+85.8718 	EXP 	rightImagePortrait: autoDraw = True
+90.8635 	EXP 	text_2: autoDraw = True
+90.8805 	EXP 	leftImagePortrait: autoDraw = False
+90.8805 	EXP 	rightImagePortrait: autoDraw = False
+91.2349 	EXP 	New trial (rep=13, index=0): None
+91.3079 	EXP 	window1: recordFrameIntervals = False
+91.3101 	DATA 	Keypress: left
+91.3137 	EXP 	leftImagePortrait: autoDraw = False
+91.3137 	EXP 	rightImagePortrait: autoDraw = False
+91.3137 	EXP 	text_2: autoDraw = False
+91.3137 	EXP 	leftImagePortrait: image = 'stimuli/1/2/0_barber.png'
+91.3137 	EXP 	rightImagePortrait: image = 'stimuli/1/2/7_barber.png'
+91.3138 	EXP 	window1: recordFrameIntervals = False
+91.8132 	EXP 	leftImagePortrait: autoDraw = True
+91.8132 	EXP 	rightImagePortrait: autoDraw = True
+96.8090 	EXP 	text_2: autoDraw = True
+96.8260 	EXP 	leftImagePortrait: autoDraw = False
+96.8260 	EXP 	rightImagePortrait: autoDraw = False
+97.0974 	EXP 	New trial (rep=14, index=0): None
+97.2119 	EXP 	window1: recordFrameIntervals = False
+97.2141 	DATA 	Keypress: right
+97.2176 	EXP 	leftImagePortrait: autoDraw = False
+97.2176 	EXP 	rightImagePortrait: autoDraw = False
+97.2176 	EXP 	text_2: autoDraw = False
+97.2176 	EXP 	leftImagePortrait: image = 'stimuli/1/1/5_barber.png'
+97.2176 	EXP 	rightImagePortrait: image = 'stimuli/1/1/7_barber.png'
+97.2178 	EXP 	window1: recordFrameIntervals = False
+97.7094 	EXP 	leftImagePortrait: autoDraw = True
+97.7094 	EXP 	rightImagePortrait: autoDraw = True
+102.7042 	EXP 	text_2: autoDraw = True
+102.7209 	EXP 	leftImagePortrait: autoDraw = False
+102.7209 	EXP 	rightImagePortrait: autoDraw = False
+103.0427 	EXP 	New trial (rep=15, index=0): None
+103.1261 	EXP 	window1: recordFrameIntervals = False
+103.1283 	DATA 	Keypress: right
+103.1318 	EXP 	leftImagePortrait: autoDraw = False
+103.1318 	EXP 	rightImagePortrait: autoDraw = False
+103.1318 	EXP 	text_2: autoDraw = False
+103.1318 	EXP 	leftImagePortrait: image = 'stimuli/1/3/5_barber.png'
+103.1318 	EXP 	rightImagePortrait: image = 'stimuli/1/3/7_barber.png'
+103.1320 	EXP 	window1: recordFrameIntervals = False
+103.6224 	EXP 	leftImagePortrait: autoDraw = True
+103.6224 	EXP 	rightImagePortrait: autoDraw = True
+108.6162 	EXP 	text_2: autoDraw = True
+108.6329 	EXP 	leftImagePortrait: autoDraw = False
+108.6329 	EXP 	rightImagePortrait: autoDraw = False
+109.0198 	EXP 	New trial (rep=16, index=0): None
+109.1010 	EXP 	window1: recordFrameIntervals = False
+109.1031 	DATA 	Keypress: left
+109.1068 	EXP 	leftImagePortrait: autoDraw = False
+109.1068 	EXP 	rightImagePortrait: autoDraw = False
+109.1068 	EXP 	text_2: autoDraw = False
+109.1068 	EXP 	leftImagePortrait: image = 'stimuli/1/2/3_barber.png'
+109.1068 	EXP 	rightImagePortrait: image = 'stimuli/1/2/7_barber.png'
+109.1069 	EXP 	window1: recordFrameIntervals = False
+109.5989 	EXP 	leftImagePortrait: autoDraw = True
+109.5989 	EXP 	rightImagePortrait: autoDraw = True
+114.5947 	EXP 	text_2: autoDraw = True
+114.6124 	EXP 	leftImagePortrait: autoDraw = False
+114.6124 	EXP 	rightImagePortrait: autoDraw = False
+114.9337 	EXP 	New trial (rep=17, index=0): None
+115.0749 	EXP 	window1: recordFrameIntervals = False
+115.0764 	DATA 	Keypress: right
+115.0797 	EXP 	leftImagePortrait: autoDraw = False
+115.0797 	EXP 	rightImagePortrait: autoDraw = False
+115.0797 	EXP 	text_2: autoDraw = False
+115.0797 	EXP 	leftImagePortrait: image = 'stimuli/1/2/4_barber.png'
+115.0797 	EXP 	rightImagePortrait: image = 'stimuli/1/2/7_barber.png'
+115.0799 	EXP 	window1: recordFrameIntervals = False
+115.5768 	EXP 	leftImagePortrait: autoDraw = True
+115.5768 	EXP 	rightImagePortrait: autoDraw = True
+120.5729 	EXP 	text_2: autoDraw = True
+120.5895 	EXP 	leftImagePortrait: autoDraw = False
+120.5895 	EXP 	rightImagePortrait: autoDraw = False
+120.9108 	EXP 	New trial (rep=0, index=1): OrderedDict([('imageSetLvl', 2), ('imageSetName', 'car'), ('refSetNumber', 4)])
+120.9132 	DATA 	Keypress: right
+120.9227 	EXP 	leftImagePortrait: autoDraw = False
+120.9227 	EXP 	rightImagePortrait: autoDraw = False
+120.9227 	EXP 	text_2: autoDraw = False
+120.9227 	EXP 	text_3: autoDraw = True
+122.9215 	EXP 	Created sequence: random, trialTypes=1, nReps=18, seed=None
+122.9216 	EXP 	New trial (rep=0, index=0): None
+123.0632 	EXP 	window1: recordFrameIntervals = False
+123.0681 	EXP 	text_3: autoDraw = False
+123.0681 	EXP 	leftImagePortrait: image = 'stimuli/2/3/12_car.png'
+123.0681 	EXP 	rightImagePortrait: image = 'stimuli/2/3/4_car.png'
+123.0683 	EXP 	window1: recordFrameIntervals = False
+123.5699 	EXP 	leftImagePortrait: autoDraw = True
+123.5699 	EXP 	rightImagePortrait: autoDraw = True
+128.5663 	EXP 	text_2: autoDraw = True
+128.5830 	EXP 	leftImagePortrait: autoDraw = False
+128.5830 	EXP 	rightImagePortrait: autoDraw = False
+139.9137 	DATA 	Mouse: Left button down, pos=(980,672)
+139.9464 	DATA 	Mouse:  Left button up, pos=(980,672)
+141.4101 	DATA 	Keypress: escape
+141.5159 	EXP 	window1: mouseVisible = True
