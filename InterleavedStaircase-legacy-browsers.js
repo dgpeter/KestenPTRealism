@@ -454,8 +454,7 @@ function set_conditionRoutineBegin(snapshot) {
     
     function preload(images, set, index) {
         index = index || 0
-        maxNo = 22
-        if (imageArray && maxNo > index) {
+        if (imageArray && 22 > index) {
                 var img = new Image ();
                 img.onload = function() {
                     preload(images, set, index + 1);
