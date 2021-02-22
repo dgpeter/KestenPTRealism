@@ -669,14 +669,14 @@ function trialRoutineBegin(snapshot) {
     nCompQuality = Number.parseInt(round(levList[staircase][currentScene][trial]));
     comp_num = nCompQuality;
     
-    leftImage= ""
-    rightImage = "" 
+    leftImage = new Image();
+    rightImage = new Image();
     if ((refSide === (- 1))) {
-        leftImage = `stimuli/${imageSetStr}/${setName}/${nRefImage}_${setName}.png`;
-        rightImage = `stimuli/${imageSetStr}/${setName}/${comp_num}_${setName}.png`;
+        leftImage.src = `stimuli/${imageSetStr}/${setName}/${nRefImage}_${setName}.png`;
+        rightImage.src = `stimuli/${imageSetStr}/${setName}/${comp_num}_${setName}.png`;
     } else {
-        leftImage = `stimuli/${imageSetStr}/${setName}/${comp_num}_${setName}.png`;
-        rightImage = `stimuli/${imageSetStr}/${setName}/${nRefImage}_${setName}.png`;
+        leftImage.src = `stimuli/${imageSetStr}/${setName}/${comp_num}_${setName}.png`;
+        rightImage.src = `stimuli/${imageSetStr}/${setName}/${nRefImage}_${setName}.png`;
     }
     
     leftImagePortrait.setImage(leftImage);
