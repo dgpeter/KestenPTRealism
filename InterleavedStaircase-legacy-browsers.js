@@ -454,9 +454,9 @@ function set_conditionRoutineBegin(snapshot) {
     
     function preload(images, set, index) {
         index = index || 0
-        if (imageArray && 22 > index) {
-                var img = new Image ();
-                img.onload = function() {
+        if (images && 22 > index) {
+                images[i] = new Image ();
+                images[i].onload = function() {
                     preload(images, set, index + 1);
                 }
             images[i].src = `stimuli/${imageSetStr}/${set}/${i}_${setName}.png`;
