@@ -383,8 +383,6 @@ var reverseList;
 var localTrialNo;
 var globalTrialNo;
 var maxNoFlat;
-var leftImage;
-var rightImage;
 var images1;
 var images2;
 var images3;
@@ -444,8 +442,7 @@ function set_conditionRoutineBegin(snapshot) {
         
     }
     
-    leftImage = new Image();
-    rightImage = new Image();
+    
     
     
     images1 = new Array();
@@ -556,6 +553,8 @@ var compSide;
 var stairFactor;
 var nCompQuality;
 var comp_num;
+var leftImage;
+var rightImage;
 var _resp_allKeys;
 var trialComponents;
 function trialRoutineBegin(snapshot) {
