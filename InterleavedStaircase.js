@@ -462,7 +462,7 @@ function set_conditionRoutineBegin(snapshot) {
     function preload(images, set, index) {
         for(i = 0; i <= 22; i++)
         {
-            image[i] = new Image();
+            images[i] = new Image();
             images[i].src = `stimuli/${imageSetStr}/${set}/${i}_${setName}.jpg`;
         }
     }
