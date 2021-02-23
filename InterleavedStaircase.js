@@ -678,11 +678,11 @@ function trialRoutineBegin(snapshot) {
     
     
     if ((refSide === (- 1))) {
-        leftImage.src = images[nRefImage];
-        rightImage.src = images[comp_num];
+        leftImage = images[nRefImage];
+        rightImage = images[comp_num];
     } else {
-        leftImage.src = images[comp_num];
-        rightImage.src = images[nRefImage];
+        leftImage = images[comp_num];
+        rightImage = images[nRefImage];
     }
     
     leftImagePortrait.setImage(leftImage);
