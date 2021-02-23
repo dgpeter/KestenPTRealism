@@ -386,6 +386,8 @@ var maxNoFlat;
 var images1;
 var images2;
 var images3;
+var leftImage;
+var rightImage;
 var set_conditionComponents;
 function set_conditionRoutineBegin(snapshot) {
   return function () {
@@ -456,7 +458,7 @@ function set_conditionRoutineBegin(snapshot) {
                 images[i].onload = function() {
                     preload(images, set, index + 1);
                 }
-            images[i].src = `stimuli/${imageSetStr}/${set}/${i}_${setName}.png`;
+            images[i].src = `stimuli/${imageSetStr}/${set}/${i}_${setName}.jpg`;
         }
     }
     
@@ -464,6 +466,8 @@ function set_conditionRoutineBegin(snapshot) {
     preload(images2, 2);
     preload(images3, 3);
     
+    leftImage = new Image();
+    rightImage = new Image();
     
     
     // keep track of which components have finished
@@ -553,8 +557,6 @@ var compSide;
 var stairFactor;
 var nCompQuality;
 var comp_num;
-var leftImage;
-var rightImage;
 var _resp_allKeys;
 var trialComponents;
 function trialRoutineBegin(snapshot) {
@@ -669,15 +671,14 @@ function trialRoutineBegin(snapshot) {
     nCompQuality = Number.parseInt(round(levList[staircase][currentScene][trial]));
     comp_num = nCompQuality;
     
-    leftImage = new Image();
-    rightImage = new Image();
+    
     
     if ((refSide === (- 1))) {
-        leftImage.src = `stimuli/${imageSetStr}/${currentScene}/${nRefImage}_${setName}.png`;
-        rightImage.src = `stimuli/${imageSetStr}/${currentScene}/${comp_num}_${setName}.png`;
+        leftImage.src = images[nRefImage];
+        rightImage.src = images[comp_num];
     } else {
-        leftImage.src = `stimuli/${currentScene}/${setName}/${comp_num}_${setName}.png`;
-        rightImage.src = `stimuli/${currentScene}/${setName}/${nRefImage}_${setName}.png`;
+        leftImage.src = images[comp_num];
+        rightImage.src = images[nRefImage];
     }
     
     leftImagePortrait.setImage(leftImage);
