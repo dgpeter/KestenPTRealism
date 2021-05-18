@@ -52,7 +52,7 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'imageConds3.xlsx', 'path': 'imageConds3.xlsx'}
+    {'name': 'imageCondsNew.xlsx', 'path': 'imageCondsNew.xlsx'}
   ]
 });
 
@@ -85,6 +85,7 @@ var text;
 var key_resp;
 var set_conditionClock;
 var text_3;
+var image;
 var trialClock;
 var leftImagePortrait;
 var rightImagePortrait;
@@ -115,7 +116,7 @@ function experimentInit() {
   text_3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_3',
-    text: 'Loading...',
+    text: 'Reference Image ',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -123,13 +124,22 @@ function experimentInit() {
     depth: -1.0 
   });
   
+  image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [2, 2],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
+  });
   // Initialize components for Routine "trial"
   trialClock = new util.Clock();
   leftImagePortrait = new visual.ImageStim({
     win : psychoJS.window,
     name : 'leftImagePortrait', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [(- 0.5), 0], size : [0.99, 0.99],
+    ori : 0, pos : [(- 0.5), 0], size : [1, 0.9],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -138,7 +148,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'rightImagePortrait', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0.5, 0], size : [0.99, 0.99],
+    ori : 0, pos : [0.5, 0], size : [1, 0.9],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
@@ -299,7 +309,7 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'imageConds3.xlsx',
+    trialList: 'imageCondsNew.xlsx',
     seed: undefined, name: 'trials_2'
   });
   psychoJS.experiment.addLoop(trials_2); // add the loop to the experiment
@@ -329,7 +339,7 @@ function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 60, method: TrialHandler.Method.RANDOM,
+    nReps: 24, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'trials'
@@ -396,7 +406,7 @@ function set_conditionRoutineBegin(snapshot) {
     set_conditionClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
-    routineTimer.add(2.000000);
+    routineTimer.add(5.000000);
     // update component parameters for each repeat
     imageSet = imageSetLvl;
     imageSetStr = imageSet.toString();
@@ -467,9 +477,11 @@ function set_conditionRoutineBegin(snapshot) {
     rightImage = new Image();
     
     
+    image.setImage(referenceImage);
     // keep track of which components have finished
     set_conditionComponents = [];
     set_conditionComponents.push(text_3);
+    set_conditionComponents.push(image);
     
     set_conditionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -498,9 +510,23 @@ function set_conditionRoutineEachFrame(snapshot) {
       text_3.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_3.status === PsychoJS.Status.STARTED || text_3.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_3.setAutoDraw(false);
+    }
+    
+    // *image* updates
+    if (t >= 1 && image.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image.tStart = t;  // (not accounting for frame time here)
+      image.frameNStart = frameN;  // exact frame index
+      
+      image.setAutoDraw(true);
+    }
+
+    frameRemains = 1 + 4 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((image.status === PsychoJS.Status.STARTED || image.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      image.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {

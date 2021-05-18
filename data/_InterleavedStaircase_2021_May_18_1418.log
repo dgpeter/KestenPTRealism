@@ -1,0 +1,1840 @@
+1.1137 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+11.8672 	WARNING 	User requested fullscreen with size [1536  864], but screen is actually [1920, 1080]. Using actual size
+14.1815 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001C8D571EDD8>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001C8D53F54E0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+14.1817 	EXP 	window1: mouseVisible = True
+14.1817 	EXP 	window1: recordFrameIntervals = False
+14.3476 	EXP 	window1: recordFrameIntervals = True
+14.5316 	EXP 	window1: recordFrameIntervals = False
+14.7103 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+14.7170 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_3', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Reference Image ', units='norm', win=Window(...), wrapWidth=1)
+14.7198 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+14.7216 	EXP 	Created leftImagePortrait = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='leftImagePortrait', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+14.7232 	EXP 	Created rightImagePortrait = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='rightImagePortrait', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+14.7277 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Please record your answer. ', units='norm', win=Window(...), wrapWidth=1)
+14.7333 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_4', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Thank you for participating in this trial. ', units='norm', win=Window(...), wrapWidth=1)
+14.7637 	EXP 	text: autoDraw = True
+15.8292 	EXP 	Imported imageCondsNewest.xlsx as conditions, 2 conditions, 3 params
+15.8294 	EXP 	Created sequence: sequential, trialTypes=2, nReps=1, seed=None
+15.8296 	EXP 	New trial (rep=0, index=0): OrderedDict([('imageSetLvl', 'decanterStudio'), ('imageSetName', 'decanterStudio'), ('refSetNumber', 7)])
+16.1186 	DATA 	Keypress: space
+16.1230 	EXP 	text: autoDraw = False
+16.1230 	EXP 	image: image = 'stimuli/decanterStudio/ref.png'
+16.1230 	EXP 	text_3: autoDraw = True
+17.1354 	EXP 	image: autoDraw = True
+17.1433 	EXP 	text_3: autoDraw = False
+20.8141 	EXP 	Created sequence: random, trialTypes=1, nReps=64, seed=None
+20.8145 	EXP 	New trial (rep=0, index=0): None
+21.2498 	EXP 	window1: recordFrameIntervals = False
+21.2563 	EXP 	text_3: autoDraw = False
+21.2563 	EXP 	image: autoDraw = False
+21.2563 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/0.png'
+21.2563 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+21.2595 	EXP 	window1: recordFrameIntervals = False
+21.7486 	EXP 	leftImagePortrait: autoDraw = True
+24.2454 	EXP 	window1: recordFrameIntervals = False
+24.2560 	EXP 	leftImagePortrait: autoDraw = False
+24.2574 	EXP 	window1: recordFrameIntervals = False
+24.4440 	EXP 	rightImagePortrait: autoDraw = True
+25.1300 	DATA 	Keypress: right
+25.1500 	EXP 	New trial (rep=1, index=0): None
+25.3328 	EXP 	window1: recordFrameIntervals = False
+25.3388 	EXP 	leftImagePortrait: autoDraw = False
+25.3388 	EXP 	rightImagePortrait: autoDraw = False
+25.3388 	EXP 	text_2: autoDraw = False
+25.3388 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/21.png'
+25.3388 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+25.3420 	EXP 	window1: recordFrameIntervals = False
+25.8339 	EXP 	leftImagePortrait: autoDraw = True
+28.3260 	EXP 	window1: recordFrameIntervals = False
+28.3362 	EXP 	leftImagePortrait: autoDraw = False
+28.3379 	EXP 	window1: recordFrameIntervals = False
+28.5249 	EXP 	rightImagePortrait: autoDraw = True
+31.0339 	EXP 	rightImagePortrait: autoDraw = False
+31.0339 	EXP 	text_2: autoDraw = True
+31.2883 	DATA 	Keypress: left
+31.3077 	EXP 	New trial (rep=2, index=0): None
+31.4891 	EXP 	window1: recordFrameIntervals = False
+31.4958 	EXP 	leftImagePortrait: autoDraw = False
+31.4958 	EXP 	rightImagePortrait: autoDraw = False
+31.4958 	EXP 	text_2: autoDraw = False
+31.4958 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+31.4958 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/18.png'
+31.4991 	EXP 	window1: recordFrameIntervals = False
+31.9885 	EXP 	leftImagePortrait: autoDraw = True
+34.4867 	EXP 	window1: recordFrameIntervals = False
+34.4975 	EXP 	leftImagePortrait: autoDraw = False
+34.4997 	EXP 	window1: recordFrameIntervals = False
+34.6846 	EXP 	rightImagePortrait: autoDraw = True
+37.1839 	EXP 	text_2: autoDraw = True
+37.1958 	EXP 	rightImagePortrait: autoDraw = False
+37.6499 	DATA 	Keypress: right
+37.6692 	EXP 	New trial (rep=3, index=0): None
+37.8455 	EXP 	window1: recordFrameIntervals = False
+37.8515 	EXP 	leftImagePortrait: autoDraw = False
+37.8515 	EXP 	rightImagePortrait: autoDraw = False
+37.8515 	EXP 	text_2: autoDraw = False
+37.8515 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/0.png'
+37.8515 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+37.8551 	EXP 	window1: recordFrameIntervals = False
+38.3455 	EXP 	leftImagePortrait: autoDraw = True
+40.8320 	EXP 	window1: recordFrameIntervals = False
+40.8424 	EXP 	leftImagePortrait: autoDraw = False
+40.8438 	EXP 	window1: recordFrameIntervals = False
+41.0308 	EXP 	rightImagePortrait: autoDraw = True
+43.5406 	EXP 	rightImagePortrait: autoDraw = False
+43.5406 	EXP 	text_2: autoDraw = True
+43.8460 	DATA 	Keypress: right
+43.8675 	EXP 	New trial (rep=4, index=0): None
+44.1550 	EXP 	window1: recordFrameIntervals = False
+44.1626 	EXP 	leftImagePortrait: autoDraw = False
+44.1626 	EXP 	rightImagePortrait: autoDraw = False
+44.1626 	EXP 	text_2: autoDraw = False
+44.1626 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/3.png'
+44.1626 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+44.1667 	EXP 	window1: recordFrameIntervals = False
+44.6581 	EXP 	leftImagePortrait: autoDraw = True
+47.1541 	EXP 	leftImagePortrait: autoDraw = False
+47.1558 	EXP 	window1: recordFrameIntervals = False
+47.1719 	EXP 	window1: recordFrameIntervals = False
+47.3556 	EXP 	rightImagePortrait: autoDraw = True
+49.8525 	EXP 	rightImagePortrait: autoDraw = False
+49.8525 	EXP 	text_2: autoDraw = True
+50.1582 	EXP 	New trial (rep=5, index=0): None
+50.3322 	EXP 	window1: recordFrameIntervals = False
+50.3345 	DATA 	Keypress: right
+50.3393 	EXP 	leftImagePortrait: autoDraw = False
+50.3393 	EXP 	rightImagePortrait: autoDraw = False
+50.3393 	EXP 	text_2: autoDraw = False
+50.3393 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/16.png'
+50.3393 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+50.3432 	EXP 	window1: recordFrameIntervals = False
+50.8334 	EXP 	leftImagePortrait: autoDraw = True
+53.3320 	EXP 	leftImagePortrait: autoDraw = False
+53.3333 	EXP 	window1: recordFrameIntervals = False
+53.3513 	EXP 	window1: recordFrameIntervals = False
+53.5318 	EXP 	rightImagePortrait: autoDraw = True
+56.0302 	EXP 	rightImagePortrait: autoDraw = False
+56.0302 	EXP 	text_2: autoDraw = True
+56.3705 	EXP 	New trial (rep=6, index=0): None
+56.5450 	EXP 	window1: recordFrameIntervals = False
+56.5475 	DATA 	Keypress: right
+56.5522 	EXP 	leftImagePortrait: autoDraw = False
+56.5522 	EXP 	rightImagePortrait: autoDraw = False
+56.5522 	EXP 	text_2: autoDraw = False
+56.5522 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/21.png'
+56.5522 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+56.5561 	EXP 	window1: recordFrameIntervals = False
+57.0458 	EXP 	leftImagePortrait: autoDraw = True
+59.5442 	EXP 	leftImagePortrait: autoDraw = False
+59.5460 	EXP 	window1: recordFrameIntervals = False
+59.5620 	EXP 	window1: recordFrameIntervals = False
+59.7457 	EXP 	rightImagePortrait: autoDraw = True
+62.2417 	EXP 	rightImagePortrait: autoDraw = False
+62.2417 	EXP 	text_2: autoDraw = True
+62.5963 	DATA 	Keypress: left
+62.6142 	EXP 	New trial (rep=7, index=0): None
+62.7916 	EXP 	window1: recordFrameIntervals = False
+62.7981 	EXP 	leftImagePortrait: autoDraw = False
+62.7981 	EXP 	rightImagePortrait: autoDraw = False
+62.7981 	EXP 	text_2: autoDraw = False
+62.7981 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+62.7981 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/4.png'
+62.8016 	EXP 	window1: recordFrameIntervals = False
+63.2922 	EXP 	leftImagePortrait: autoDraw = True
+65.7789 	EXP 	window1: recordFrameIntervals = False
+65.7889 	EXP 	leftImagePortrait: autoDraw = False
+65.7909 	EXP 	window1: recordFrameIntervals = False
+65.9773 	EXP 	rightImagePortrait: autoDraw = True
+68.4863 	EXP 	rightImagePortrait: autoDraw = False
+68.4863 	EXP 	text_2: autoDraw = True
+68.7586 	EXP 	New trial (rep=8, index=0): None
+68.9376 	EXP 	window1: recordFrameIntervals = False
+68.9399 	DATA 	Keypress: left
+68.9437 	EXP 	leftImagePortrait: autoDraw = False
+68.9437 	EXP 	rightImagePortrait: autoDraw = False
+68.9437 	EXP 	text_2: autoDraw = False
+68.9437 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/16.png'
+68.9437 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+68.9476 	EXP 	window1: recordFrameIntervals = False
+69.4366 	EXP 	leftImagePortrait: autoDraw = True
+71.9339 	EXP 	leftImagePortrait: autoDraw = False
+71.9352 	EXP 	window1: recordFrameIntervals = False
+71.9522 	EXP 	window1: recordFrameIntervals = False
+72.1331 	EXP 	rightImagePortrait: autoDraw = True
+73.9915 	EXP 	New trial (rep=9, index=0): None
+74.1715 	EXP 	window1: recordFrameIntervals = False
+74.1732 	DATA 	Keypress: left
+74.1770 	EXP 	leftImagePortrait: autoDraw = False
+74.1770 	EXP 	rightImagePortrait: autoDraw = False
+74.1770 	EXP 	text_2: autoDraw = False
+74.1770 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/18.png'
+74.1770 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+74.1807 	EXP 	window1: recordFrameIntervals = False
+74.6724 	EXP 	leftImagePortrait: autoDraw = True
+77.1686 	EXP 	window1: recordFrameIntervals = False
+77.1796 	EXP 	leftImagePortrait: autoDraw = False
+77.1816 	EXP 	window1: recordFrameIntervals = False
+77.3683 	EXP 	rightImagePortrait: autoDraw = True
+78.0224 	EXP 	New trial (rep=10, index=0): None
+78.2100 	EXP 	window1: recordFrameIntervals = False
+78.2121 	DATA 	Keypress: left
+78.2161 	EXP 	leftImagePortrait: autoDraw = False
+78.2161 	EXP 	rightImagePortrait: autoDraw = False
+78.2161 	EXP 	text_2: autoDraw = False
+78.2161 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+78.2161 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/15.png'
+78.2196 	EXP 	window1: recordFrameIntervals = False
+78.7101 	EXP 	leftImagePortrait: autoDraw = True
+81.2095 	EXP 	leftImagePortrait: autoDraw = False
+81.2112 	EXP 	window1: recordFrameIntervals = False
+81.2281 	EXP 	window1: recordFrameIntervals = False
+81.4087 	EXP 	rightImagePortrait: autoDraw = True
+81.9528 	EXP 	New trial (rep=11, index=0): None
+82.1314 	EXP 	window1: recordFrameIntervals = False
+82.1338 	DATA 	Keypress: right
+82.1378 	EXP 	leftImagePortrait: autoDraw = False
+82.1378 	EXP 	rightImagePortrait: autoDraw = False
+82.1378 	EXP 	text_2: autoDraw = False
+82.1378 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+82.1378 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/3.png'
+82.1416 	EXP 	window1: recordFrameIntervals = False
+82.6315 	EXP 	leftImagePortrait: autoDraw = True
+85.1282 	EXP 	window1: recordFrameIntervals = False
+85.1398 	EXP 	leftImagePortrait: autoDraw = False
+85.1412 	EXP 	window1: recordFrameIntervals = False
+85.3261 	EXP 	rightImagePortrait: autoDraw = True
+86.0481 	DATA 	Keypress: left
+86.0651 	EXP 	New trial (rep=12, index=0): None
+86.2428 	EXP 	window1: recordFrameIntervals = False
+86.2489 	EXP 	leftImagePortrait: autoDraw = False
+86.2489 	EXP 	rightImagePortrait: autoDraw = False
+86.2489 	EXP 	text_2: autoDraw = False
+86.2489 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+86.2489 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/4.png'
+86.2530 	EXP 	window1: recordFrameIntervals = False
+86.7436 	EXP 	leftImagePortrait: autoDraw = True
+89.2418 	EXP 	window1: recordFrameIntervals = False
+89.2528 	EXP 	leftImagePortrait: autoDraw = False
+89.2548 	EXP 	window1: recordFrameIntervals = False
+89.4413 	EXP 	rightImagePortrait: autoDraw = True
+90.0466 	EXP 	New trial (rep=13, index=0): None
+90.2181 	EXP 	window1: recordFrameIntervals = False
+90.2200 	DATA 	Keypress: left
+90.2248 	EXP 	leftImagePortrait: autoDraw = False
+90.2248 	EXP 	rightImagePortrait: autoDraw = False
+90.2248 	EXP 	text_2: autoDraw = False
+90.2248 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+90.2248 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/6.png'
+90.2287 	EXP 	window1: recordFrameIntervals = False
+90.7181 	EXP 	leftImagePortrait: autoDraw = True
+93.2162 	EXP 	leftImagePortrait: autoDraw = False
+93.2184 	EXP 	window1: recordFrameIntervals = False
+93.2343 	EXP 	window1: recordFrameIntervals = False
+93.4181 	EXP 	rightImagePortrait: autoDraw = True
+94.2924 	EXP 	New trial (rep=14, index=0): None
+94.4702 	EXP 	window1: recordFrameIntervals = False
+94.4722 	DATA 	Keypress: left
+94.4767 	EXP 	leftImagePortrait: autoDraw = False
+94.4767 	EXP 	rightImagePortrait: autoDraw = False
+94.4767 	EXP 	text_2: autoDraw = False
+94.4767 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/5.png'
+94.4767 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+94.4799 	EXP 	window1: recordFrameIntervals = False
+94.9713 	EXP 	leftImagePortrait: autoDraw = True
+97.4690 	EXP 	window1: recordFrameIntervals = False
+97.4794 	EXP 	leftImagePortrait: autoDraw = False
+97.4808 	EXP 	window1: recordFrameIntervals = False
+97.6674 	EXP 	rightImagePortrait: autoDraw = True
+98.8220 	EXP 	New trial (rep=15, index=0): None
+99.0027 	EXP 	window1: recordFrameIntervals = False
+99.0047 	DATA 	Keypress: right
+99.0100 	EXP 	leftImagePortrait: autoDraw = False
+99.0100 	EXP 	rightImagePortrait: autoDraw = False
+99.0100 	EXP 	text_2: autoDraw = False
+99.0100 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+99.0100 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+99.0132 	EXP 	window1: recordFrameIntervals = False
+99.5040 	EXP 	leftImagePortrait: autoDraw = True
+101.9973 	EXP 	window1: recordFrameIntervals = False
+102.0090 	EXP 	leftImagePortrait: autoDraw = False
+102.0112 	EXP 	window1: recordFrameIntervals = False
+102.1952 	EXP 	rightImagePortrait: autoDraw = True
+103.6158 	DATA 	Keypress: right
+103.6352 	EXP 	New trial (rep=16, index=0): None
+103.8367 	EXP 	window1: recordFrameIntervals = False
+103.8432 	EXP 	leftImagePortrait: autoDraw = False
+103.8432 	EXP 	rightImagePortrait: autoDraw = False
+103.8432 	EXP 	text_2: autoDraw = False
+103.8432 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+103.8432 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/14.png'
+103.8473 	EXP 	window1: recordFrameIntervals = False
+104.3391 	EXP 	leftImagePortrait: autoDraw = True
+106.8386 	EXP 	leftImagePortrait: autoDraw = False
+106.8402 	EXP 	window1: recordFrameIntervals = False
+106.8572 	EXP 	window1: recordFrameIntervals = False
+107.0378 	EXP 	rightImagePortrait: autoDraw = True
+107.5654 	EXP 	New trial (rep=17, index=0): None
+107.7440 	EXP 	window1: recordFrameIntervals = False
+107.7458 	DATA 	Keypress: right
+107.7503 	EXP 	leftImagePortrait: autoDraw = False
+107.7503 	EXP 	rightImagePortrait: autoDraw = False
+107.7503 	EXP 	text_2: autoDraw = False
+107.7503 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/17.png'
+107.7503 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+107.7535 	EXP 	window1: recordFrameIntervals = False
+108.2432 	EXP 	leftImagePortrait: autoDraw = True
+110.7405 	EXP 	window1: recordFrameIntervals = False
+110.7520 	EXP 	leftImagePortrait: autoDraw = False
+110.7535 	EXP 	window1: recordFrameIntervals = False
+110.9394 	EXP 	rightImagePortrait: autoDraw = True
+111.6129 	EXP 	New trial (rep=18, index=0): None
+111.8088 	EXP 	window1: recordFrameIntervals = False
+111.8111 	DATA 	Keypress: left
+111.8155 	EXP 	leftImagePortrait: autoDraw = False
+111.8155 	EXP 	rightImagePortrait: autoDraw = False
+111.8155 	EXP 	text_2: autoDraw = False
+111.8155 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+111.8155 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/13.png'
+111.8193 	EXP 	window1: recordFrameIntervals = False
+112.3083 	EXP 	leftImagePortrait: autoDraw = True
+114.8044 	EXP 	window1: recordFrameIntervals = False
+114.8158 	EXP 	leftImagePortrait: autoDraw = False
+114.8174 	EXP 	window1: recordFrameIntervals = False
+115.0030 	EXP 	rightImagePortrait: autoDraw = True
+115.4080 	EXP 	New trial (rep=19, index=0): None
+115.5713 	EXP 	window1: recordFrameIntervals = False
+115.5732 	DATA 	Keypress: left
+115.5769 	EXP 	leftImagePortrait: autoDraw = False
+115.5769 	EXP 	rightImagePortrait: autoDraw = False
+115.5769 	EXP 	text_2: autoDraw = False
+115.5769 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+115.5769 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+115.5806 	EXP 	window1: recordFrameIntervals = False
+116.0707 	EXP 	leftImagePortrait: autoDraw = True
+118.5674 	EXP 	window1: recordFrameIntervals = False
+118.5791 	EXP 	leftImagePortrait: autoDraw = False
+118.5813 	EXP 	window1: recordFrameIntervals = False
+118.7671 	EXP 	rightImagePortrait: autoDraw = True
+119.3549 	DATA 	Keypress: right
+119.3715 	EXP 	New trial (rep=20, index=0): None
+119.5513 	EXP 	window1: recordFrameIntervals = False
+119.5578 	EXP 	leftImagePortrait: autoDraw = False
+119.5578 	EXP 	rightImagePortrait: autoDraw = False
+119.5578 	EXP 	text_2: autoDraw = False
+119.5578 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/6.png'
+119.5578 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+119.5616 	EXP 	window1: recordFrameIntervals = False
+120.0500 	EXP 	leftImagePortrait: autoDraw = True
+122.5478 	EXP 	window1: recordFrameIntervals = False
+122.5585 	EXP 	leftImagePortrait: autoDraw = False
+122.5607 	EXP 	window1: recordFrameIntervals = False
+122.7458 	EXP 	rightImagePortrait: autoDraw = True
+123.8844 	EXP 	New trial (rep=21, index=0): None
+124.0531 	EXP 	window1: recordFrameIntervals = False
+124.0550 	DATA 	Keypress: left
+124.0592 	EXP 	leftImagePortrait: autoDraw = False
+124.0592 	EXP 	rightImagePortrait: autoDraw = False
+124.0592 	EXP 	text_2: autoDraw = False
+124.0592 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+124.0592 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/6.png'
+124.0627 	EXP 	window1: recordFrameIntervals = False
+124.5523 	EXP 	leftImagePortrait: autoDraw = True
+127.0552 	EXP 	leftImagePortrait: autoDraw = False
+127.0565 	EXP 	window1: recordFrameIntervals = False
+127.0735 	EXP 	window1: recordFrameIntervals = False
+127.2563 	EXP 	rightImagePortrait: autoDraw = True
+128.2145 	EXP 	New trial (rep=22, index=0): None
+128.3880 	EXP 	window1: recordFrameIntervals = False
+128.3901 	DATA 	Keypress: right
+128.3939 	EXP 	leftImagePortrait: autoDraw = False
+128.3939 	EXP 	rightImagePortrait: autoDraw = False
+128.3939 	EXP 	text_2: autoDraw = False
+128.3939 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+128.3939 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/6.png'
+128.3978 	EXP 	window1: recordFrameIntervals = False
+128.8878 	EXP 	leftImagePortrait: autoDraw = True
+131.3851 	EXP 	leftImagePortrait: autoDraw = False
+131.3868 	EXP 	window1: recordFrameIntervals = False
+131.4038 	EXP 	window1: recordFrameIntervals = False
+131.5869 	EXP 	rightImagePortrait: autoDraw = True
+132.1283 	EXP 	New trial (rep=23, index=0): None
+132.2990 	EXP 	window1: recordFrameIntervals = False
+132.3006 	DATA 	Keypress: left
+132.3048 	EXP 	leftImagePortrait: autoDraw = False
+132.3048 	EXP 	rightImagePortrait: autoDraw = False
+132.3048 	EXP 	text_2: autoDraw = False
+132.3048 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+132.3048 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/6.png'
+132.3083 	EXP 	window1: recordFrameIntervals = False
+132.7976 	EXP 	leftImagePortrait: autoDraw = True
+135.2984 	EXP 	leftImagePortrait: autoDraw = False
+135.2997 	EXP 	window1: recordFrameIntervals = False
+135.3166 	EXP 	window1: recordFrameIntervals = False
+135.4990 	EXP 	rightImagePortrait: autoDraw = True
+136.2589 	EXP 	New trial (rep=24, index=0): None
+136.4345 	EXP 	window1: recordFrameIntervals = False
+136.4365 	DATA 	Keypress: left
+136.4408 	EXP 	leftImagePortrait: autoDraw = False
+136.4408 	EXP 	rightImagePortrait: autoDraw = False
+136.4408 	EXP 	text_2: autoDraw = False
+136.4408 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+136.4408 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/6.png'
+136.4442 	EXP 	window1: recordFrameIntervals = False
+136.9347 	EXP 	leftImagePortrait: autoDraw = True
+139.4449 	EXP 	leftImagePortrait: autoDraw = False
+139.4465 	EXP 	window1: recordFrameIntervals = False
+139.4635 	EXP 	window1: recordFrameIntervals = False
+139.6456 	EXP 	rightImagePortrait: autoDraw = True
+140.5376 	EXP 	New trial (rep=25, index=0): None
+140.7083 	EXP 	window1: recordFrameIntervals = False
+140.7102 	DATA 	Keypress: left
+140.7143 	EXP 	leftImagePortrait: autoDraw = False
+140.7143 	EXP 	rightImagePortrait: autoDraw = False
+140.7143 	EXP 	text_2: autoDraw = False
+140.7143 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/17.png'
+140.7143 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+140.7179 	EXP 	window1: recordFrameIntervals = False
+141.2065 	EXP 	leftImagePortrait: autoDraw = True
+143.7081 	EXP 	leftImagePortrait: autoDraw = False
+143.7098 	EXP 	window1: recordFrameIntervals = False
+143.7269 	EXP 	window1: recordFrameIntervals = False
+143.9102 	EXP 	rightImagePortrait: autoDraw = True
+144.6653 	DATA 	Keypress: left
+144.6848 	EXP 	New trial (rep=26, index=0): None
+144.8679 	EXP 	window1: recordFrameIntervals = False
+144.8742 	EXP 	leftImagePortrait: autoDraw = False
+144.8742 	EXP 	rightImagePortrait: autoDraw = False
+144.8742 	EXP 	text_2: autoDraw = False
+144.8742 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+144.8742 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+144.8779 	EXP 	window1: recordFrameIntervals = False
+145.3664 	EXP 	leftImagePortrait: autoDraw = True
+147.8600 	EXP 	window1: recordFrameIntervals = False
+147.8715 	EXP 	leftImagePortrait: autoDraw = False
+147.8730 	EXP 	window1: recordFrameIntervals = False
+148.0584 	EXP 	rightImagePortrait: autoDraw = True
+148.7997 	EXP 	New trial (rep=27, index=0): None
+148.9741 	EXP 	window1: recordFrameIntervals = False
+148.9760 	DATA 	Keypress: right
+148.9799 	EXP 	leftImagePortrait: autoDraw = False
+148.9799 	EXP 	rightImagePortrait: autoDraw = False
+148.9799 	EXP 	text_2: autoDraw = False
+148.9799 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+148.9799 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/13.png'
+148.9836 	EXP 	window1: recordFrameIntervals = False
+149.4733 	EXP 	leftImagePortrait: autoDraw = True
+151.9744 	EXP 	window1: recordFrameIntervals = False
+151.9848 	EXP 	leftImagePortrait: autoDraw = False
+151.9864 	EXP 	window1: recordFrameIntervals = False
+152.1738 	EXP 	rightImagePortrait: autoDraw = True
+154.5438 	EXP 	New trial (rep=28, index=0): None
+154.7244 	EXP 	window1: recordFrameIntervals = False
+154.7261 	DATA 	Keypress: right
+154.7308 	EXP 	leftImagePortrait: autoDraw = False
+154.7308 	EXP 	rightImagePortrait: autoDraw = False
+154.7308 	EXP 	text_2: autoDraw = False
+154.7308 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/13.png'
+154.7308 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+154.7348 	EXP 	window1: recordFrameIntervals = False
+155.2226 	EXP 	leftImagePortrait: autoDraw = True
+157.7191 	EXP 	window1: recordFrameIntervals = False
+157.7301 	EXP 	leftImagePortrait: autoDraw = False
+157.7321 	EXP 	window1: recordFrameIntervals = False
+157.9168 	EXP 	rightImagePortrait: autoDraw = True
+158.8719 	EXP 	New trial (rep=29, index=0): None
+159.0361 	EXP 	window1: recordFrameIntervals = False
+159.0382 	DATA 	Keypress: left
+159.0427 	EXP 	leftImagePortrait: autoDraw = False
+159.0427 	EXP 	rightImagePortrait: autoDraw = False
+159.0427 	EXP 	text_2: autoDraw = False
+159.0427 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+159.0427 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+159.0459 	EXP 	window1: recordFrameIntervals = False
+159.5361 	EXP 	leftImagePortrait: autoDraw = True
+162.0319 	EXP 	window1: recordFrameIntervals = False
+162.0430 	EXP 	leftImagePortrait: autoDraw = False
+162.0449 	EXP 	window1: recordFrameIntervals = False
+162.2308 	EXP 	rightImagePortrait: autoDraw = True
+162.9187 	EXP 	New trial (rep=30, index=0): None
+163.1109 	EXP 	window1: recordFrameIntervals = False
+163.1126 	DATA 	Keypress: left
+163.1173 	EXP 	leftImagePortrait: autoDraw = False
+163.1173 	EXP 	rightImagePortrait: autoDraw = False
+163.1173 	EXP 	text_2: autoDraw = False
+163.1173 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+163.1173 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/12.png'
+163.1212 	EXP 	window1: recordFrameIntervals = False
+163.6113 	EXP 	leftImagePortrait: autoDraw = True
+166.1069 	EXP 	leftImagePortrait: autoDraw = False
+166.1253 	EXP 	window1: recordFrameIntervals = False
+166.1422 	EXP 	window1: recordFrameIntervals = False
+166.3246 	EXP 	rightImagePortrait: autoDraw = True
+166.9034 	EXP 	New trial (rep=31, index=0): None
+167.1167 	EXP 	window1: recordFrameIntervals = False
+167.1187 	DATA 	Keypress: right
+167.1239 	EXP 	leftImagePortrait: autoDraw = False
+167.1239 	EXP 	rightImagePortrait: autoDraw = False
+167.1239 	EXP 	text_2: autoDraw = False
+167.1239 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+167.1239 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+167.1276 	EXP 	window1: recordFrameIntervals = False
+167.6159 	EXP 	leftImagePortrait: autoDraw = True
+170.1091 	EXP 	window1: recordFrameIntervals = False
+170.1199 	EXP 	leftImagePortrait: autoDraw = False
+170.1220 	EXP 	window1: recordFrameIntervals = False
+170.3078 	EXP 	rightImagePortrait: autoDraw = True
+170.9628 	EXP 	New trial (rep=32, index=0): None
+171.1306 	EXP 	window1: recordFrameIntervals = False
+171.1323 	DATA 	Keypress: left
+171.1379 	EXP 	leftImagePortrait: autoDraw = False
+171.1379 	EXP 	rightImagePortrait: autoDraw = False
+171.1379 	EXP 	text_2: autoDraw = False
+171.1379 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/12.png'
+171.1379 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+171.1420 	EXP 	window1: recordFrameIntervals = False
+171.6286 	EXP 	leftImagePortrait: autoDraw = True
+174.1329 	EXP 	leftImagePortrait: autoDraw = False
+174.1349 	EXP 	window1: recordFrameIntervals = False
+174.1509 	EXP 	window1: recordFrameIntervals = False
+174.3329 	EXP 	rightImagePortrait: autoDraw = True
+175.0102 	EXP 	New trial (rep=33, index=0): None
+175.1866 	EXP 	window1: recordFrameIntervals = False
+175.1890 	DATA 	Keypress: left
+175.1928 	EXP 	leftImagePortrait: autoDraw = False
+175.1928 	EXP 	rightImagePortrait: autoDraw = False
+175.1928 	EXP 	text_2: autoDraw = False
+175.1928 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/8.png'
+175.1928 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+175.1966 	EXP 	window1: recordFrameIntervals = False
+175.6868 	EXP 	leftImagePortrait: autoDraw = True
+178.1849 	EXP 	window1: recordFrameIntervals = False
+178.1963 	EXP 	leftImagePortrait: autoDraw = False
+178.1979 	EXP 	window1: recordFrameIntervals = False
+178.3837 	EXP 	rightImagePortrait: autoDraw = True
+179.1076 	EXP 	New trial (rep=34, index=0): None
+179.2855 	EXP 	window1: recordFrameIntervals = False
+179.2877 	DATA 	Keypress: left
+179.2919 	EXP 	leftImagePortrait: autoDraw = False
+179.2919 	EXP 	rightImagePortrait: autoDraw = False
+179.2919 	EXP 	text_2: autoDraw = False
+179.2919 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/11.png'
+179.2919 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+179.2952 	EXP 	window1: recordFrameIntervals = False
+179.7870 	EXP 	leftImagePortrait: autoDraw = True
+182.2823 	EXP 	window1: recordFrameIntervals = False
+182.2928 	EXP 	leftImagePortrait: autoDraw = False
+182.2943 	EXP 	window1: recordFrameIntervals = False
+182.4810 	EXP 	rightImagePortrait: autoDraw = True
+183.4207 	EXP 	New trial (rep=35, index=0): None
+183.5865 	EXP 	window1: recordFrameIntervals = False
+183.5882 	DATA 	Keypress: right
+183.5926 	EXP 	leftImagePortrait: autoDraw = False
+183.5926 	EXP 	rightImagePortrait: autoDraw = False
+183.5926 	EXP 	text_2: autoDraw = False
+183.5926 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+183.5926 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/11.png'
+183.5959 	EXP 	window1: recordFrameIntervals = False
+184.0862 	EXP 	leftImagePortrait: autoDraw = True
+186.5782 	EXP 	window1: recordFrameIntervals = False
+186.5895 	EXP 	leftImagePortrait: autoDraw = False
+186.5911 	EXP 	window1: recordFrameIntervals = False
+186.7755 	EXP 	rightImagePortrait: autoDraw = True
+187.2997 	EXP 	New trial (rep=36, index=0): None
+187.4697 	EXP 	window1: recordFrameIntervals = False
+187.4722 	DATA 	Keypress: right
+187.4769 	EXP 	leftImagePortrait: autoDraw = False
+187.4769 	EXP 	rightImagePortrait: autoDraw = False
+187.4769 	EXP 	text_2: autoDraw = False
+187.4769 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+187.4769 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+187.4798 	EXP 	window1: recordFrameIntervals = False
+187.9697 	EXP 	leftImagePortrait: autoDraw = True
+190.4701 	EXP 	leftImagePortrait: autoDraw = False
+190.4719 	EXP 	window1: recordFrameIntervals = False
+190.4878 	EXP 	window1: recordFrameIntervals = False
+190.6706 	EXP 	rightImagePortrait: autoDraw = True
+191.2122 	EXP 	New trial (rep=37, index=0): None
+191.3900 	EXP 	window1: recordFrameIntervals = False
+191.3923 	DATA 	Keypress: left
+191.3964 	EXP 	leftImagePortrait: autoDraw = False
+191.3964 	EXP 	rightImagePortrait: autoDraw = False
+191.3964 	EXP 	text_2: autoDraw = False
+191.3964 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+191.3964 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/16.png'
+191.4000 	EXP 	window1: recordFrameIntervals = False
+191.8898 	EXP 	leftImagePortrait: autoDraw = True
+194.3890 	EXP 	window1: recordFrameIntervals = False
+194.3999 	EXP 	leftImagePortrait: autoDraw = False
+194.4020 	EXP 	window1: recordFrameIntervals = False
+194.5884 	EXP 	rightImagePortrait: autoDraw = True
+195.1759 	EXP 	New trial (rep=38, index=0): None
+195.3503 	EXP 	window1: recordFrameIntervals = False
+195.3522 	DATA 	Keypress: right
+195.3562 	EXP 	leftImagePortrait: autoDraw = False
+195.3562 	EXP 	rightImagePortrait: autoDraw = False
+195.3562 	EXP 	text_2: autoDraw = False
+195.3562 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/8.png'
+195.3562 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+195.3602 	EXP 	window1: recordFrameIntervals = False
+195.8506 	EXP 	leftImagePortrait: autoDraw = True
+198.3465 	EXP 	leftImagePortrait: autoDraw = False
+198.3655 	EXP 	window1: recordFrameIntervals = False
+198.3815 	EXP 	window1: recordFrameIntervals = False
+198.5644 	EXP 	rightImagePortrait: autoDraw = True
+199.3386 	EXP 	New trial (rep=39, index=0): None
+199.5149 	EXP 	window1: recordFrameIntervals = False
+199.5171 	DATA 	Keypress: left
+199.5214 	EXP 	leftImagePortrait: autoDraw = False
+199.5214 	EXP 	rightImagePortrait: autoDraw = False
+199.5214 	EXP 	text_2: autoDraw = False
+199.5214 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+199.5214 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/11.png'
+199.5248 	EXP 	window1: recordFrameIntervals = False
+200.0162 	EXP 	leftImagePortrait: autoDraw = True
+202.5160 	EXP 	window1: recordFrameIntervals = False
+202.5268 	EXP 	leftImagePortrait: autoDraw = False
+202.5290 	EXP 	window1: recordFrameIntervals = False
+202.7152 	EXP 	rightImagePortrait: autoDraw = True
+203.2368 	EXP 	New trial (rep=40, index=0): None
+203.4095 	EXP 	window1: recordFrameIntervals = False
+203.4111 	DATA 	Keypress: right
+203.4153 	EXP 	leftImagePortrait: autoDraw = False
+203.4153 	EXP 	rightImagePortrait: autoDraw = False
+203.4153 	EXP 	text_2: autoDraw = False
+203.4153 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+203.4153 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/8.png'
+203.4189 	EXP 	window1: recordFrameIntervals = False
+203.9079 	EXP 	leftImagePortrait: autoDraw = True
+206.4066 	EXP 	leftImagePortrait: autoDraw = False
+206.4080 	EXP 	window1: recordFrameIntervals = False
+206.4250 	EXP 	window1: recordFrameIntervals = False
+206.6063 	EXP 	rightImagePortrait: autoDraw = True
+207.5838 	EXP 	New trial (rep=41, index=0): None
+207.7519 	EXP 	window1: recordFrameIntervals = False
+207.7544 	DATA 	Keypress: right
+207.7582 	EXP 	leftImagePortrait: autoDraw = False
+207.7582 	EXP 	rightImagePortrait: autoDraw = False
+207.7582 	EXP 	text_2: autoDraw = False
+207.7582 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+207.7582 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+207.7619 	EXP 	window1: recordFrameIntervals = False
+208.2528 	EXP 	leftImagePortrait: autoDraw = True
+210.7528 	EXP 	leftImagePortrait: autoDraw = False
+210.7549 	EXP 	window1: recordFrameIntervals = False
+210.7711 	EXP 	window1: recordFrameIntervals = False
+210.9543 	EXP 	rightImagePortrait: autoDraw = True
+212.7103 	DATA 	Keypress: right
+212.7287 	EXP 	New trial (rep=42, index=0): None
+212.9021 	EXP 	window1: recordFrameIntervals = False
+212.9083 	EXP 	leftImagePortrait: autoDraw = False
+212.9083 	EXP 	rightImagePortrait: autoDraw = False
+212.9083 	EXP 	text_2: autoDraw = False
+212.9083 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+212.9083 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/8.png'
+212.9118 	EXP 	window1: recordFrameIntervals = False
+213.4021 	EXP 	leftImagePortrait: autoDraw = True
+215.8992 	EXP 	leftImagePortrait: autoDraw = False
+215.9010 	EXP 	window1: recordFrameIntervals = False
+215.9170 	EXP 	window1: recordFrameIntervals = False
+216.1007 	EXP 	rightImagePortrait: autoDraw = True
+216.8092 	EXP 	New trial (rep=43, index=0): None
+216.9942 	EXP 	window1: recordFrameIntervals = False
+216.9964 	DATA 	Keypress: left
+217.0009 	EXP 	leftImagePortrait: autoDraw = False
+217.0009 	EXP 	rightImagePortrait: autoDraw = False
+217.0009 	EXP 	text_2: autoDraw = False
+217.0009 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+217.0009 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+217.0049 	EXP 	window1: recordFrameIntervals = False
+217.4939 	EXP 	leftImagePortrait: autoDraw = True
+219.9956 	EXP 	leftImagePortrait: autoDraw = False
+219.9972 	EXP 	window1: recordFrameIntervals = False
+220.0142 	EXP 	window1: recordFrameIntervals = False
+220.1951 	EXP 	rightImagePortrait: autoDraw = True
+220.7711 	EXP 	New trial (rep=44, index=0): None
+220.9444 	EXP 	window1: recordFrameIntervals = False
+220.9463 	DATA 	Keypress: right
+220.9503 	EXP 	leftImagePortrait: autoDraw = False
+220.9503 	EXP 	rightImagePortrait: autoDraw = False
+220.9503 	EXP 	text_2: autoDraw = False
+220.9503 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/11.png'
+220.9503 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+220.9541 	EXP 	window1: recordFrameIntervals = False
+221.4440 	EXP 	leftImagePortrait: autoDraw = True
+223.9428 	EXP 	leftImagePortrait: autoDraw = False
+223.9447 	EXP 	window1: recordFrameIntervals = False
+223.9617 	EXP 	window1: recordFrameIntervals = False
+224.1466 	EXP 	rightImagePortrait: autoDraw = True
+226.0019 	EXP 	New trial (rep=45, index=0): None
+226.2476 	EXP 	window1: recordFrameIntervals = False
+226.2494 	DATA 	Keypress: left
+226.2541 	EXP 	leftImagePortrait: autoDraw = False
+226.2541 	EXP 	rightImagePortrait: autoDraw = False
+226.2541 	EXP 	text_2: autoDraw = False
+226.2541 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+226.2541 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/8.png'
+226.2579 	EXP 	window1: recordFrameIntervals = False
+226.7463 	EXP 	leftImagePortrait: autoDraw = True
+229.2427 	EXP 	window1: recordFrameIntervals = False
+229.2545 	EXP 	leftImagePortrait: autoDraw = False
+229.2566 	EXP 	window1: recordFrameIntervals = False
+229.4423 	EXP 	rightImagePortrait: autoDraw = True
+229.7980 	EXP 	New trial (rep=46, index=0): None
+229.9650 	EXP 	window1: recordFrameIntervals = False
+229.9673 	DATA 	Keypress: right
+229.9720 	EXP 	leftImagePortrait: autoDraw = False
+229.9720 	EXP 	rightImagePortrait: autoDraw = False
+229.9720 	EXP 	text_2: autoDraw = False
+229.9720 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+229.9720 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/16.png'
+229.9759 	EXP 	window1: recordFrameIntervals = False
+230.4649 	EXP 	leftImagePortrait: autoDraw = True
+232.9569 	EXP 	window1: recordFrameIntervals = False
+232.9680 	EXP 	leftImagePortrait: autoDraw = False
+232.9698 	EXP 	window1: recordFrameIntervals = False
+233.1562 	EXP 	rightImagePortrait: autoDraw = True
+233.6768 	EXP 	New trial (rep=47, index=0): None
+233.8418 	EXP 	window1: recordFrameIntervals = False
+233.8441 	DATA 	Keypress: right
+233.8487 	EXP 	leftImagePortrait: autoDraw = False
+233.8487 	EXP 	rightImagePortrait: autoDraw = False
+233.8487 	EXP 	text_2: autoDraw = False
+233.8487 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+233.8487 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+233.8528 	EXP 	window1: recordFrameIntervals = False
+234.3422 	EXP 	leftImagePortrait: autoDraw = True
+236.8383 	EXP 	window1: recordFrameIntervals = False
+236.8480 	EXP 	leftImagePortrait: autoDraw = False
+236.8503 	EXP 	window1: recordFrameIntervals = False
+237.0372 	EXP 	rightImagePortrait: autoDraw = True
+237.6398 	DATA 	Keypress: right
+237.6576 	EXP 	New trial (rep=48, index=0): None
+237.8279 	EXP 	window1: recordFrameIntervals = False
+237.8345 	EXP 	leftImagePortrait: autoDraw = False
+237.8345 	EXP 	rightImagePortrait: autoDraw = False
+237.8345 	EXP 	text_2: autoDraw = False
+237.8345 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+237.8345 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+237.8386 	EXP 	window1: recordFrameIntervals = False
+238.3271 	EXP 	leftImagePortrait: autoDraw = True
+240.8283 	EXP 	leftImagePortrait: autoDraw = False
+240.8305 	EXP 	window1: recordFrameIntervals = False
+240.8465 	EXP 	window1: recordFrameIntervals = False
+241.0281 	EXP 	rightImagePortrait: autoDraw = True
+241.9215 	EXP 	New trial (rep=49, index=0): None
+242.1033 	EXP 	window1: recordFrameIntervals = False
+242.1048 	DATA 	Keypress: left
+242.1087 	EXP 	leftImagePortrait: autoDraw = False
+242.1087 	EXP 	rightImagePortrait: autoDraw = False
+242.1087 	EXP 	text_2: autoDraw = False
+242.1087 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+242.1087 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/10.png'
+242.1126 	EXP 	window1: recordFrameIntervals = False
+242.6030 	EXP 	leftImagePortrait: autoDraw = True
+245.0970 	EXP 	window1: recordFrameIntervals = False
+245.1080 	EXP 	leftImagePortrait: autoDraw = False
+245.1100 	EXP 	window1: recordFrameIntervals = False
+245.2971 	EXP 	rightImagePortrait: autoDraw = True
+245.6018 	EXP 	New trial (rep=50, index=0): None
+245.7777 	EXP 	window1: recordFrameIntervals = False
+245.7792 	DATA 	Keypress: right
+245.7838 	EXP 	leftImagePortrait: autoDraw = False
+245.7838 	EXP 	rightImagePortrait: autoDraw = False
+245.7838 	EXP 	text_2: autoDraw = False
+245.7838 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/16.png'
+245.7838 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+245.7871 	EXP 	window1: recordFrameIntervals = False
+246.2774 	EXP 	leftImagePortrait: autoDraw = True
+248.7779 	EXP 	window1: recordFrameIntervals = False
+248.7884 	EXP 	leftImagePortrait: autoDraw = False
+248.7899 	EXP 	window1: recordFrameIntervals = False
+248.9776 	EXP 	rightImagePortrait: autoDraw = True
+249.3319 	EXP 	New trial (rep=51, index=0): None
+249.5031 	EXP 	window1: recordFrameIntervals = False
+249.5053 	DATA 	Keypress: right
+249.5098 	EXP 	leftImagePortrait: autoDraw = False
+249.5098 	EXP 	rightImagePortrait: autoDraw = False
+249.5098 	EXP 	text_2: autoDraw = False
+249.5098 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/8.png'
+249.5098 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+249.5140 	EXP 	window1: recordFrameIntervals = False
+250.0042 	EXP 	leftImagePortrait: autoDraw = True
+252.5021 	EXP 	leftImagePortrait: autoDraw = False
+252.5040 	EXP 	window1: recordFrameIntervals = False
+252.5200 	EXP 	window1: recordFrameIntervals = False
+252.7027 	EXP 	rightImagePortrait: autoDraw = True
+253.3948 	EXP 	New trial (rep=52, index=0): None
+253.5753 	EXP 	window1: recordFrameIntervals = False
+253.5772 	DATA 	Keypress: left
+253.5815 	EXP 	leftImagePortrait: autoDraw = False
+253.5815 	EXP 	rightImagePortrait: autoDraw = False
+253.5815 	EXP 	text_2: autoDraw = False
+253.5815 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+253.5815 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/16.png'
+253.5848 	EXP 	window1: recordFrameIntervals = False
+254.0738 	EXP 	leftImagePortrait: autoDraw = True
+256.5702 	EXP 	window1: recordFrameIntervals = False
+256.5823 	EXP 	leftImagePortrait: autoDraw = False
+256.5842 	EXP 	window1: recordFrameIntervals = False
+256.7674 	EXP 	rightImagePortrait: autoDraw = True
+257.3589 	EXP 	New trial (rep=53, index=0): None
+257.5265 	EXP 	window1: recordFrameIntervals = False
+257.5286 	DATA 	Keypress: right
+257.5327 	EXP 	leftImagePortrait: autoDraw = False
+257.5327 	EXP 	rightImagePortrait: autoDraw = False
+257.5327 	EXP 	text_2: autoDraw = False
+257.5327 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+257.5327 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/16.png'
+257.5364 	EXP 	window1: recordFrameIntervals = False
+258.0267 	EXP 	leftImagePortrait: autoDraw = True
+260.5286 	EXP 	leftImagePortrait: autoDraw = False
+260.5303 	EXP 	window1: recordFrameIntervals = False
+260.5474 	EXP 	window1: recordFrameIntervals = False
+260.7313 	EXP 	rightImagePortrait: autoDraw = True
+261.3217 	EXP 	New trial (rep=54, index=0): None
+261.4969 	EXP 	window1: recordFrameIntervals = False
+261.4995 	DATA 	Keypress: right
+261.5038 	EXP 	leftImagePortrait: autoDraw = False
+261.5038 	EXP 	rightImagePortrait: autoDraw = False
+261.5038 	EXP 	text_2: autoDraw = False
+261.5038 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/15.png'
+261.5038 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+261.5070 	EXP 	window1: recordFrameIntervals = False
+261.9976 	EXP 	leftImagePortrait: autoDraw = True
+264.4981 	EXP 	window1: recordFrameIntervals = False
+264.5087 	EXP 	leftImagePortrait: autoDraw = False
+264.5101 	EXP 	window1: recordFrameIntervals = False
+264.6971 	EXP 	rightImagePortrait: autoDraw = True
+265.3204 	EXP 	New trial (rep=55, index=0): None
+265.5177 	EXP 	window1: recordFrameIntervals = False
+265.5201 	DATA 	Keypress: right
+265.5238 	EXP 	leftImagePortrait: autoDraw = False
+265.5238 	EXP 	rightImagePortrait: autoDraw = False
+265.5238 	EXP 	text_2: autoDraw = False
+265.5238 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+265.5238 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/16.png'
+265.5278 	EXP 	window1: recordFrameIntervals = False
+266.0181 	EXP 	leftImagePortrait: autoDraw = True
+268.5117 	EXP 	window1: recordFrameIntervals = False
+268.5231 	EXP 	leftImagePortrait: autoDraw = False
+268.5246 	EXP 	window1: recordFrameIntervals = False
+268.7102 	EXP 	rightImagePortrait: autoDraw = True
+269.1817 	DATA 	Keypress: right
+269.2010 	EXP 	New trial (rep=56, index=0): None
+269.4154 	EXP 	window1: recordFrameIntervals = False
+269.4212 	EXP 	leftImagePortrait: autoDraw = False
+269.4212 	EXP 	rightImagePortrait: autoDraw = False
+269.4212 	EXP 	text_2: autoDraw = False
+269.4212 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+269.4212 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/15.png'
+269.4246 	EXP 	window1: recordFrameIntervals = False
+269.9156 	EXP 	leftImagePortrait: autoDraw = True
+272.4079 	EXP 	window1: recordFrameIntervals = False
+272.4191 	EXP 	leftImagePortrait: autoDraw = False
+272.4209 	EXP 	window1: recordFrameIntervals = False
+272.6068 	EXP 	rightImagePortrait: autoDraw = True
+273.1433 	DATA 	Keypress: right
+273.1620 	EXP 	New trial (rep=57, index=0): None
+273.3225 	EXP 	window1: recordFrameIntervals = False
+273.3287 	EXP 	leftImagePortrait: autoDraw = False
+273.3287 	EXP 	rightImagePortrait: autoDraw = False
+273.3287 	EXP 	text_2: autoDraw = False
+273.3287 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+273.3287 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+273.3324 	EXP 	window1: recordFrameIntervals = False
+273.8224 	EXP 	leftImagePortrait: autoDraw = True
+276.3216 	EXP 	window1: recordFrameIntervals = False
+276.3327 	EXP 	leftImagePortrait: autoDraw = False
+276.3345 	EXP 	window1: recordFrameIntervals = False
+276.5210 	EXP 	rightImagePortrait: autoDraw = True
+277.1725 	DATA 	Keypress: right
+277.1927 	EXP 	New trial (rep=58, index=0): None
+277.3562 	EXP 	window1: recordFrameIntervals = False
+277.3623 	EXP 	leftImagePortrait: autoDraw = False
+277.3623 	EXP 	rightImagePortrait: autoDraw = False
+277.3623 	EXP 	text_2: autoDraw = False
+277.3623 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+277.3623 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/15.png'
+277.3659 	EXP 	window1: recordFrameIntervals = False
+277.8578 	EXP 	leftImagePortrait: autoDraw = True
+280.3515 	EXP 	window1: recordFrameIntervals = False
+280.3623 	EXP 	leftImagePortrait: autoDraw = False
+280.3645 	EXP 	window1: recordFrameIntervals = False
+280.5509 	EXP 	rightImagePortrait: autoDraw = True
+281.0897 	DATA 	Keypress: right
+281.1058 	EXP 	New trial (rep=59, index=0): None
+281.2748 	EXP 	window1: recordFrameIntervals = False
+281.2818 	EXP 	leftImagePortrait: autoDraw = False
+281.2818 	EXP 	rightImagePortrait: autoDraw = False
+281.2818 	EXP 	text_2: autoDraw = False
+281.2818 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+281.2818 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/15.png'
+281.2860 	EXP 	window1: recordFrameIntervals = False
+281.7755 	EXP 	leftImagePortrait: autoDraw = True
+284.2766 	EXP 	leftImagePortrait: autoDraw = False
+284.2779 	EXP 	window1: recordFrameIntervals = False
+284.2949 	EXP 	window1: recordFrameIntervals = False
+284.4792 	EXP 	rightImagePortrait: autoDraw = True
+285.0686 	DATA 	Keypress: right
+285.0914 	EXP 	New trial (rep=60, index=0): None
+285.3868 	EXP 	window1: recordFrameIntervals = False
+285.3941 	EXP 	leftImagePortrait: autoDraw = False
+285.3941 	EXP 	rightImagePortrait: autoDraw = False
+285.3941 	EXP 	text_2: autoDraw = False
+285.3941 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/1/8.png'
+285.3941 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/1/7.png'
+285.3977 	EXP 	window1: recordFrameIntervals = False
+285.8866 	EXP 	leftImagePortrait: autoDraw = True
+288.3786 	EXP 	window1: recordFrameIntervals = False
+288.3894 	EXP 	leftImagePortrait: autoDraw = False
+288.3915 	EXP 	window1: recordFrameIntervals = False
+288.5779 	EXP 	rightImagePortrait: autoDraw = True
+289.1966 	DATA 	Keypress: left
+289.2159 	EXP 	New trial (rep=61, index=0): None
+289.3814 	EXP 	window1: recordFrameIntervals = False
+289.3869 	EXP 	leftImagePortrait: autoDraw = False
+289.3869 	EXP 	rightImagePortrait: autoDraw = False
+289.3869 	EXP 	text_2: autoDraw = False
+289.3869 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/15.png'
+289.3869 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+289.3908 	EXP 	window1: recordFrameIntervals = False
+289.8819 	EXP 	leftImagePortrait: autoDraw = True
+292.3746 	EXP 	window1: recordFrameIntervals = False
+292.3858 	EXP 	leftImagePortrait: autoDraw = False
+292.3877 	EXP 	window1: recordFrameIntervals = False
+292.5729 	EXP 	rightImagePortrait: autoDraw = True
+293.0287 	EXP 	New trial (rep=62, index=0): None
+293.1997 	EXP 	window1: recordFrameIntervals = False
+293.2015 	DATA 	Keypress: left
+293.2052 	EXP 	leftImagePortrait: autoDraw = False
+293.2052 	EXP 	rightImagePortrait: autoDraw = False
+293.2052 	EXP 	text_2: autoDraw = False
+293.2052 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+293.2052 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/14.png'
+293.2090 	EXP 	window1: recordFrameIntervals = False
+293.6994 	EXP 	leftImagePortrait: autoDraw = True
+296.1998 	EXP 	leftImagePortrait: autoDraw = False
+296.2014 	EXP 	window1: recordFrameIntervals = False
+296.2174 	EXP 	window1: recordFrameIntervals = False
+296.3989 	EXP 	rightImagePortrait: autoDraw = True
+296.8420 	EXP 	New trial (rep=63, index=0): None
+297.0131 	EXP 	window1: recordFrameIntervals = False
+297.0157 	DATA 	Keypress: right
+297.0197 	EXP 	leftImagePortrait: autoDraw = False
+297.0197 	EXP 	rightImagePortrait: autoDraw = False
+297.0197 	EXP 	text_2: autoDraw = False
+297.0197 	EXP 	leftImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+297.0197 	EXP 	rightImagePortrait: image = 'stimuli/decanterStudio/2/7.png'
+297.0230 	EXP 	window1: recordFrameIntervals = False
+297.5141 	EXP 	leftImagePortrait: autoDraw = True
+300.0131 	EXP 	leftImagePortrait: autoDraw = False
+300.0146 	EXP 	window1: recordFrameIntervals = False
+300.0315 	EXP 	window1: recordFrameIntervals = False
+300.2131 	EXP 	rightImagePortrait: autoDraw = True
+300.9559 	EXP 	New trial (rep=0, index=1): OrderedDict([('imageSetLvl', 'decanterBedroom'), ('imageSetName', 'noCokeStudio'), ('refSetNumber', 7)])
+301.0501 	DATA 	Keypress: left
+301.0538 	EXP 	leftImagePortrait: autoDraw = False
+301.0538 	EXP 	rightImagePortrait: autoDraw = False
+301.0538 	EXP 	text_2: autoDraw = False
+301.0538 	EXP 	image: image = 'stimuli/decanterBedroom/ref.png'
+301.0538 	EXP 	text_3: autoDraw = True
+302.0494 	EXP 	image: autoDraw = True
+302.0651 	EXP 	text_3: autoDraw = False
+305.9639 	EXP 	Created sequence: random, trialTypes=1, nReps=64, seed=None
+305.9643 	EXP 	New trial (rep=0, index=0): None
+306.2040 	EXP 	window1: recordFrameIntervals = False
+306.2103 	EXP 	text_3: autoDraw = False
+306.2103 	EXP 	image: autoDraw = False
+306.2103 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/0.png'
+306.2103 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+306.2135 	EXP 	window1: recordFrameIntervals = False
+306.7025 	EXP 	leftImagePortrait: autoDraw = True
+309.2054 	EXP 	leftImagePortrait: autoDraw = False
+309.2075 	EXP 	window1: recordFrameIntervals = False
+309.2234 	EXP 	window1: recordFrameIntervals = False
+309.4062 	EXP 	rightImagePortrait: autoDraw = True
+309.9671 	EXP 	New trial (rep=1, index=0): None
+310.1609 	EXP 	window1: recordFrameIntervals = False
+310.1630 	DATA 	Keypress: right
+310.1671 	EXP 	leftImagePortrait: autoDraw = False
+310.1671 	EXP 	rightImagePortrait: autoDraw = False
+310.1671 	EXP 	text_2: autoDraw = False
+310.1671 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/21.png'
+310.1671 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+310.1707 	EXP 	window1: recordFrameIntervals = False
+310.6596 	EXP 	leftImagePortrait: autoDraw = True
+313.1584 	EXP 	window1: recordFrameIntervals = False
+313.1692 	EXP 	leftImagePortrait: autoDraw = False
+313.1714 	EXP 	window1: recordFrameIntervals = False
+313.3569 	EXP 	rightImagePortrait: autoDraw = True
+314.2098 	DATA 	Keypress: left
+314.2280 	EXP 	New trial (rep=2, index=0): None
+314.4058 	EXP 	window1: recordFrameIntervals = False
+314.4126 	EXP 	leftImagePortrait: autoDraw = False
+314.4126 	EXP 	rightImagePortrait: autoDraw = False
+314.4126 	EXP 	text_2: autoDraw = False
+314.4126 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/0.png'
+314.4126 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+314.4164 	EXP 	window1: recordFrameIntervals = False
+314.9042 	EXP 	leftImagePortrait: autoDraw = True
+317.4050 	EXP 	window1: recordFrameIntervals = False
+317.4156 	EXP 	leftImagePortrait: autoDraw = False
+317.4170 	EXP 	window1: recordFrameIntervals = False
+317.6047 	EXP 	rightImagePortrait: autoDraw = True
+318.0265 	EXP 	New trial (rep=3, index=0): None
+318.2204 	EXP 	window1: recordFrameIntervals = False
+318.2241 	DATA 	Keypress: right
+318.2280 	EXP 	leftImagePortrait: autoDraw = False
+318.2280 	EXP 	rightImagePortrait: autoDraw = False
+318.2280 	EXP 	text_2: autoDraw = False
+318.2280 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+318.2280 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/3.png'
+318.2317 	EXP 	window1: recordFrameIntervals = False
+318.7209 	EXP 	leftImagePortrait: autoDraw = True
+321.2182 	EXP 	window1: recordFrameIntervals = False
+321.2292 	EXP 	leftImagePortrait: autoDraw = False
+321.2311 	EXP 	window1: recordFrameIntervals = False
+321.4165 	EXP 	rightImagePortrait: autoDraw = True
+322.3049 	EXP 	New trial (rep=4, index=0): None
+322.5066 	EXP 	window1: recordFrameIntervals = False
+322.5093 	DATA 	Keypress: right
+322.5134 	EXP 	leftImagePortrait: autoDraw = False
+322.5134 	EXP 	rightImagePortrait: autoDraw = False
+322.5134 	EXP 	text_2: autoDraw = False
+322.5134 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/3.png'
+322.5134 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+322.5167 	EXP 	window1: recordFrameIntervals = False
+323.0061 	EXP 	leftImagePortrait: autoDraw = True
+325.5091 	EXP 	leftImagePortrait: autoDraw = False
+325.5110 	EXP 	window1: recordFrameIntervals = False
+325.5270 	EXP 	window1: recordFrameIntervals = False
+325.7108 	EXP 	rightImagePortrait: autoDraw = True
+326.1866 	EXP 	New trial (rep=5, index=0): None
+326.3826 	EXP 	window1: recordFrameIntervals = False
+326.3843 	DATA 	Keypress: right
+326.3880 	EXP 	leftImagePortrait: autoDraw = False
+326.3880 	EXP 	rightImagePortrait: autoDraw = False
+326.3880 	EXP 	text_2: autoDraw = False
+326.3880 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+326.3880 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/18.png'
+326.3920 	EXP 	window1: recordFrameIntervals = False
+326.8820 	EXP 	leftImagePortrait: autoDraw = True
+329.3785 	EXP 	window1: recordFrameIntervals = False
+329.3889 	EXP 	leftImagePortrait: autoDraw = False
+329.3905 	EXP 	window1: recordFrameIntervals = False
+329.5781 	EXP 	rightImagePortrait: autoDraw = True
+330.0472 	DATA 	Keypress: right
+330.0658 	EXP 	New trial (rep=6, index=0): None
+330.2605 	EXP 	window1: recordFrameIntervals = False
+330.2664 	EXP 	leftImagePortrait: autoDraw = False
+330.2664 	EXP 	rightImagePortrait: autoDraw = False
+330.2664 	EXP 	text_2: autoDraw = False
+330.2664 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+330.2664 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/17.png'
+330.2700 	EXP 	window1: recordFrameIntervals = False
+330.7609 	EXP 	leftImagePortrait: autoDraw = True
+333.2591 	EXP 	window1: recordFrameIntervals = False
+333.2693 	EXP 	leftImagePortrait: autoDraw = False
+333.2710 	EXP 	window1: recordFrameIntervals = False
+333.4569 	EXP 	rightImagePortrait: autoDraw = True
+334.2122 	EXP 	New trial (rep=7, index=0): None
+334.4106 	EXP 	window1: recordFrameIntervals = False
+334.4134 	DATA 	Keypress: right
+334.4174 	EXP 	leftImagePortrait: autoDraw = False
+334.4174 	EXP 	rightImagePortrait: autoDraw = False
+334.4174 	EXP 	text_2: autoDraw = False
+334.4174 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/15.png'
+334.4174 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+334.4209 	EXP 	window1: recordFrameIntervals = False
+334.9101 	EXP 	leftImagePortrait: autoDraw = True
+337.4053 	EXP 	window1: recordFrameIntervals = False
+337.4162 	EXP 	leftImagePortrait: autoDraw = False
+337.4183 	EXP 	window1: recordFrameIntervals = False
+337.6031 	EXP 	rightImagePortrait: autoDraw = True
+340.1006 	EXP 	text_2: autoDraw = True
+340.1138 	EXP 	rightImagePortrait: autoDraw = False
+340.7527 	EXP 	New trial (rep=8, index=0): None
+340.9503 	EXP 	window1: recordFrameIntervals = False
+340.9524 	DATA 	Keypress: left
+340.9568 	EXP 	leftImagePortrait: autoDraw = False
+340.9568 	EXP 	rightImagePortrait: autoDraw = False
+340.9568 	EXP 	text_2: autoDraw = False
+340.9568 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/21.png'
+340.9568 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+340.9600 	EXP 	window1: recordFrameIntervals = False
+341.4506 	EXP 	leftImagePortrait: autoDraw = True
+343.9512 	EXP 	window1: recordFrameIntervals = False
+343.9609 	EXP 	leftImagePortrait: autoDraw = False
+343.9631 	EXP 	window1: recordFrameIntervals = False
+344.1532 	EXP 	rightImagePortrait: autoDraw = True
+346.5518 	EXP 	New trial (rep=9, index=0): None
+346.8229 	EXP 	window1: recordFrameIntervals = False
+346.8243 	DATA 	Keypress: left
+346.8285 	EXP 	leftImagePortrait: autoDraw = False
+346.8285 	EXP 	rightImagePortrait: autoDraw = False
+346.8285 	EXP 	text_2: autoDraw = False
+346.8285 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/2.png'
+346.8285 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+346.8320 	EXP 	window1: recordFrameIntervals = False
+347.3228 	EXP 	leftImagePortrait: autoDraw = True
+349.8225 	EXP 	leftImagePortrait: autoDraw = False
+349.8240 	EXP 	window1: recordFrameIntervals = False
+349.8400 	EXP 	window1: recordFrameIntervals = False
+350.0225 	EXP 	rightImagePortrait: autoDraw = True
+350.3478 	EXP 	New trial (rep=10, index=0): None
+350.5366 	EXP 	window1: recordFrameIntervals = False
+350.5383 	DATA 	Keypress: right
+350.5425 	EXP 	leftImagePortrait: autoDraw = False
+350.5425 	EXP 	rightImagePortrait: autoDraw = False
+350.5425 	EXP 	text_2: autoDraw = False
+350.5425 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/3.png'
+350.5425 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+350.5460 	EXP 	window1: recordFrameIntervals = False
+351.0366 	EXP 	leftImagePortrait: autoDraw = True
+353.5358 	EXP 	leftImagePortrait: autoDraw = False
+353.5379 	EXP 	window1: recordFrameIntervals = False
+353.5539 	EXP 	window1: recordFrameIntervals = False
+353.7376 	EXP 	rightImagePortrait: autoDraw = True
+353.9793 	EXP 	New trial (rep=11, index=0): None
+354.1718 	EXP 	window1: recordFrameIntervals = False
+354.1742 	DATA 	Keypress: right
+354.1780 	EXP 	leftImagePortrait: autoDraw = False
+354.1780 	EXP 	rightImagePortrait: autoDraw = False
+354.1780 	EXP 	text_2: autoDraw = False
+354.1780 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/18.png'
+354.1780 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+354.1818 	EXP 	window1: recordFrameIntervals = False
+354.6723 	EXP 	leftImagePortrait: autoDraw = True
+357.1565 	EXP 	window1: recordFrameIntervals = False
+357.1667 	EXP 	leftImagePortrait: autoDraw = False
+357.1684 	EXP 	window1: recordFrameIntervals = False
+357.3573 	EXP 	rightImagePortrait: autoDraw = True
+358.8599 	EXP 	New trial (rep=12, index=0): None
+359.0970 	EXP 	window1: recordFrameIntervals = False
+359.0987 	DATA 	Keypress: left
+359.1032 	EXP 	leftImagePortrait: autoDraw = False
+359.1032 	EXP 	rightImagePortrait: autoDraw = False
+359.1032 	EXP 	text_2: autoDraw = False
+359.1032 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/14.png'
+359.1032 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+359.1069 	EXP 	window1: recordFrameIntervals = False
+359.5971 	EXP 	leftImagePortrait: autoDraw = True
+362.0954 	EXP 	leftImagePortrait: autoDraw = False
+362.0971 	EXP 	window1: recordFrameIntervals = False
+362.1141 	EXP 	window1: recordFrameIntervals = False
+362.2953 	EXP 	rightImagePortrait: autoDraw = True
+363.3544 	EXP 	New trial (rep=13, index=0): None
+363.5560 	EXP 	window1: recordFrameIntervals = False
+363.5584 	DATA 	Keypress: right
+363.5627 	EXP 	leftImagePortrait: autoDraw = False
+363.5627 	EXP 	rightImagePortrait: autoDraw = False
+363.5627 	EXP 	text_2: autoDraw = False
+363.5627 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/17.png'
+363.5627 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+363.5660 	EXP 	window1: recordFrameIntervals = False
+364.0574 	EXP 	leftImagePortrait: autoDraw = True
+366.5584 	EXP 	leftImagePortrait: autoDraw = False
+366.5604 	EXP 	window1: recordFrameIntervals = False
+366.5764 	EXP 	window1: recordFrameIntervals = False
+366.7590 	EXP 	rightImagePortrait: autoDraw = True
+368.1173 	EXP 	New trial (rep=14, index=0): None
+368.3220 	EXP 	window1: recordFrameIntervals = False
+368.3241 	DATA 	Keypress: left
+368.3284 	EXP 	leftImagePortrait: autoDraw = False
+368.3284 	EXP 	rightImagePortrait: autoDraw = False
+368.3284 	EXP 	text_2: autoDraw = False
+368.3284 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+368.3284 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/4.png'
+368.3324 	EXP 	window1: recordFrameIntervals = False
+368.8220 	EXP 	leftImagePortrait: autoDraw = True
+371.3213 	EXP 	leftImagePortrait: autoDraw = False
+371.3230 	EXP 	window1: recordFrameIntervals = False
+371.3401 	EXP 	window1: recordFrameIntervals = False
+371.5227 	EXP 	rightImagePortrait: autoDraw = True
+374.0193 	EXP 	rightImagePortrait: autoDraw = False
+374.0193 	EXP 	text_2: autoDraw = True
+374.3762 	EXP 	New trial (rep=15, index=0): None
+374.5572 	EXP 	window1: recordFrameIntervals = False
+374.5596 	DATA 	Keypress: left
+374.5637 	EXP 	leftImagePortrait: autoDraw = False
+374.5637 	EXP 	rightImagePortrait: autoDraw = False
+374.5637 	EXP 	text_2: autoDraw = False
+374.5637 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/5.png'
+374.5637 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+374.5673 	EXP 	window1: recordFrameIntervals = False
+375.0558 	EXP 	leftImagePortrait: autoDraw = True
+377.5550 	EXP 	window1: recordFrameIntervals = False
+377.5659 	EXP 	leftImagePortrait: autoDraw = False
+377.5681 	EXP 	window1: recordFrameIntervals = False
+377.7535 	EXP 	rightImagePortrait: autoDraw = True
+379.5092 	EXP 	New trial (rep=16, index=0): None
+379.7156 	EXP 	window1: recordFrameIntervals = False
+379.7172 	DATA 	Keypress: right
+379.7212 	EXP 	leftImagePortrait: autoDraw = False
+379.7212 	EXP 	rightImagePortrait: autoDraw = False
+379.7212 	EXP 	text_2: autoDraw = False
+379.7212 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+379.7212 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/4.png'
+379.7253 	EXP 	window1: recordFrameIntervals = False
+380.2145 	EXP 	leftImagePortrait: autoDraw = True
+382.7119 	EXP 	leftImagePortrait: autoDraw = False
+382.7133 	EXP 	window1: recordFrameIntervals = False
+382.7303 	EXP 	window1: recordFrameIntervals = False
+382.9121 	EXP 	rightImagePortrait: autoDraw = True
+385.4099 	EXP 	rightImagePortrait: autoDraw = False
+385.4099 	EXP 	text_2: autoDraw = True
+385.7824 	EXP 	New trial (rep=17, index=0): None
+386.0330 	EXP 	window1: recordFrameIntervals = False
+386.0347 	DATA 	Keypress: left
+386.0391 	EXP 	leftImagePortrait: autoDraw = False
+386.0391 	EXP 	rightImagePortrait: autoDraw = False
+386.0391 	EXP 	text_2: autoDraw = False
+386.0391 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/14.png'
+386.0391 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+386.0433 	EXP 	window1: recordFrameIntervals = False
+386.5324 	EXP 	leftImagePortrait: autoDraw = True
+389.0296 	EXP 	window1: recordFrameIntervals = False
+389.0404 	EXP 	leftImagePortrait: autoDraw = False
+389.0426 	EXP 	window1: recordFrameIntervals = False
+389.2292 	EXP 	rightImagePortrait: autoDraw = True
+389.9306 	DATA 	Keypress: left
+389.9500 	EXP 	New trial (rep=18, index=0): None
+390.1379 	EXP 	window1: recordFrameIntervals = False
+390.1437 	EXP 	leftImagePortrait: autoDraw = False
+390.1437 	EXP 	rightImagePortrait: autoDraw = False
+390.1437 	EXP 	text_2: autoDraw = False
+390.1437 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/16.png'
+390.1437 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+390.1477 	EXP 	window1: recordFrameIntervals = False
+390.6373 	EXP 	leftImagePortrait: autoDraw = True
+393.1367 	EXP 	leftImagePortrait: autoDraw = False
+393.1383 	EXP 	window1: recordFrameIntervals = False
+393.1553 	EXP 	window1: recordFrameIntervals = False
+393.3357 	EXP 	rightImagePortrait: autoDraw = True
+394.1625 	EXP 	New trial (rep=19, index=0): None
+394.3534 	EXP 	window1: recordFrameIntervals = False
+394.3555 	DATA 	Keypress: left
+394.3600 	EXP 	leftImagePortrait: autoDraw = False
+394.3600 	EXP 	rightImagePortrait: autoDraw = False
+394.3600 	EXP 	text_2: autoDraw = False
+394.3600 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+394.3600 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/5.png'
+394.3632 	EXP 	window1: recordFrameIntervals = False
+394.8533 	EXP 	leftImagePortrait: autoDraw = True
+397.3499 	EXP 	leftImagePortrait: autoDraw = False
+397.3683 	EXP 	window1: recordFrameIntervals = False
+397.3853 	EXP 	window1: recordFrameIntervals = False
+397.5670 	EXP 	rightImagePortrait: autoDraw = True
+398.1941 	EXP 	New trial (rep=20, index=0): None
+398.3823 	EXP 	window1: recordFrameIntervals = False
+398.3840 	DATA 	Keypress: left
+398.3878 	EXP 	leftImagePortrait: autoDraw = False
+398.3878 	EXP 	rightImagePortrait: autoDraw = False
+398.3878 	EXP 	text_2: autoDraw = False
+398.3878 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+398.3878 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/5.png'
+398.3917 	EXP 	window1: recordFrameIntervals = False
+398.8816 	EXP 	leftImagePortrait: autoDraw = True
+401.3801 	EXP 	leftImagePortrait: autoDraw = False
+401.3820 	EXP 	window1: recordFrameIntervals = False
+401.3980 	EXP 	window1: recordFrameIntervals = False
+401.5820 	EXP 	rightImagePortrait: autoDraw = True
+402.0730 	EXP 	New trial (rep=21, index=0): None
+402.2634 	EXP 	window1: recordFrameIntervals = False
+402.2660 	DATA 	Keypress: right
+402.2701 	EXP 	leftImagePortrait: autoDraw = False
+402.2701 	EXP 	rightImagePortrait: autoDraw = False
+402.2701 	EXP 	text_2: autoDraw = False
+402.2701 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/16.png'
+402.2701 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+402.2733 	EXP 	window1: recordFrameIntervals = False
+402.7631 	EXP 	leftImagePortrait: autoDraw = True
+403.4546 	EXP 	New trial (rep=22, index=0): None
+403.6463 	EXP 	window1: recordFrameIntervals = False
+403.6482 	DATA 	Keypress: right
+403.6525 	EXP 	leftImagePortrait: autoDraw = False
+403.6525 	EXP 	rightImagePortrait: autoDraw = False
+403.6525 	EXP 	text_2: autoDraw = False
+403.6525 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/5.png'
+403.6525 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+403.6560 	EXP 	window1: recordFrameIntervals = False
+404.1484 	EXP 	leftImagePortrait: autoDraw = True
+406.6473 	EXP 	window1: recordFrameIntervals = False
+406.6590 	EXP 	leftImagePortrait: autoDraw = False
+406.6603 	EXP 	window1: recordFrameIntervals = False
+406.8463 	EXP 	rightImagePortrait: autoDraw = True
+407.3528 	EXP 	New trial (rep=23, index=0): None
+407.5512 	EXP 	window1: recordFrameIntervals = False
+407.5527 	DATA 	Keypress: right
+407.5568 	EXP 	leftImagePortrait: autoDraw = False
+407.5568 	EXP 	rightImagePortrait: autoDraw = False
+407.5568 	EXP 	text_2: autoDraw = False
+407.5568 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/16.png'
+407.5568 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+407.5603 	EXP 	window1: recordFrameIntervals = False
+408.0503 	EXP 	leftImagePortrait: autoDraw = True
+410.5449 	EXP 	window1: recordFrameIntervals = False
+410.5556 	EXP 	leftImagePortrait: autoDraw = False
+410.5570 	EXP 	window1: recordFrameIntervals = False
+410.7436 	EXP 	rightImagePortrait: autoDraw = True
+411.4325 	EXP 	New trial (rep=24, index=0): None
+411.6175 	EXP 	window1: recordFrameIntervals = False
+411.6193 	DATA 	Keypress: right
+411.6232 	EXP 	leftImagePortrait: autoDraw = False
+411.6232 	EXP 	rightImagePortrait: autoDraw = False
+411.6232 	EXP 	text_2: autoDraw = False
+411.6232 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/16.png'
+411.6232 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+411.6268 	EXP 	window1: recordFrameIntervals = False
+412.1155 	EXP 	leftImagePortrait: autoDraw = True
+414.6189 	EXP 	leftImagePortrait: autoDraw = False
+414.6211 	EXP 	window1: recordFrameIntervals = False
+414.6371 	EXP 	window1: recordFrameIntervals = False
+414.8190 	EXP 	rightImagePortrait: autoDraw = True
+415.2961 	EXP 	New trial (rep=25, index=0): None
+415.4884 	EXP 	window1: recordFrameIntervals = False
+415.4901 	DATA 	Keypress: right
+415.4941 	EXP 	leftImagePortrait: autoDraw = False
+415.4941 	EXP 	rightImagePortrait: autoDraw = False
+415.4941 	EXP 	text_2: autoDraw = False
+415.4941 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+415.4941 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/13.png'
+415.4978 	EXP 	window1: recordFrameIntervals = False
+415.9881 	EXP 	leftImagePortrait: autoDraw = True
+418.4994 	EXP 	leftImagePortrait: autoDraw = False
+418.5013 	EXP 	window1: recordFrameIntervals = False
+418.5172 	EXP 	window1: recordFrameIntervals = False
+418.6988 	EXP 	rightImagePortrait: autoDraw = True
+421.1972 	EXP 	rightImagePortrait: autoDraw = False
+421.1972 	EXP 	text_2: autoDraw = True
+421.4869 	EXP 	New trial (rep=26, index=0): None
+421.6871 	EXP 	window1: recordFrameIntervals = False
+421.6890 	DATA 	Keypress: left
+421.6933 	EXP 	leftImagePortrait: autoDraw = False
+421.6933 	EXP 	rightImagePortrait: autoDraw = False
+421.6933 	EXP 	text_2: autoDraw = False
+421.6933 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/6.png'
+421.6933 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+421.6969 	EXP 	window1: recordFrameIntervals = False
+422.1880 	EXP 	leftImagePortrait: autoDraw = True
+424.6830 	EXP 	window1: recordFrameIntervals = False
+424.6939 	EXP 	leftImagePortrait: autoDraw = False
+424.6959 	EXP 	window1: recordFrameIntervals = False
+424.8823 	EXP 	rightImagePortrait: autoDraw = True
+425.7869 	EXP 	New trial (rep=27, index=0): None
+425.9732 	EXP 	window1: recordFrameIntervals = False
+425.9750 	DATA 	Keypress: left
+425.9793 	EXP 	leftImagePortrait: autoDraw = False
+425.9793 	EXP 	rightImagePortrait: autoDraw = False
+425.9793 	EXP 	text_2: autoDraw = False
+425.9793 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+425.9793 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/13.png'
+425.9827 	EXP 	window1: recordFrameIntervals = False
+426.4720 	EXP 	leftImagePortrait: autoDraw = True
+428.9738 	EXP 	leftImagePortrait: autoDraw = False
+428.9751 	EXP 	window1: recordFrameIntervals = False
+428.9920 	EXP 	window1: recordFrameIntervals = False
+429.1742 	EXP 	rightImagePortrait: autoDraw = True
+429.9167 	EXP 	New trial (rep=28, index=0): None
+430.1094 	EXP 	window1: recordFrameIntervals = False
+430.1109 	DATA 	Keypress: right
+430.1149 	EXP 	leftImagePortrait: autoDraw = False
+430.1149 	EXP 	rightImagePortrait: autoDraw = False
+430.1149 	EXP 	text_2: autoDraw = False
+430.1149 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/16.png'
+430.1149 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+430.1186 	EXP 	window1: recordFrameIntervals = False
+430.6100 	EXP 	leftImagePortrait: autoDraw = True
+431.0835 	EXP 	New trial (rep=29, index=0): None
+431.2958 	EXP 	window1: recordFrameIntervals = False
+431.2977 	DATA 	Keypress: right
+431.3025 	EXP 	leftImagePortrait: autoDraw = False
+431.3025 	EXP 	rightImagePortrait: autoDraw = False
+431.3025 	EXP 	text_2: autoDraw = False
+431.3025 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+431.3025 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/6.png'
+431.3062 	EXP 	window1: recordFrameIntervals = False
+431.7969 	EXP 	leftImagePortrait: autoDraw = True
+433.2126 	DATA 	Keypress: left
+433.2319 	EXP 	New trial (rep=30, index=0): None
+433.4334 	EXP 	window1: recordFrameIntervals = False
+433.4390 	EXP 	leftImagePortrait: autoDraw = False
+433.4390 	EXP 	rightImagePortrait: autoDraw = False
+433.4390 	EXP 	text_2: autoDraw = False
+433.4390 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+433.4390 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/13.png'
+433.4426 	EXP 	window1: recordFrameIntervals = False
+433.9342 	EXP 	leftImagePortrait: autoDraw = True
+436.4346 	EXP 	leftImagePortrait: autoDraw = False
+436.4364 	EXP 	window1: recordFrameIntervals = False
+436.4534 	EXP 	window1: recordFrameIntervals = False
+436.6342 	EXP 	rightImagePortrait: autoDraw = True
+437.2256 	DATA 	Keypress: left
+437.2430 	EXP 	New trial (rep=31, index=0): None
+437.4359 	EXP 	window1: recordFrameIntervals = False
+437.4417 	EXP 	leftImagePortrait: autoDraw = False
+437.4417 	EXP 	rightImagePortrait: autoDraw = False
+437.4417 	EXP 	text_2: autoDraw = False
+437.4417 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+437.4417 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/6.png'
+437.4450 	EXP 	window1: recordFrameIntervals = False
+437.9349 	EXP 	leftImagePortrait: autoDraw = True
+440.4310 	EXP 	leftImagePortrait: autoDraw = False
+440.4497 	EXP 	window1: recordFrameIntervals = False
+440.4657 	EXP 	window1: recordFrameIntervals = False
+440.6470 	EXP 	rightImagePortrait: autoDraw = True
+441.7250 	EXP 	New trial (rep=32, index=0): None
+441.9175 	EXP 	window1: recordFrameIntervals = False
+441.9195 	DATA 	Keypress: right
+441.9246 	EXP 	leftImagePortrait: autoDraw = False
+441.9246 	EXP 	rightImagePortrait: autoDraw = False
+441.9246 	EXP 	text_2: autoDraw = False
+441.9246 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/16.png'
+441.9246 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+441.9281 	EXP 	window1: recordFrameIntervals = False
+442.4166 	EXP 	leftImagePortrait: autoDraw = True
+444.9172 	EXP 	window1: recordFrameIntervals = False
+444.9276 	EXP 	leftImagePortrait: autoDraw = False
+444.9292 	EXP 	window1: recordFrameIntervals = False
+445.1167 	EXP 	rightImagePortrait: autoDraw = True
+446.5359 	DATA 	Keypress: left
+446.5548 	EXP 	New trial (rep=33, index=0): None
+446.7863 	EXP 	window1: recordFrameIntervals = False
+446.7933 	EXP 	leftImagePortrait: autoDraw = False
+446.7933 	EXP 	rightImagePortrait: autoDraw = False
+446.7933 	EXP 	text_2: autoDraw = False
+446.7933 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/16.png'
+446.7933 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+446.7971 	EXP 	window1: recordFrameIntervals = False
+447.2865 	EXP 	leftImagePortrait: autoDraw = True
+449.7790 	EXP 	window1: recordFrameIntervals = False
+449.7908 	EXP 	leftImagePortrait: autoDraw = False
+449.7930 	EXP 	window1: recordFrameIntervals = False
+449.9771 	EXP 	rightImagePortrait: autoDraw = True
+451.1162 	EXP 	New trial (rep=34, index=0): None
+451.3047 	EXP 	window1: recordFrameIntervals = False
+451.3062 	DATA 	Keypress: left
+451.3106 	EXP 	leftImagePortrait: autoDraw = False
+451.3106 	EXP 	rightImagePortrait: autoDraw = False
+451.3106 	EXP 	text_2: autoDraw = False
+451.3106 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+451.3106 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/13.png'
+451.3140 	EXP 	window1: recordFrameIntervals = False
+451.8035 	EXP 	leftImagePortrait: autoDraw = True
+454.3029 	EXP 	leftImagePortrait: autoDraw = False
+454.3049 	EXP 	window1: recordFrameIntervals = False
+454.3218 	EXP 	window1: recordFrameIntervals = False
+454.5037 	EXP 	rightImagePortrait: autoDraw = True
+455.2966 	EXP 	New trial (rep=35, index=0): None
+455.4912 	EXP 	window1: recordFrameIntervals = False
+455.4934 	DATA 	Keypress: right
+455.4975 	EXP 	leftImagePortrait: autoDraw = False
+455.4975 	EXP 	rightImagePortrait: autoDraw = False
+455.4975 	EXP 	text_2: autoDraw = False
+455.4975 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+455.4975 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/13.png'
+455.5011 	EXP 	window1: recordFrameIntervals = False
+455.9905 	EXP 	leftImagePortrait: autoDraw = True
+458.4892 	EXP 	window1: recordFrameIntervals = False
+458.4999 	EXP 	leftImagePortrait: autoDraw = False
+458.5012 	EXP 	window1: recordFrameIntervals = False
+458.6872 	EXP 	rightImagePortrait: autoDraw = True
+459.1601 	EXP 	New trial (rep=36, index=0): None
+459.3508 	EXP 	window1: recordFrameIntervals = False
+459.3530 	DATA 	Keypress: right
+459.3568 	EXP 	leftImagePortrait: autoDraw = False
+459.3568 	EXP 	rightImagePortrait: autoDraw = False
+459.3568 	EXP 	text_2: autoDraw = False
+459.3568 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/16.png'
+459.3568 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+459.3606 	EXP 	window1: recordFrameIntervals = False
+459.8503 	EXP 	leftImagePortrait: autoDraw = True
+462.3466 	EXP 	leftImagePortrait: autoDraw = False
+462.3649 	EXP 	window1: recordFrameIntervals = False
+462.3819 	EXP 	window1: recordFrameIntervals = False
+462.5633 	EXP 	rightImagePortrait: autoDraw = True
+464.3606 	EXP 	New trial (rep=37, index=0): None
+464.7032 	EXP 	window1: recordFrameIntervals = False
+464.7054 	DATA 	Keypress: left
+464.7108 	EXP 	leftImagePortrait: autoDraw = False
+464.7108 	EXP 	rightImagePortrait: autoDraw = False
+464.7108 	EXP 	text_2: autoDraw = False
+464.7108 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+464.7108 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/6.png'
+464.7145 	EXP 	window1: recordFrameIntervals = False
+465.2053 	EXP 	leftImagePortrait: autoDraw = True
+467.6979 	EXP 	window1: recordFrameIntervals = False
+467.7087 	EXP 	leftImagePortrait: autoDraw = False
+467.7109 	EXP 	window1: recordFrameIntervals = False
+467.8959 	EXP 	rightImagePortrait: autoDraw = True
+468.7853 	EXP 	New trial (rep=38, index=0): None
+468.9788 	EXP 	window1: recordFrameIntervals = False
+468.9812 	DATA 	Keypress: right
+468.9850 	EXP 	leftImagePortrait: autoDraw = False
+468.9850 	EXP 	rightImagePortrait: autoDraw = False
+468.9850 	EXP 	text_2: autoDraw = False
+468.9850 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+468.9850 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/13.png'
+468.9889 	EXP 	window1: recordFrameIntervals = False
+469.4802 	EXP 	leftImagePortrait: autoDraw = True
+471.9787 	EXP 	window1: recordFrameIntervals = False
+471.9886 	EXP 	leftImagePortrait: autoDraw = False
+471.9906 	EXP 	window1: recordFrameIntervals = False
+472.1778 	EXP 	rightImagePortrait: autoDraw = True
+473.8965 	EXP 	New trial (rep=39, index=0): None
+474.0894 	EXP 	window1: recordFrameIntervals = False
+474.0914 	DATA 	Keypress: left
+474.0915 	DATA 	Keypress: down
+474.0955 	EXP 	leftImagePortrait: autoDraw = False
+474.0955 	EXP 	rightImagePortrait: autoDraw = False
+474.0955 	EXP 	text_2: autoDraw = False
+474.0955 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/6.png'
+474.0955 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+474.0991 	EXP 	window1: recordFrameIntervals = False
+474.5896 	EXP 	leftImagePortrait: autoDraw = True
+477.0844 	EXP 	leftImagePortrait: autoDraw = False
+477.1031 	EXP 	window1: recordFrameIntervals = False
+477.1211 	EXP 	window1: recordFrameIntervals = False
+477.3022 	EXP 	rightImagePortrait: autoDraw = True
+477.9277 	EXP 	New trial (rep=40, index=0): None
+478.1165 	EXP 	window1: recordFrameIntervals = False
+478.1199 	DATA 	Keypress: right
+478.1251 	EXP 	leftImagePortrait: autoDraw = False
+478.1251 	EXP 	rightImagePortrait: autoDraw = False
+478.1251 	EXP 	text_2: autoDraw = False
+478.1251 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/6.png'
+478.1251 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+478.1284 	EXP 	window1: recordFrameIntervals = False
+478.6168 	EXP 	leftImagePortrait: autoDraw = True
+479.6269 	EXP 	New trial (rep=41, index=0): None
+479.8182 	EXP 	window1: recordFrameIntervals = False
+479.8201 	DATA 	Keypress: right
+479.8252 	EXP 	leftImagePortrait: autoDraw = False
+479.8252 	EXP 	rightImagePortrait: autoDraw = False
+479.8252 	EXP 	text_2: autoDraw = False
+479.8252 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+479.8252 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/15.png'
+479.8286 	EXP 	window1: recordFrameIntervals = False
+480.3163 	EXP 	leftImagePortrait: autoDraw = True
+482.8130 	EXP 	leftImagePortrait: autoDraw = False
+482.8316 	EXP 	window1: recordFrameIntervals = False
+482.8476 	EXP 	window1: recordFrameIntervals = False
+483.0291 	EXP 	rightImagePortrait: autoDraw = True
+483.6866 	DATA 	Keypress: right
+483.7058 	EXP 	New trial (rep=42, index=0): None
+483.8867 	EXP 	window1: recordFrameIntervals = False
+483.8937 	EXP 	leftImagePortrait: autoDraw = False
+483.8937 	EXP 	rightImagePortrait: autoDraw = False
+483.8937 	EXP 	text_2: autoDraw = False
+483.8937 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/6.png'
+483.8937 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+483.8977 	EXP 	window1: recordFrameIntervals = False
+484.3863 	EXP 	leftImagePortrait: autoDraw = True
+486.8821 	EXP 	window1: recordFrameIntervals = False
+486.8929 	EXP 	leftImagePortrait: autoDraw = False
+486.8950 	EXP 	window1: recordFrameIntervals = False
+487.0814 	EXP 	rightImagePortrait: autoDraw = True
+489.5779 	EXP 	text_2: autoDraw = True
+489.5911 	EXP 	rightImagePortrait: autoDraw = False
+489.8641 	EXP 	New trial (rep=43, index=0): None
+490.0607 	EXP 	window1: recordFrameIntervals = False
+490.0625 	DATA 	Keypress: right
+490.0664 	EXP 	leftImagePortrait: autoDraw = False
+490.0664 	EXP 	rightImagePortrait: autoDraw = False
+490.0664 	EXP 	text_2: autoDraw = False
+490.0664 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+490.0664 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/15.png'
+490.0702 	EXP 	window1: recordFrameIntervals = False
+490.5596 	EXP 	leftImagePortrait: autoDraw = True
+493.0607 	EXP 	window1: recordFrameIntervals = False
+493.0713 	EXP 	leftImagePortrait: autoDraw = False
+493.0727 	EXP 	window1: recordFrameIntervals = False
+493.2596 	EXP 	rightImagePortrait: autoDraw = True
+493.8969 	EXP 	New trial (rep=44, index=0): None
+494.1115 	EXP 	window1: recordFrameIntervals = False
+494.1131 	DATA 	Keypress: right
+494.1172 	EXP 	leftImagePortrait: autoDraw = False
+494.1172 	EXP 	rightImagePortrait: autoDraw = False
+494.1172 	EXP 	text_2: autoDraw = False
+494.1172 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+494.1172 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/13.png'
+494.1207 	EXP 	window1: recordFrameIntervals = False
+494.6134 	EXP 	leftImagePortrait: autoDraw = True
+497.1079 	EXP 	window1: recordFrameIntervals = False
+497.1177 	EXP 	leftImagePortrait: autoDraw = False
+497.1193 	EXP 	window1: recordFrameIntervals = False
+497.3088 	EXP 	rightImagePortrait: autoDraw = True
+497.8763 	DATA 	Keypress: right
+497.8942 	EXP 	New trial (rep=45, index=0): None
+498.0905 	EXP 	window1: recordFrameIntervals = False
+498.0969 	EXP 	leftImagePortrait: autoDraw = False
+498.0969 	EXP 	rightImagePortrait: autoDraw = False
+498.0969 	EXP 	text_2: autoDraw = False
+498.0969 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/15.png'
+498.0969 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+498.1007 	EXP 	window1: recordFrameIntervals = False
+498.5907 	EXP 	leftImagePortrait: autoDraw = True
+501.0879 	EXP 	window1: recordFrameIntervals = False
+501.0979 	EXP 	leftImagePortrait: autoDraw = False
+501.0998 	EXP 	window1: recordFrameIntervals = False
+501.2859 	EXP 	rightImagePortrait: autoDraw = True
+501.9900 	EXP 	New trial (rep=46, index=0): None
+502.1920 	EXP 	window1: recordFrameIntervals = False
+502.1942 	DATA 	Keypress: right
+502.1981 	EXP 	leftImagePortrait: autoDraw = False
+502.1981 	EXP 	rightImagePortrait: autoDraw = False
+502.1981 	EXP 	text_2: autoDraw = False
+502.1981 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/12.png'
+502.1981 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+502.2018 	EXP 	window1: recordFrameIntervals = False
+502.6927 	EXP 	leftImagePortrait: autoDraw = True
+505.1945 	EXP 	leftImagePortrait: autoDraw = False
+505.1960 	EXP 	window1: recordFrameIntervals = False
+505.2130 	EXP 	window1: recordFrameIntervals = False
+505.3937 	EXP 	rightImagePortrait: autoDraw = True
+505.9038 	EXP 	New trial (rep=47, index=0): None
+506.0933 	EXP 	window1: recordFrameIntervals = False
+506.0956 	DATA 	Keypress: right
+506.0998 	EXP 	leftImagePortrait: autoDraw = False
+506.0998 	EXP 	rightImagePortrait: autoDraw = False
+506.0998 	EXP 	text_2: autoDraw = False
+506.0998 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/15.png'
+506.0998 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+506.1033 	EXP 	window1: recordFrameIntervals = False
+506.5922 	EXP 	leftImagePortrait: autoDraw = True
+509.0916 	EXP 	leftImagePortrait: autoDraw = False
+509.0933 	EXP 	window1: recordFrameIntervals = False
+509.1093 	EXP 	window1: recordFrameIntervals = False
+509.2930 	EXP 	rightImagePortrait: autoDraw = True
+509.7018 	EXP 	New trial (rep=48, index=0): None
+509.8925 	EXP 	window1: recordFrameIntervals = False
+509.8942 	DATA 	Keypress: right
+509.8981 	EXP 	leftImagePortrait: autoDraw = False
+509.8981 	EXP 	rightImagePortrait: autoDraw = False
+509.8981 	EXP 	text_2: autoDraw = False
+509.8981 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+509.8981 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/12.png'
+509.9020 	EXP 	window1: recordFrameIntervals = False
+510.3930 	EXP 	leftImagePortrait: autoDraw = True
+512.8944 	EXP 	window1: recordFrameIntervals = False
+512.9051 	EXP 	leftImagePortrait: autoDraw = False
+512.9073 	EXP 	window1: recordFrameIntervals = False
+513.0938 	EXP 	rightImagePortrait: autoDraw = True
+513.6474 	EXP 	New trial (rep=49, index=0): None
+513.8349 	EXP 	window1: recordFrameIntervals = False
+513.8368 	DATA 	Keypress: left
+513.8411 	EXP 	leftImagePortrait: autoDraw = False
+513.8411 	EXP 	rightImagePortrait: autoDraw = False
+513.8411 	EXP 	text_2: autoDraw = False
+513.8411 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+513.8411 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/15.png'
+513.8445 	EXP 	window1: recordFrameIntervals = False
+514.3346 	EXP 	leftImagePortrait: autoDraw = True
+516.8350 	EXP 	leftImagePortrait: autoDraw = False
+516.8372 	EXP 	window1: recordFrameIntervals = False
+516.8532 	EXP 	window1: recordFrameIntervals = False
+517.0352 	EXP 	rightImagePortrait: autoDraw = True
+517.4753 	DATA 	Keypress: right
+517.4947 	EXP 	New trial (rep=50, index=0): None
+517.6743 	EXP 	window1: recordFrameIntervals = False
+517.6806 	EXP 	leftImagePortrait: autoDraw = False
+517.6806 	EXP 	rightImagePortrait: autoDraw = False
+517.6806 	EXP 	text_2: autoDraw = False
+517.6806 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+517.6806 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/13.png'
+517.6843 	EXP 	window1: recordFrameIntervals = False
+518.1737 	EXP 	leftImagePortrait: autoDraw = True
+520.6721 	EXP 	window1: recordFrameIntervals = False
+520.6827 	EXP 	leftImagePortrait: autoDraw = False
+520.6842 	EXP 	window1: recordFrameIntervals = False
+520.8711 	EXP 	rightImagePortrait: autoDraw = True
+521.3226 	DATA 	Keypress: right
+521.3423 	EXP 	New trial (rep=51, index=0): None
+521.5384 	EXP 	window1: recordFrameIntervals = False
+521.5449 	EXP 	leftImagePortrait: autoDraw = False
+521.5449 	EXP 	rightImagePortrait: autoDraw = False
+521.5449 	EXP 	text_2: autoDraw = False
+521.5449 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+521.5449 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+521.5481 	EXP 	window1: recordFrameIntervals = False
+522.0391 	EXP 	leftImagePortrait: autoDraw = True
+524.5363 	EXP 	window1: recordFrameIntervals = False
+524.5460 	EXP 	leftImagePortrait: autoDraw = False
+524.5483 	EXP 	window1: recordFrameIntervals = False
+524.7372 	EXP 	rightImagePortrait: autoDraw = True
+525.0774 	EXP 	New trial (rep=52, index=0): None
+525.3967 	EXP 	window1: recordFrameIntervals = False
+525.3985 	DATA 	Keypress: right
+525.4039 	EXP 	leftImagePortrait: autoDraw = False
+525.4039 	EXP 	rightImagePortrait: autoDraw = False
+525.4039 	EXP 	text_2: autoDraw = False
+525.4039 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+525.4039 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+525.4080 	EXP 	window1: recordFrameIntervals = False
+525.8948 	EXP 	leftImagePortrait: autoDraw = True
+528.3919 	EXP 	leftImagePortrait: autoDraw = False
+528.4111 	EXP 	window1: recordFrameIntervals = False
+528.4280 	EXP 	window1: recordFrameIntervals = False
+528.6086 	EXP 	rightImagePortrait: autoDraw = True
+529.4864 	EXP 	New trial (rep=53, index=0): None
+529.7356 	EXP 	window1: recordFrameIntervals = False
+529.7388 	DATA 	Keypress: left
+529.7437 	EXP 	leftImagePortrait: autoDraw = False
+529.7437 	EXP 	rightImagePortrait: autoDraw = False
+529.7437 	EXP 	text_2: autoDraw = False
+529.7437 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+529.7437 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+529.7474 	EXP 	window1: recordFrameIntervals = False
+530.2356 	EXP 	leftImagePortrait: autoDraw = True
+532.7289 	EXP 	window1: recordFrameIntervals = False
+532.7387 	EXP 	leftImagePortrait: autoDraw = False
+532.7409 	EXP 	window1: recordFrameIntervals = False
+532.9286 	EXP 	rightImagePortrait: autoDraw = True
+535.0478 	EXP 	New trial (rep=54, index=0): None
+535.2423 	EXP 	window1: recordFrameIntervals = False
+535.2446 	DATA 	Keypress: right
+535.2488 	EXP 	leftImagePortrait: autoDraw = False
+535.2488 	EXP 	rightImagePortrait: autoDraw = False
+535.2488 	EXP 	text_2: autoDraw = False
+535.2488 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+535.2488 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/6.png'
+535.2523 	EXP 	window1: recordFrameIntervals = False
+535.7423 	EXP 	leftImagePortrait: autoDraw = True
+538.2401 	EXP 	window1: recordFrameIntervals = False
+538.2513 	EXP 	leftImagePortrait: autoDraw = False
+538.2531 	EXP 	window1: recordFrameIntervals = False
+538.4403 	EXP 	rightImagePortrait: autoDraw = True
+540.1409 	DATA 	Keypress: right
+540.1598 	EXP 	New trial (rep=55, index=0): None
+540.3502 	EXP 	window1: recordFrameIntervals = False
+540.3562 	EXP 	leftImagePortrait: autoDraw = False
+540.3562 	EXP 	rightImagePortrait: autoDraw = False
+540.3562 	EXP 	text_2: autoDraw = False
+540.3562 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+540.3562 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+540.3601 	EXP 	window1: recordFrameIntervals = False
+540.8505 	EXP 	leftImagePortrait: autoDraw = True
+543.3468 	EXP 	leftImagePortrait: autoDraw = False
+543.3482 	EXP 	window1: recordFrameIntervals = False
+543.3652 	EXP 	window1: recordFrameIntervals = False
+543.5484 	EXP 	rightImagePortrait: autoDraw = True
+544.2391 	EXP 	New trial (rep=56, index=0): None
+544.4335 	EXP 	window1: recordFrameIntervals = False
+544.4356 	DATA 	Keypress: left
+544.4401 	EXP 	leftImagePortrait: autoDraw = False
+544.4401 	EXP 	rightImagePortrait: autoDraw = False
+544.4401 	EXP 	text_2: autoDraw = False
+544.4401 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+544.4401 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+544.4443 	EXP 	window1: recordFrameIntervals = False
+544.9324 	EXP 	leftImagePortrait: autoDraw = True
+547.4332 	EXP 	window1: recordFrameIntervals = False
+547.4432 	EXP 	leftImagePortrait: autoDraw = False
+547.4451 	EXP 	window1: recordFrameIntervals = False
+547.6314 	EXP 	rightImagePortrait: autoDraw = True
+547.8203 	EXP 	New trial (rep=57, index=0): None
+548.0228 	EXP 	window1: recordFrameIntervals = False
+548.0244 	DATA 	Keypress: right
+548.0286 	EXP 	leftImagePortrait: autoDraw = False
+548.0286 	EXP 	rightImagePortrait: autoDraw = False
+548.0286 	EXP 	text_2: autoDraw = False
+548.0286 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/6.png'
+548.0286 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+548.0322 	EXP 	window1: recordFrameIntervals = False
+548.5235 	EXP 	leftImagePortrait: autoDraw = True
+551.0236 	EXP 	leftImagePortrait: autoDraw = False
+551.0252 	EXP 	window1: recordFrameIntervals = False
+551.0422 	EXP 	window1: recordFrameIntervals = False
+551.2234 	EXP 	rightImagePortrait: autoDraw = True
+552.1161 	EXP 	New trial (rep=58, index=0): None
+552.3082 	EXP 	window1: recordFrameIntervals = False
+552.3101 	DATA 	Keypress: left
+552.3143 	EXP 	leftImagePortrait: autoDraw = False
+552.3143 	EXP 	rightImagePortrait: autoDraw = False
+552.3143 	EXP 	text_2: autoDraw = False
+552.3143 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+552.3143 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/2/7.png'
+552.3178 	EXP 	window1: recordFrameIntervals = False
+552.8067 	EXP 	leftImagePortrait: autoDraw = True
+555.3035 	EXP 	leftImagePortrait: autoDraw = False
+555.3216 	EXP 	window1: recordFrameIntervals = False
+555.3386 	EXP 	window1: recordFrameIntervals = False
+555.5206 	EXP 	rightImagePortrait: autoDraw = True
+556.0285 	DATA 	Keypress: right
+556.0469 	EXP 	New trial (rep=59, index=0): None
+556.2472 	EXP 	window1: recordFrameIntervals = False
+556.2537 	EXP 	leftImagePortrait: autoDraw = False
+556.2537 	EXP 	rightImagePortrait: autoDraw = False
+556.2537 	EXP 	text_2: autoDraw = False
+556.2537 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+556.2537 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/6.png'
+556.2569 	EXP 	window1: recordFrameIntervals = False
+556.7462 	EXP 	leftImagePortrait: autoDraw = True
+559.2386 	EXP 	window1: recordFrameIntervals = False
+559.2508 	EXP 	leftImagePortrait: autoDraw = False
+559.2526 	EXP 	window1: recordFrameIntervals = False
+559.4371 	EXP 	rightImagePortrait: autoDraw = True
+559.9773 	EXP 	New trial (rep=60, index=0): None
+560.1805 	EXP 	window1: recordFrameIntervals = False
+560.1825 	DATA 	Keypress: right
+560.1865 	EXP 	leftImagePortrait: autoDraw = False
+560.1865 	EXP 	rightImagePortrait: autoDraw = False
+560.1865 	EXP 	text_2: autoDraw = False
+560.1865 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/6.png'
+560.1865 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+560.1901 	EXP 	window1: recordFrameIntervals = False
+560.6787 	EXP 	leftImagePortrait: autoDraw = True
+563.1805 	EXP 	leftImagePortrait: autoDraw = False
+563.1823 	EXP 	window1: recordFrameIntervals = False
+563.1983 	EXP 	window1: recordFrameIntervals = False
+563.3822 	EXP 	rightImagePortrait: autoDraw = True
+564.2570 	EXP 	New trial (rep=61, index=0): None
+564.4505 	EXP 	window1: recordFrameIntervals = False
+564.4527 	DATA 	Keypress: left
+564.4568 	EXP 	leftImagePortrait: autoDraw = False
+564.4568 	EXP 	rightImagePortrait: autoDraw = False
+564.4568 	EXP 	text_2: autoDraw = False
+564.4568 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+564.4568 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/5.png'
+564.4603 	EXP 	window1: recordFrameIntervals = False
+564.9517 	EXP 	leftImagePortrait: autoDraw = True
+567.4503 	EXP 	window1: recordFrameIntervals = False
+567.4604 	EXP 	leftImagePortrait: autoDraw = False
+567.4623 	EXP 	window1: recordFrameIntervals = False
+567.6515 	EXP 	rightImagePortrait: autoDraw = True
+568.4038 	EXP 	New trial (rep=62, index=0): None
+568.5978 	EXP 	window1: recordFrameIntervals = False
+568.6000 	DATA 	Keypress: left
+568.6040 	EXP 	leftImagePortrait: autoDraw = False
+568.6040 	EXP 	rightImagePortrait: autoDraw = False
+568.6040 	EXP 	text_2: autoDraw = False
+568.6040 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/6.png'
+568.6040 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+568.6076 	EXP 	window1: recordFrameIntervals = False
+569.0971 	EXP 	leftImagePortrait: autoDraw = True
+571.5957 	EXP 	window1: recordFrameIntervals = False
+571.6069 	EXP 	leftImagePortrait: autoDraw = False
+571.6097 	EXP 	window1: recordFrameIntervals = False
+571.7960 	EXP 	rightImagePortrait: autoDraw = True
+572.8173 	EXP 	New trial (rep=63, index=0): None
+573.0423 	EXP 	window1: recordFrameIntervals = False
+573.0448 	DATA 	Keypress: right
+573.0492 	EXP 	leftImagePortrait: autoDraw = False
+573.0492 	EXP 	rightImagePortrait: autoDraw = False
+573.0492 	EXP 	text_2: autoDraw = False
+573.0492 	EXP 	leftImagePortrait: image = 'stimuli/decanterBedroom/1/7.png'
+573.0492 	EXP 	rightImagePortrait: image = 'stimuli/decanterBedroom/1/6.png'
+573.0528 	EXP 	window1: recordFrameIntervals = False
+573.5429 	EXP 	leftImagePortrait: autoDraw = True
+576.0426 	EXP 	window1: recordFrameIntervals = False
+576.0533 	EXP 	leftImagePortrait: autoDraw = False
+576.0556 	EXP 	window1: recordFrameIntervals = False
+576.2406 	EXP 	rightImagePortrait: autoDraw = True
+577.7654 	DATA 	Keypress: left
+577.7685 	EXP 	leftImagePortrait: autoDraw = False
+577.7685 	EXP 	rightImagePortrait: autoDraw = False
+577.7685 	EXP 	text_2: autoDraw = False
+577.7685 	EXP 	text_4: autoDraw = True
+578.7676 	EXP 	text_4: autoDraw = False
+578.7676 	EXP 	text_4: autoDraw = False
+578.9220 	EXP 	window1: mouseVisible = True

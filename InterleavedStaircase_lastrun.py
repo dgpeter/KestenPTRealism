@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.10),
-    on February 22, 2021, at 15:38
+    on May 18, 2021, at 14:18
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\m01578dp\\InterleavedStaircase\\InterleavedStaircase_lastrun.py',
+    originPath='C:\\Users\\m01578dp\\InterleavedStaircase_2IFC_newer\\InterleavedStaircase_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -65,8 +65,8 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # Setup the Window
 win = visual.Window(
-    size=[1536, 864], fullscr=False, screen=0, 
-    winType='pyglet', allowGUI=True, allowStencil=False,
+    size=[1536, 864], fullscr=True, screen=0, 
+    winType='pyglet', allowGUI=False, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
     units='norm')
@@ -83,7 +83,7 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "Instructions"
 InstructionsClock = core.Clock()
 text = visual.TextStim(win=win, name='text',
-    text='Please evaluate the differences in realism between the two scenes. Each comparison will last 5 seconds and then you will be required to: \n\nPress  ‘left’  if you think the stimulus on the left was more realistic\n\nPress  ‘right’ if you think the stimulus on the right was more realistic\n\nPress any key to start',
+    text='Please evaluate the differences in realism between the two scenes. You will be presented with 2 images describing the same scene with a short interval between them.\n\nA reference image will also be provided for each scene.\n\nPress the  ‘left’ arrow key if you think the first stimulus was more realistic.\n\nPress the  ‘right’ arrow key if you think the second stimulus was more realistic.\n\nPress any key to start',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -94,12 +94,20 @@ key_resp = keyboard.Keyboard()
 # Initialize components for Routine "set_condition"
 set_conditionClock = core.Clock()
 text_3 = visual.TextStim(win=win, name='text_3',
-    text='Loading...',
+    text='Reference Image ',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
+image = visual.ImageStim(
+    win=win,
+    name='image', 
+    image='sin', mask=None,
+    ori=0, pos=(0, 0), size=(2, 2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
 
 # Initialize components for Routine "trial"
 trialClock = core.Clock()
@@ -107,7 +115,7 @@ leftImagePortrait = visual.ImageStim(
     win=win,
     name='leftImagePortrait', 
     image='sin', mask=None,
-    ori=0, pos=(-0.5, 0), size=(0.99, 0.99),
+    ori=0, pos=(0, 0), size=(2, 2),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -116,7 +124,7 @@ rightImagePortrait = visual.ImageStim(
     win=win,
     name='rightImagePortrait', 
     image='sin', mask=None,
-    ori=0, pos=(0.5, 0), size=(0.99, 0.99),
+    ori=0, pos=(0, 0), size=(2, 2),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
@@ -128,6 +136,7 @@ text_2 = visual.TextStim(win=win, name='text_2',
     languageStyle='LTR',
     depth=-4.0);
 resp = keyboard.Keyboard()
+ISI_2 = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI_2')
 
 # Initialize components for Routine "end"
 endClock = core.Clock()
@@ -233,7 +242,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_2 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('imageConds3.xlsx'),
+    trialList=data.importConditions('imageCondsNewest.xlsx'),
     seed=None, name='trials_2')
 thisExp.addLoop(trials_2)  # add the loop to the experiment
 thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
@@ -251,7 +260,7 @@ for thisTrial_2 in trials_2:
     
     # ------Prepare to start Routine "set_condition"-------
     continueRoutine = True
-    routineTimer.add(2.000000)
+    routineTimer.add(5.000000)
     # update component parameters for each repeat
     imageSet = imageSetLvl
     imageSetStr = str(imageSet)
@@ -260,7 +269,8 @@ for thisTrial_2 in trials_2:
     
     initStep = (nRefImage)
     
-    noOfMiniScenes  = 3
+    #noOfMiniScenes  = 3
+    noOfMiniScenes = 2
     
     reversals = 0
     trialCounter = 1
@@ -293,14 +303,24 @@ for thisTrial_2 in trials_2:
             
     
     
-    globalTrialNo = 60
+    #globalTrialNo = 60
+    globalTrialNo = 64
+    
     maxNoFlat = globalTrialNo/(noOfMiniScenes * 2)
     
+    referenceImage = f'stimuli/{imageSetStr}/ref.png'
     
     
+    #image = visual.ImageStim(win, image='stimuli/studio/21_studio.png')
+    #imageRatio = image.size[1] / image.size[0]
+    #print("Aspect ratio is: " + str(imageRatio)) 
+    #newScale = 1 # new horizontal size. vertical size will scale appropriately.
+    #image.setSize((newScale, newScale * imageRatio)) #
     
+    
+    image.setImage(referenceImage)
     # keep track of which components have finished
-    set_conditionComponents = [text_3]
+    set_conditionComponents = [text_3, image]
     for thisComponent in set_conditionComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -333,12 +353,29 @@ for thisTrial_2 in trials_2:
             text_3.setAutoDraw(True)
         if text_3.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_3.tStartRefresh + 2-frameTolerance:
+            if tThisFlipGlobal > text_3.tStartRefresh + 1-frameTolerance:
                 # keep track of stop time/frame for later
                 text_3.tStop = t  # not accounting for scr refresh
                 text_3.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(text_3, 'tStopRefresh')  # time at next scr refresh
                 text_3.setAutoDraw(False)
+        
+        # *image* updates
+        if image.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            image.frameNStart = frameN  # exact frame index
+            image.tStart = t  # local t and not account for scr refresh
+            image.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(image, 'tStartRefresh')  # time at next scr refresh
+            image.setAutoDraw(True)
+        if image.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > image.tStartRefresh + 4-frameTolerance:
+                # keep track of stop time/frame for later
+                image.tStop = t  # not accounting for scr refresh
+                image.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(image, 'tStopRefresh')  # time at next scr refresh
+                image.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -363,9 +400,11 @@ for thisTrial_2 in trials_2:
             thisComponent.setAutoDraw(False)
     trials_2.addData('text_3.started', text_3.tStartRefresh)
     trials_2.addData('text_3.stopped', text_3.tStopRefresh)
+    trials_2.addData('image.started', image.tStartRefresh)
+    trials_2.addData('image.stopped', image.tStopRefresh)
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=60, method='random', 
+    trials = data.TrialHandler(nReps=64, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -387,9 +426,11 @@ for thisTrial_2 in trials_2:
         continueRoutine = True
         # update component parameters for each repeat
         
-        images1 = [f'stimuli/{imageSetStr}/1/{i}_{imageSetName}.png' for i in range(22)]
-        images2 = [f'stimuli/{imageSetStr}/2/{i}_{imageSetName}.png' for i in range(22)]
-        images3 = [f'stimuli/{imageSetStr}/3/{i}_{imageSetName}.png' for i in range(22)]
+        images1 = [f'stimuli/{imageSetStr}/1/{i}.png' for i in range(22)]
+        images2 = [f'stimuli/{imageSetStr}/2/{i}.png' for i in range(22)]
+        images3 = [f'stimuli/{imageSetStr}/3/{i}.png' for i in range(22)]
+        
+        
         
         currentScene = int(random() * noOfMiniScenes) + 1
         staircase = round(random()) 
@@ -465,9 +506,16 @@ for thisTrial_2 in trials_2:
         
         comp_num = nCompQuality 
         
+        
+        #winAspectRatio = win.size[1]/win.size[0]
+        #print("Window aspect ratio is: " + str(winAspectRatio))
+        #leftImagePortrait.size = (1, 1*winAspectRatio)
+        #rightImagePortrait.size = (1, 1*winAspectRatio)
+        
         if refSide == -1:
             leftImage = images[nRefImage]
             rightImage = images[comp_num]
+            
         else:
             leftImage = images[comp_num]
             rightImage = images[nRefImage]
@@ -479,7 +527,7 @@ for thisTrial_2 in trials_2:
         resp.rt = []
         _resp_allKeys = []
         # keep track of which components have finished
-        trialComponents = [leftImagePortrait, ISI, rightImagePortrait, text_2, resp]
+        trialComponents = [leftImagePortrait, ISI, rightImagePortrait, text_2, resp, ISI_2]
         for thisComponent in trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -512,7 +560,7 @@ for thisTrial_2 in trials_2:
                 leftImagePortrait.setAutoDraw(True)
             if leftImagePortrait.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > leftImagePortrait.tStartRefresh + 5-frameTolerance:
+                if tThisFlipGlobal > leftImagePortrait.tStartRefresh + 2.5-frameTolerance:
                     # keep track of stop time/frame for later
                     leftImagePortrait.tStop = t  # not accounting for scr refresh
                     leftImagePortrait.frameNStop = frameN  # exact frame index
@@ -520,7 +568,7 @@ for thisTrial_2 in trials_2:
                     leftImagePortrait.setAutoDraw(False)
             
             # *rightImagePortrait* updates
-            if rightImagePortrait.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+            if rightImagePortrait.status == NOT_STARTED and tThisFlip >= 3.2-frameTolerance:
                 # keep track of start time/frame for later
                 rightImagePortrait.frameNStart = frameN  # exact frame index
                 rightImagePortrait.tStart = t  # local t and not account for scr refresh
@@ -529,7 +577,7 @@ for thisTrial_2 in trials_2:
                 rightImagePortrait.setAutoDraw(True)
             if rightImagePortrait.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > rightImagePortrait.tStartRefresh + 5-frameTolerance:
+                if tThisFlipGlobal > rightImagePortrait.tStartRefresh + 2.5-frameTolerance:
                     # keep track of stop time/frame for later
                     rightImagePortrait.tStop = t  # not accounting for scr refresh
                     rightImagePortrait.frameNStop = frameN  # exact frame index
@@ -537,7 +585,7 @@ for thisTrial_2 in trials_2:
                     rightImagePortrait.setAutoDraw(False)
             
             # *text_2* updates
-            if text_2.status == NOT_STARTED and tThisFlip >= 5.5-frameTolerance:
+            if text_2.status == NOT_STARTED and tThisFlip >= 5.7-frameTolerance:
                 # keep track of start time/frame for later
                 text_2.frameNStart = frameN  # exact frame index
                 text_2.tStart = t  # local t and not account for scr refresh
@@ -547,7 +595,7 @@ for thisTrial_2 in trials_2:
             
             # *resp* updates
             waitOnFlip = False
-            if resp.status == NOT_STARTED and tThisFlip >= 5.5-frameTolerance:
+            if resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                 # keep track of start time/frame for later
                 resp.frameNStart = frameN  # exact frame index
                 resp.tStart = t  # local t and not account for scr refresh
@@ -577,6 +625,17 @@ for thisTrial_2 in trials_2:
             elif ISI.status == STARTED:  # one frame should pass before updating params and completing
                 ISI.complete()  # finish the static period
                 ISI.tStop = ISI.tStart + 0.5  # record stop time
+            # *ISI_2* period
+            if ISI_2.status == NOT_STARTED and t >= 3-frameTolerance:
+                # keep track of start time/frame for later
+                ISI_2.frameNStart = frameN  # exact frame index
+                ISI_2.tStart = t  # local t and not account for scr refresh
+                ISI_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(ISI_2, 'tStartRefresh')  # time at next scr refresh
+                ISI_2.start(0.2)
+            elif ISI_2.status == STARTED:  # one frame should pass before updating params and completing
+                ISI_2.complete()  # finish the static period
+                ISI_2.tStop = ISI_2.tStart + 0.2  # record stop time
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -646,11 +705,13 @@ for thisTrial_2 in trials_2:
             trials.addData('resp.rt', resp.rt)
         trials.addData('resp.started', resp.tStartRefresh)
         trials.addData('resp.stopped', resp.tStopRefresh)
+        trials.addData('ISI_2.started', ISI_2.tStart)
+        trials.addData('ISI_2.stopped', ISI_2.tStop)
         # the Routine "trial" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
         
-    # completed 60 repeats of 'trials'
+    # completed 64 repeats of 'trials'
     
     thisExp.nextEntry()
     
