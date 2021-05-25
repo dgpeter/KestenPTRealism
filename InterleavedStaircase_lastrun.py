@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.10),
-    on May 18, 2021, at 14:18
+    on May 25, 2021, at 09:28
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -267,7 +267,7 @@ for thisTrial_2 in trials_2:
     setName = imageSetName
     nRefImage = refSetNumber
     
-    initStep = (nRefImage)
+    initStep = (nRefImage) * 3
     
     #noOfMiniScenes  = 3
     noOfMiniScenes = 2
